@@ -7,19 +7,19 @@ const Nav = () => {
     const links = [
         {
             'href': '#',
-            'title': t('nav.services'),
+            'title': 'services',
         },
         {
             'href': '#',
-            'title': t('nav.cases'),
+            'title': 'cases',
         },
         {
             'href': '#',
-            'title': t('nav.about'),
+            'title': 'about',
         },
         {
             'href':'#',
-            'title': t('nav.feedback'),
+            'title': 'feedback',
         }
     ]
 
@@ -30,7 +30,7 @@ const Nav = () => {
                 return (
                     <li key={index}>
                         <a href={item.href}>
-                            {item.title}
+                            {t(`nav.${item.title}`)}
                         </a>
                     </li>
                 )
