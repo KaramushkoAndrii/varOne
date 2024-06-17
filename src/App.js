@@ -1,10 +1,12 @@
 import { Suspense } from 'react';
+import { Container } from 'react-bootstrap';
 //import logo from '../src/resources/logo.jpg'
 //import { useTranslation } from 'react-i18next';
 import Header from './components/header/Header';
+import HeroPage from './components/heroPage/HeroPage';
+import Welcome from './components/welcome/welcome';
 //import ChangeLng from './components/changeLng/ChangeLng';
 //import Nav from './components/nav/nav';
-import Main from './components/Main/Main';
 import MainServices from './components/mainServices/MainServices';
 
 
@@ -14,9 +16,14 @@ function App() {
   
   return (
     <div className="App">
-      <Header />
-      <Main />
-      <MainServices />
+      <Container>
+        <Header />
+        <main>
+          <HeroPage />
+          <Welcome />
+        </main>
+        <MainServices />
+      </Container>
     </div>
   );
 }
