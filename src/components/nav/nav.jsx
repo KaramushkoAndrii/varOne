@@ -1,5 +1,7 @@
 import { useTranslation } from 'react-i18next';
 
+import './nav.scss'
+
 const Nav = () => {
 
     const { t } = useTranslation();
@@ -25,17 +27,19 @@ const Nav = () => {
 
 
     return (
-        <ul>
-            {links.map((item, index) => {
-                return (
-                    <li key={index}>
-                        <a href={item.href}>
-                            {t(`nav.${item.title}`)}
-                        </a>
-                    </li>
-                )
-            })}
-        </ul>
+        <nav>
+            <ul className='navigation_list'>
+                {links.map((item, index) => {
+                    return (
+                        <li key={index}>
+                            <a href={item.href}>
+                                {t(`nav.${item.title}`)}
+                            </a>
+                        </li>
+                    )
+                })}
+            </ul>
+        </nav>
     )
 }
 

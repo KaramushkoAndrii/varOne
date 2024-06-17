@@ -1,36 +1,22 @@
 import { Suspense } from 'react';
-import { useTranslation } from 'react-i18next';
+//import logo from '../src/resources/logo.jpg'
+//import { useTranslation } from 'react-i18next';
 import Header from './components/header/Header';
-import Nav from './components/nav/nav';
+//import ChangeLng from './components/changeLng/ChangeLng';
+//import Nav from './components/nav/nav';
+import Main from './components/Main/Main';
+import MainServices from './components/mainServices/MainServices';
 
-const locales = {
-  ua : {
-    title: 'UA'
-  },
-  ru : {
-    title: 'RU'
-  }
-}
+
 
 function App() {
-  const { t, i18n } = useTranslation();
+  //const { t } = useTranslation();
   
   return (
     <div className="App">
-      <h1>{t('main.header')}</h1>
-      <Nav />
-      <ul>
-        {Object.keys(locales).map((locale) => {
-          return (
-            <li key={locale}><button style={{fontWeight: i18n.resolvedLanguage === locale ? 'bold' : 'normal'}} 
-                type="submit"
-                onClick={() => i18n.changeLanguage(locale)}>
-              {locales[locale].title}
-              </button>
-            </li>
-          )
-        })}
-      </ul>
+      <Header />
+      <Main />
+      <MainServices />
     </div>
   );
 }

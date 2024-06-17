@@ -1,8 +1,18 @@
-import "./Header.scss"
+import ChangeLng from '../changeLng/ChangeLng';
+import Nav from '../nav/nav';
+import "./Header.scss";
+import Contacts from '../contacts/contacts';
 
 const Header = () => {
+
     return (
-        <h1></h1>
+        <header className='header'>
+            <Nav />
+            <div>
+                <Contacts />
+                <ChangeLng />
+            </div>
+        </header>
     )
 }
 

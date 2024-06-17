@@ -1,0 +1,25 @@
+/*.language_togle {
+    display: flex;
+    column-gap: 1rem;
+}*/
+
+@import '../../style/var.scss';
+
+.language_toggle {
+    select {
+        padding: 10px;
+        font-size: 16px;
+        //border: 1px solid $white; /* Подставь свой цвет рамки */
+        border-radius: 5px;
+        background-color: $white; /* Подставь свой цвет фона */
+        opacity: 0.3;
+        color: $black; /* Подставь свой цвет текста */
+        transition: background-color 0.3s ease; /*border-color 0.3s ease;*/ /* Плавный переход для изменения фона и рамки */
+
+        &:hover/*, &:focus*/ {
+            opacity: 1;
+            background-color: $white; /* Подставь свой цвет фона при наведении */
+            //border-color: $black; /* Подставь свой цвет рамки при наведении */
+        }
+    }
+}

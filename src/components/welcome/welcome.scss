@@ -1,0 +1,43 @@
+@import '../../style/var.scss';
+
+.welcome {
+    display: flex;
+    padding: 4rem 2rem;
+
+    &_title {
+        font-size: 2.5rem;
+    }
+
+    &_description {
+        font-size: 1rem;
+        color: $grey;
+        max-width: 75%;
+    }
+
+    &_img {
+        max-width: 50vw;
+        max-height: 85vh;
+
+        & > img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &_info {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        button {
+            width: 75%;
+            transform: scale(1);
+            transition: transform 0.5s ease;
+
+            &:hover {
+                transform: scale(1.05);
+            }
+        }
+    }
+}

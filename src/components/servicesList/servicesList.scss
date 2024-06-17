@@ -1,0 +1,18 @@
+
+
+@import '../../style/var.scss';
+
+.services_list {
+
+    display: flex;
+    gap: 1rem;
+
+    
+    li {
+        border: 1px solid $primary-color;
+    }
+
+    a {
+        padding: 1rem;
+    }
+}
