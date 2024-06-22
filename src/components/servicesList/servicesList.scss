@@ -1,18 +1,22 @@
 
-
 @import '../../style/var.scss';
 
-.services_list {
 
-    //display: flex;
+.services-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     gap: 1rem;
+    padding: 1rem 0;
 
-    
     li {
-        border: 1px solid $primary-color;
+        border: 1px solid black;
+        border-radius: 5px;
+        padding: 1rem;
+        width: 19%;
     }
 
-    a {
+    .services-icon {
         padding: 1rem;
     }
 }

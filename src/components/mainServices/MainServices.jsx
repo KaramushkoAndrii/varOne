@@ -10,13 +10,21 @@ const MainServices = () => {
     const { t } = useTranslation();
 
     return (
+        // <section className='services'>
+        //     <div className='sevices__content'>
+        //         <h2>{t('main.services')}</h2>
+        //         <p>{t('main.request')}</p>
+        //         <Button text={t('buttons.task')}/>
+        //     </div>
+        //     <ServicesList />
+        // </section>
         <section className='services'>
-            <div>
-                <h2>{t('main.services')}</h2>
+            <h2>{t('main.services')}</h2>
+            <ServicesList />
+            <div className='services__request'>
                 <p>{t('main.request')}</p>
                 <Button text={t('buttons.task')}/>
             </div>
-            <ServicesList />
         </section>
     )
 }

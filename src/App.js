@@ -21,8 +21,8 @@ function App() {
         <main>
           <HeroPage />
           <Welcome />
+          <MainServices />
         </main>
-        <MainServices />
       </Container>
     </div>
   );

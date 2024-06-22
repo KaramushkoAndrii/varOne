@@ -1,4 +1,9 @@
 import { useTranslation } from 'react-i18next';
+//import 'bootstrap-icons/font/bootstrap-icons.css';
+import houseLogo from '../../resources/listIcons/house.svg';
+
+
+
 
 import './servicesList.scss';
 
@@ -8,94 +13,61 @@ const ServicesList = () => {
     const { t } = useTranslation();
     const services = [
         {
-            title: 'service1',
-            //bgImg: 'url()',
+            title: 'house',
+            icon: houseLogo,
             href: '#'
         },
         {
-            title: 'service2',
-            //bgImg: 'url()',
+            title: 'family',
+            icon: houseLogo,
             href: '#'
         },
         {
-            title: 'service3',
-            //bgImg: 'url()',
+            title: 'military',
+            icon: houseLogo,
             href: '#'
         },
         {
-            title: 'service4',
-            //bgImg: 'url()',
-            href: '#'
-        }
-        ,  {
-            title: 'service1',
-            //bgImg: 'url()',
+            title: 'lawyer',
+            icon: houseLogo,
             href: '#'
         },
         {
-            title: 'service2',
-            //bgImg: 'url()',
+            title: 'duty',
+            icon: houseLogo,
             href: '#'
         },
         {
-            title: 'service3',
-            //bgImg: 'url()',
+            title: 'protection',
+            icon: houseLogo,
             href: '#'
         },
         {
-            title: 'service4',
-            //bgImg: 'url()',
+            title: 'worker',
+            icon: houseLogo,
             href: '#'
         },
         {
-            title: 'service1',
-            //bgImg: 'url()',
+            title: 'administrative law',
+            icon: houseLogo,
             href: '#'
         },
         {
-            title: 'service2',
-            //bgImg: 'url()',
-            href: '#'
-        },
-        {
-            title: 'service3',
-            //bgImg: 'url()',
-            href: '#'
-        },
-        {
-            title: 'service4',
-            //bgImg: 'url()',
-            href: '#'
-        }
-        ,  {
-            title: 'service1',
-            //bgImg: 'url()',
-            href: '#'
-        },
-        {
-            title: 'service2',
-            //bgImg: 'url()',
-            href: '#'
-        },
-        {
-            title: 'service3',
-            //bgImg: 'url()',
-            href: '#'
-        },
-        {
-            title: 'service4',
-            //bgImg: 'url()',
+            title: 'administrative violation',
+            icon: houseLogo,
             href: '#'
         }
     ]
 
 
     return (
-        <ul className='services_list'>
+        <ul className='services-list'>
             {
                 services.map((item, index) => (
                     <li key={index}>
                         <a href={item.href}>
+                            <img src={item.icon} alt={item.icon} />
+                            {/* <i className={`bi bi-${item.icon}`}/> */}
                             <h3>{t(`services.${item.title}`)}</h3>
                         </a>
                     </li>
