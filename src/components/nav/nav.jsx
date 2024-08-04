@@ -8,19 +8,19 @@ const Nav = () => {
 
     const links = [
         {
-            'href': '#',
-            'title': 'services',
-        },
-        {
-            'href': '#',
-            'title': 'cases',
-        },
-        {
-            'href': '#',
+            'href': '#welcome',
             'title': 'about',
         },
         {
-            'href':'#',
+            'href': '#services',
+            'title': 'services',
+        },
+        // {
+        //     'href': '#',
+        //     'title': 'cases',
+        // },
+        {
+            'href':'#contact',
             'title': 'feedback',
         }
     ]

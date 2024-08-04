@@ -1,6 +1,15 @@
 import { useTranslation } from 'react-i18next';
 //import 'bootstrap-icons/font/bootstrap-icons.css';
-import houseLogo from '../../resources/listIcons/house.svg';
+//import houseLogo from '../../resources/listIcons/house.svg';
+import { FaBuilding } from "react-icons/fa";
+import { MdFamilyRestroom } from "react-icons/md";
+import { TbMilitaryRank } from "react-icons/tb";
+import { VscLaw } from "react-icons/vsc";
+import { TbMoneybag } from "react-icons/tb";
+import { AiOutlineFileProtect } from "react-icons/ai";
+import { MdOutlineWorkOutline } from "react-icons/md";
+import { MdOutlineAdminPanelSettings } from "react-icons/md";
+import { RiAdminLine } from "react-icons/ri";
 
 
 
@@ -14,47 +23,47 @@ const ServicesList = () => {
     const services = [
         {
             title: 'house',
-            icon: houseLogo,
+            icon: <FaBuilding />,
             href: '#'
         },
         {
             title: 'family',
-            icon: houseLogo,
+            icon: <MdFamilyRestroom />,
             href: '#'
         },
         {
             title: 'military',
-            icon: houseLogo,
+            icon: <TbMilitaryRank />,
             href: '#'
         },
         {
             title: 'lawyer',
-            icon: houseLogo,
+            icon: <VscLaw />,
             href: '#'
         },
         {
             title: 'duty',
-            icon: houseLogo,
+            icon: <TbMoneybag />,
             href: '#'
         },
         {
             title: 'protection',
-            icon: houseLogo,
+            icon: <AiOutlineFileProtect  />,
             href: '#'
         },
         {
             title: 'worker',
-            icon: houseLogo,
+            icon: <MdOutlineWorkOutline />,
             href: '#'
         },
         {
             title: 'administrative law',
-            icon: houseLogo,
+            icon: <MdOutlineAdminPanelSettings />,
             href: '#'
         },
         {
             title: 'administrative violation',
-            icon: houseLogo,
+            icon: <RiAdminLine />,
             href: '#'
         }
     ]
@@ -65,9 +74,9 @@ const ServicesList = () => {
             {
                 services.map((item, index) => (
                     <li key={index}>
-                        <a href={item.href}>
-                            <img src={item.icon} alt={item.icon} />
-                            {/* <i className={`bi bi-${item.icon}`}/> */}
+                        <a className='services-link' href={item.href}>
+                            {item.icon}
+                            {/* <img src={item.icon} alt={item.title} /> */}
                             <h3>{t(`services.${item.title}`)}</h3>
                         </a>
                     </li>

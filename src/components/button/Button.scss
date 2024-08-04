@@ -4,13 +4,17 @@
     box-shadow: 0 6px 13px -5px #0043ea;
     border-bottom: 1px solid $primary-color;
     color: $white;
-    border-radius: 3px;
+    border-radius: 5px;
     padding: 1rem;
     background-color: $primary-color;
     width: 10rem;
     font-size: 0.75rem;
     cursor: pointer;
-    transition: background-color 0.5s ease;
+    transition: background-color 0.5s ease, transform 0.3s ease;
+
+    &:hover {
+        transform: scale(1.05);
+    }
 }
 
 .main_button.transperent {

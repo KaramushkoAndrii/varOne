@@ -6,7 +6,7 @@ const Button = (props) => {
     const mainClass = 'main_button'
     
     return (
-        <button className={props.bg ? `${mainClass} ${ props.bg}` : `${mainClass}`} >
+        <button className={props.bg ? `${mainClass} ${ props.bg}` : `${mainClass}`} onClick={props.onClick ? props.onClick : null}>
             {props.text}
         </button>
     )
