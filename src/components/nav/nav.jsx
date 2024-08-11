@@ -15,10 +15,6 @@ const Nav = () => {
             'href': '#services',
             'title': 'services',
         },
-        // {
-        //     'href': '#',
-        //     'title': 'cases',
-        // },
         {
             'href':'#contact',
             'title': 'feedback',

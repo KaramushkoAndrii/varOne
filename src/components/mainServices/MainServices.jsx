@@ -5,7 +5,7 @@ import ServicesList from '../servicesList/ServicesList';
 import './mainServices.scss';
 
 
-const MainServices = () => {
+const MainServices = ({onToggleModal}) => {
 
     const { t } = useTranslation();
 
@@ -15,7 +15,7 @@ const MainServices = () => {
             <ServicesList />
             <div className='services__request'>
                 <p>{t('main.request')}</p>
-                <Button text={t('buttons.task')}/>
+                <Button text={t('buttons.task')} onClick={onToggleModal}/>
             </div>
         </section>
     )

@@ -1,6 +1,4 @@
 import { useTranslation } from 'react-i18next';
-//import 'bootstrap-icons/font/bootstrap-icons.css';
-//import houseLogo from '../../resources/listIcons/house.svg';
 import { FaBuilding } from "react-icons/fa";
 import { MdFamilyRestroom } from "react-icons/md";
 import { TbMilitaryRank } from "react-icons/tb";
@@ -76,7 +74,6 @@ const ServicesList = () => {
                     <li key={index}>
                         <a className='services-link' href={item.href}>
                             {item.icon}
-                            {/* <img src={item.icon} alt={item.title} /> */}
                             <h3>{t(`services.${item.title}`)}</h3>
                         </a>
                     </li>

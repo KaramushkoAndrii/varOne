@@ -1,11 +1,11 @@
+
+
 import { useTranslation } from "react-i18next";
-
 import Button from "../button/Button";
-
 import lawyer from '../../resources/lawyer.webp'
 import './welcome.scss'
 
-const Welcome = () => {
+const Welcome = ({onToggleModal}) => {
 
     const { t } = useTranslation();
     return (
@@ -13,7 +13,7 @@ const Welcome = () => {
             <div className="welcome_info">
                 <h2 className="welcome_title">{t('welcome.title')}</h2>
                 <p className="welcome_description">{t('welcome.description')}</p>
-                <Button text={t('buttons.consultation')} />
+                <Button text={t('buttons.consultation')} onClick={onToggleModal}/>
             </div>
             <div className="welcome_img">
                 <img src={lawyer} alt={lawyer} loading={"lazy"}/>
