@@ -1,8 +1,12 @@
-import { useState } from "react";
 
+import { useState } from "react";
+import { useTranslation } from "react-i18next";
+import Button from "../button/Button";
 import './Modal.scss'
 
 const Modal = ({onToggle, isOpen}) => {
+
+    const { t } = useTranslation();
 
     const [task, setTask] = useState('');
     const [number, setNumber] = useState('')
@@ -19,20 +23,20 @@ const Modal = ({onToggle, isOpen}) => {
         <div className={`modal ${isOpen ? 'modal__open' : ''}`}>
             <header className="modal__header">
                 <h2 className="modal__title">
-                    Идем на встречу нашим клиентам
+                    {t('modal.title')}
                 </h2>
                 <span className="modal__close" onClick={onToggle}>X</span>
             </header>
             <div className="modal__body">
                 <form>
-                    <label htmlFor="task">Stay your task hear</label>
-                    <textarea name="task" id="task" value={task} onChange={changedTask} placeholder="Задача"/>
+                    <label htmlFor="task">{t('modal.task')}</label>
+                    <textarea name="task" id="task" value={task} onChange={changedTask} placeholder={t('modal.text')}/>
 
-                    <label htmlFor="number">Stay your number hear</label>
+                    <label htmlFor="number">{t('modal.number')}</label>
                     <span>
                         <input name="number" id="number" type="tel" value={number} onChange={changedNumber} 
                             placeholder="050 123 456 78 89" />
-                        <button>ClickMe!</button>
+                        <Button text={t('modal.send')} />
                     </span>
                 </form>
             </div>

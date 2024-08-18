@@ -1,13 +1,13 @@
 
 import './Button.scss'
 
-const Button = (props) => {
+const Button = ({bg, onClick, text}) => {
 
     const mainClass = 'main_button'
     
     return (
-        <button className={props.bg ? `${mainClass} ${ props.bg}` : `${mainClass}`} onClick={props.onClick ? props.onClick : null}>
-            {props.text}
+        <button className={bg ? `${mainClass} ${ bg}` : `${mainClass}`} onClick={onClick ? onClick : null}>
+            {text}
         </button>
     )
 }
