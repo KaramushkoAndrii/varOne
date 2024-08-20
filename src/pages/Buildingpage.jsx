@@ -1,7 +1,9 @@
-const Build = () => {
+import PageHeader from "../components/pageHeader/PageHeader";
+
+const BuildingPage = () => {
     return (
-        <h2>BuildingPage</h2>
+        <PageHeader text={'building'} bgClass={'build'}/>
     )
 }
 
-export default Build;
+export default BuildingPage;

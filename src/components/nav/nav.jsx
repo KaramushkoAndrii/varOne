@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next';
+import {Link} from 'react-router-dom'
 
 import './nav.scss'
 
@@ -7,6 +8,10 @@ const Nav = () => {
     const { t } = useTranslation();
 
     const links = [
+        {
+            'href': '/',
+            'title': 'main'
+        },
         {
             'href': '#welcome',
             'title': 'about',
@@ -28,9 +33,9 @@ const Nav = () => {
                 {links.map((item, index) => {
                     return (
                         <li key={index}>
-                            <a href={item.href}>
+                            <Link to={item.href}>
                                 {t(`nav.${item.title}`)}
-                            </a>
+                            </Link>
                         </li>
                     )
                 })}
