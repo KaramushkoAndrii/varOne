@@ -1,4 +1,5 @@
 @import '../../style/var.scss';
+@import '../../style/fonts.scss';
 
 .hero_section {
     position: relative;
@@ -34,6 +35,8 @@
         line-height: 52px;
         margin-bottom: 52px;
         text-align: center;
+        font-family: 'Xolonium', sans-serif;
+        font-weight: bold;
     }
 
     .hero_btn_group {

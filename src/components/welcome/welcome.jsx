@@ -2,7 +2,7 @@
 
 import { useTranslation } from "react-i18next";
 import Button from "../button/Button";
-import lawyer from '../../resources/lawyer.webp'
+import MainFoto from '../../resources/MainFoto.webp'
 import './welcome.scss'
 
 const Welcome = ({onToggleModal}) => {
@@ -16,7 +16,7 @@ const Welcome = ({onToggleModal}) => {
                 <Button text={t('buttons.consultation')} onClick={onToggleModal}/>
             </div>
             <div className="welcome_img">
-                <img src={lawyer} alt={lawyer} loading={"lazy"}/>
+                <img src={MainFoto} alt={MainFoto} loading={"lazy"}/>
             </div>
         </section>
     )

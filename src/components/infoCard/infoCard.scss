@@ -1,0 +1,57 @@
+
+
+@import '../../style/var.scss';
+@import '../../style/fonts.scss';
+
+.info-card {
+    position: sticky;
+    top: 7rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 2rem;
+    align-items: center;
+    width: 25dvw;
+    height: 75dvh;
+    overflow: hidden;
+    font-family: 'Roboto';
+    font-weight: normal;
+    text-align: center;
+    background-color: $grey;
+    padding: 1rem;
+    border-radius: 5px;
+    color: $white;
+
+    &__img {
+        width: 7rem;
+        height: 7rem;
+        border-radius: 50%;
+        overflow: hidden;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+    }
+
+    &__contacts {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 2rem;
+
+        span {
+            color: $primary-color;
+        }
+
+        a {
+            color: $white;
+        }
+    }
+
+    button {
+        width: 100%;
+    }
+}

@@ -1,4 +1,5 @@
 @import '../../style/var.scss';
+@import '../../style/fonts.scss';
 
 .main_button {
     box-shadow: 0 6px 13px -5px #0043ea;
@@ -11,6 +12,8 @@
     font-size: 0.75rem;
     cursor: pointer;
     transition: background-color 0.5s ease, transform 0.3s ease;
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
 
     &:hover {
         transform: scale(1.05);

@@ -31,8 +31,8 @@ function App() {
           <Routes>
             <Route path='/' element={<Layout />}>
               <Route index element={<HomePage onToggleModal={onToggleModal}/>}/>
-              <Route path='building' element={<BuildingPage />}/>
-              <Route path='family' element={<FamilyPage />} />
+              <Route path='building' element={<BuildingPage onToggleModal={onToggleModal}/>}/>
+              <Route path='family' element={<FamilyPage onToggleModal={onToggleModal}/>} />
               <Route path='military' element={<MilitaryPage />} />
               <Route path='lawyer' element={<LawyerPage />} />
               <Route path='duty' element={<DutyPage />} />

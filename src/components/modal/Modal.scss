@@ -1,4 +1,5 @@
 @import '../../style/var.scss';
+@import '../../style/fonts.scss';
 
 .modal {
 
@@ -17,6 +18,8 @@
     opacity: 0;
     visibility: hidden;
     transition: transform 1s ease, opacity 1s ease;
+    font-family: 'Xolonium';
+    font-weight: normal;
 
     &.modal__open {
         visibility: visible;
@@ -131,6 +134,11 @@
 
             span {
                 margin-bottom: 0.5rem;
+                color: $primary-color;
+            }
+
+            a {
+                color: $white;
             }
         }
     }

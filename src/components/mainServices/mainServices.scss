@@ -1,11 +1,17 @@
 @import '../../style/var.scss';
+@import '../../style/fonts.scss';
 
 .services {
+    font-family: 'Xolonium', sans-serif;
+    font-weight: normal;
     padding: 4rem 2rem;
     
     .services__request {
         display: flex;
+        flex-wrap: wrap;
         gap: 1rem;
+        font-family: 'Roboto', sans-serif;
+        font-weight: normal;
 
         p {
             width: clamp(350px, 50rem, 620px);

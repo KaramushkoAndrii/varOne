@@ -46,7 +46,7 @@ const Modal = ({onToggle, isOpen}) => {
                     <a href="mailto:karamushko1997@gmail.com">karamushko1997@gmail.com</a>
                 </div>
                 <div className="modal__item">
-                    <span>Phone number</span>
+                    <span>{t('modal.myNumber')}</span>
                     <a href="tel:+380979863778">+380979863778</a>
                 </div>
             </footer>

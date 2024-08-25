@@ -1,4 +1,5 @@
 @import '../../style/var.scss';
+@import '../../style/fonts.scss';
 
 .language_toggle {
     select {
@@ -9,6 +10,8 @@
         opacity: 0.3;
         color: $black;
         transition: background-color 0.3s ease;
+        font-family: 'Roboto';
+        font-weight: normal;
 
         &:hover {
             opacity: 1;

@@ -1,8 +1,10 @@
 @import '../../style/var.scss';
+@import '../../style/fonts.scss';
 
 .contacts_list {
     display: flex;
     gap: 1rem;
+    font-family: 'Roboto';
 
     a {
         padding: 0.5rem 1rem;
