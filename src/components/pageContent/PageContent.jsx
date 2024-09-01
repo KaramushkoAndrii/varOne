@@ -1,4 +1,4 @@
-
+import React from 'react';
 import { useTranslation } from 'react-i18next';
 import Button from '../button/Button';
 import './pageContent.scss';
@@ -6,11 +6,14 @@ import './pageContent.scss';
 const PageContent = ({title,
                      src, 
                      titleDescription, 
-                     sectionHeader, 
-                     descriptionTop, 
-                     list, 
+                     sectionHeader = '', 
+                     descriptionTop = '', 
+                     list = [], 
                      buttonText='buttons.pageButton', 
-                     descriptionBottom, 
+                     descriptionBottom,
+                     chil = null,
+                     childrenHref = null,
+                     children = null,
                      onToggleModal}) => {
                         
     const { t } = useTranslation();
@@ -40,14 +43,15 @@ const PageContent = ({title,
                 </p>
                 <ul>
                     {list.map((item, key) => (
-                        <li key={key}>{item}</li>
+                        <li key={key}>{t(item)}</li>
                     ))}
                 </ul>
-                <Button text={t(buttonText)}
-                        onClick={onToggleModal}/>
-                <p>
+                {buttonText ? <Button text={t(buttonText)} onClick={onToggleModal}/> : null}
+                <p className={chil ? 'mb-0' : ''}>
                     {t(descriptionBottom)}
                 </p>
+                    {chil ? <a href={childrenHref}>{t(chil)}</a> : null}
+                    {children}
             </section>
         </>
     )

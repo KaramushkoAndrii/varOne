@@ -1,27 +1,28 @@
 import PageHeader from "../components/pageHeader/PageHeader";
 import InfoCard from "../components/infoCard/InfoCard";
 import PageContent from "../components/pageContent/PageContent";
+import Services from "../components/services/Services";
 
 const FamilyPage = ({onToggleModal}) => {
 
-    
-    const list = [
-        "Услуга номер 1",
-        "Услуга номер 2",
-        "Услуга номер 3",
-        "Услуга номер 4",
-        "Услуга номер 1",
-        "Услуга номер 2",
-        "Услуга номер 3",
-        "Услуга номер 4",
-        "Услуга номер 1",
-        "Услуга номер 2",
-        "Услуга номер 3",
-        "Услуга номер 4",
-        "Услуга номер 1",
-        "Услуга номер 2",
-        "Услуга номер 3",
-        "Услуга номер 4"
+
+    //Add translation at translation.json list and listBottom
+
+    const listBottom = [
+        'family-list.min',
+        'family-list.justice',
+        'family-list.guard'
+    ]
+
+    const servicesList = [
+        'family-services.brak',
+        'family-services.imushestvo',
+        'family-services.mesto-zhitelsva-rebenka',
+        'family-services.alimenti',
+        'family-services.osparivanie',
+        'family-services.priznanie-nedeesposobnym',
+        'family-services.projivanie-odnoy-semiey',
+        'family-services.drygie-factory'
     ]
     
     return (
@@ -32,21 +33,22 @@ const FamilyPage = ({onToggleModal}) => {
             <div className="page-container">
                 <InfoCard  onToggleModal={onToggleModal}/>
 
-                <div className="page-info">
+                <section className="page-info">
                     <PageContent title={'family-page.title'}
                                 titleDescription={'family-page.titleDescription'}
                                 sectionHeader={'family-page.sectionHeader'}
                                 descriptionTop={'family-page.descriptionTop'}
-                                descriptionBottom={'family-page.descriptionBottom'}
-                                list={list}
                                 onToggleModal={onToggleModal}/>
 
-                    <PageContent sectionHeader={'family-page.sectionHeader'}
-                                descriptionTop={'family-page.descriptionTop'}
-                                descriptionBottom={'family-page.descriptionBottom'}
-                                list={list}
+                    <PageContent sectionHeader={'family-page.sectionHeaderSecond'}
+                                descriptionTop={'family-page.descriptionTopSecond'}
+                                descriptionBottom={'family-page.descriptionBottomSecond'}
+                                list={listBottom}
                                 onToggleModal={onToggleModal}/>
-                </div>
+
+
+                    <Services list={servicesList}/>
+                </section>
             </div>
         </>
     )

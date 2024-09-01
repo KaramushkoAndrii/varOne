@@ -4,7 +4,6 @@
 @import '../../style/fonts.scss';
 
 .main-section {
-    flex: 3;
     h2 {
         margin: 1rem 0;
     }
@@ -17,8 +16,20 @@
         margin-bottom: 2rem;
     }
 
+    .mb-0 {
+        margin-bottom: 0;
+    }
+
     ul {
         margin: 2rem auto;
+        
+        li {
+            list-style: disc inside;
+
+            &:hover {
+                color: $primary-color;
+            }
+        }
 
         li:not(:first-child) {
             padding-top: 0.5rem;

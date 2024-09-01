@@ -7,10 +7,6 @@
     border: none;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
 body {
     font-family: 'Roboto';
     font-weight: normal;
@@ -29,6 +25,6 @@ h1, h2, h3 {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    gap: 2rem;
-    margin: 3rem 2rem;
+    gap: 10rem;
+    margin: 3rem 6rem;
 }

@@ -9,9 +9,10 @@ nav {
         display: flex;
         column-gap: 0.5rem;
 
-        a {
+        span {
             position: relative;
             color: $white;
+            cursor: pointer;
 
             &::after {
                 position: absolute;

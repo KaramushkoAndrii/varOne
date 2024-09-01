@@ -1,11 +1,13 @@
 import { useTranslation } from 'react-i18next';
-import {Link} from 'react-router-dom'
+import {Link, useNavigate, useLocation} from 'react-router-dom'
 
 import './nav.scss'
 
 const Nav = () => {
 
     const { t } = useTranslation();
+    const navigate = useNavigate();
+    const location = useLocation();
 
     const links = [
         {
@@ -21,10 +23,31 @@ const Nav = () => {
             'title': 'services',
         },
         {
+            'href': 'cases',
+            'title': 'cases'
+        },
+        {
             'href':'#contact',
             'title': 'feedback',
         }
-    ]
+    ];
+
+    const handleNavigation = (href) => {
+        if(href.startsWith('#')) {
+            if(location.pathname !== '/') {
+                navigate('/')
+            }
+
+            setTimeout(() => {
+                const el = document.querySelector(href);
+                if(el) {
+                    el.scrollIntoView({behavior: 'smooth'})
+                }
+            }, 100)
+        } else {
+            navigate(href)
+        }
+    }
 
 
     return (
@@ -33,9 +56,9 @@ const Nav = () => {
                 {links.map((item, index) => {
                     return (
                         <li key={index}>
-                            <Link to={item.href}>
+                            <span onClick={() => handleNavigation(item.href)}>
                                 {t(`nav.${item.title}`)}
-                            </Link>
+                            </span>
                         </li>
                     )
                 })}

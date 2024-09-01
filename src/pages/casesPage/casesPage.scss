@@ -1,0 +1,56 @@
+
+
+@import '../../style/var.scss';
+@import '../../style/fonts.scss';
+
+.main-section {
+
+    .cases__list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+        font-family: 'Xolonium';
+        font-weight: normal;
+        
+
+        .cases__item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 5rem;
+            text-align: center;
+            border-radius: 5px;
+            list-style: none;
+        }
+
+        li:nth-child(10n - 9) {
+            grid-row: span 2;
+        }
+
+        li:nth-child(10n - 2) {
+            grid-row: span 2;
+        }
+    //     li:nth-child(6n-5) {
+    //       grid-column: 1 / 2; /* Объединяем первый элемент первой и второй строки */
+    //       grid-row: span 2;
+    //     }
+        
+    //     li:nth-child(6n-4) {
+    //       grid-column: 2 / 3; /* Обычное расположение для второго элемента */
+    //     }
+        
+    //     li:nth-child(6n-3) {
+    //       grid-column: 3 / 4; /* Объединяем третий элемент первой и второй строки */
+    //       grid-row: span 2;
+    //     }
+        
+    //     li:nth-child(6n-2),
+    //     li:nth-child(6n-1) {
+    //       grid-column: span 1; /* Обычное расположение для оставшихся элементов */
+    //     }
+        
+    //     li:nth-child(6n) {
+    //       grid-column: 3 / 4;
+    //     }
+    }
+}
