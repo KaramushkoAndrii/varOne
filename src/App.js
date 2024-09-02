@@ -5,7 +5,7 @@ import Modal from './components/modal/Modal';
 import ScrollToAim from './components/scrollToAim/ScrollToAim';
 
 import Layout from './components/layout/Layout';
-import HomePage from './pages/HomePage';
+import HomePage from './pages/Homepage';
 import BuildingPage from './pages/BuildingPage';
 import FamilyPage from './pages/FamilyPage';
 import MilitaryPage from './pages/MilitaryPage';
