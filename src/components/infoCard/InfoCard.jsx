@@ -3,12 +3,13 @@ import { useTranslation } from 'react-i18next';
 import './infoCard.scss';
 import Button from '../../components/button/Button';
 import modal from '../../resources/modal.webp';
+import MyContacts from '../myContacts/MyContacts';
 
 
 const InfoCard = ({img=modal, 
                    name='info-card.name', 
-                   mail='karamushko1997@gmal.com', 
-                   number=+380979863778, 
+                   mail=MyContacts[0], 
+                   number=MyContacts[1], 
                    about='info-card.about',
                    onToggleModal}) => {
 

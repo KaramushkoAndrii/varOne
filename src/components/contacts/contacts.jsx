@@ -1,3 +1,5 @@
+import MyContacts from '../myContacts/MyContacts'
+
 import './contacts.scss'
 
 
@@ -5,10 +7,10 @@ const Contacts = () => {
     return (
         <ul className='contacts_list'>
             <li>
-                <a href='tel:+380979863778'> +380979863778 </a>
+                <a href={`tel:${MyContacts[1]}`}> {MyContacts[1]} </a>
             </li>
             <li>
-                <a href="mailto:karamushko1997@gmail.com">karamushko1997@gmail</a>
+                <a href={`mailto:${MyContacts[0]}`}>{MyContacts[0]}</a>
             </li>
         </ul>
     )
