@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import PageHeader from "../components/pageHeader/PageHeader";
 import InfoCard from "../components/infoCard/InfoCard";
 import PageContent from "../components/pageContent/PageContent";
+import RecomendList from "../components/recomendList/RecomendList";
 
 const AdministrativeLawPage = ({onToggleModal}) => {
 
@@ -25,15 +26,6 @@ const AdministrativeLawPage = ({onToggleModal}) => {
         'administrativeLaw-services.podgotovka',
         'administrativeLaw-services.vozrajeniya',
         'administrativeLaw-services.predstavitelstvo',
-    ]
-
-    const recomendList = [
-        'administrativeLaw-recomend.callback',
-        'administrativeLaw-recomend.strategy',
-        'administrativeLaw-recomend.promise',
-        'administrativeLaw-recomend.dogovor',
-        'administrativeLaw-recomend.specializaciya',
-        'administrativeLaw-recomend.free',
     ]
 
 
@@ -63,13 +55,9 @@ const AdministrativeLawPage = ({onToggleModal}) => {
                                     </li>
                                 ))}
                             </ul>
-                            <h2>{t('administrativeLaw-page.polezen')}</h2>
-                            <h3>{t('administrativeLaw-page.recomend')}</h3>
-                            <ul>
-                                {recomendList.map((item, key) => (
-                                    <li key={key}>{t(`${item}`)}</li>
-                                ))}
-                            </ul>
+
+                            <RecomendList />
+                            
                         </PageContent>
 
 

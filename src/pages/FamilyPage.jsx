@@ -1,3 +1,5 @@
+
+
 import PageHeader from "../components/pageHeader/PageHeader";
 import InfoCard from "../components/infoCard/InfoCard";
 import PageContent from "../components/pageContent/PageContent";
@@ -15,14 +17,31 @@ const FamilyPage = ({onToggleModal}) => {
     ]
 
     const servicesList = [
-        'family-services.brak',
-        'family-services.imushestvo',
-        'family-services.mesto-zhitelsva-rebenka',
-        'family-services.alimenti',
-        'family-services.osparivanie',
-        'family-services.priznanie-nedeesposobnym',
-        'family-services.projivanie-odnoy-semiey',
-        'family-services.drygie-factory'
+        {link: 'brak',
+         name: 'family-services.brak'
+        },
+
+        {link: 'imushestvo',
+         name: 'family-services.imushestvo'
+        },
+        {link: 'mesto-zhitelsva-rebenka',
+         name: 'family-services.mesto-zhitelsva-rebenka'
+        },
+        {link: 'alimenti',
+         name: 'family-services.alimenti'
+        },
+        {link: 'osparivanie',
+         name: 'family-services.osparivanie'
+        },
+        {link: 'priznanie-nedeesposobnym',
+         name: 'family-services.priznanie-nedeesposobnym'
+        },
+        {link: 'projivanie-odnoy-semiey',
+         name:'family-services.projivanie-odnoy-semiey'
+        },
+        {link: 'drygie-factory',
+         name: 'family-services.drygie-factory'
+        }  
     ]
     
     return (

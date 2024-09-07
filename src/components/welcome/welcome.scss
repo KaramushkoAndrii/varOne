@@ -21,8 +21,14 @@
     }
 
     &_img {
+        width: 100%;
         max-width: 50vw;
         max-height: 85vh;
+
+        & > iframe {
+            width: 100%;
+            height: 69.5dvh;
+        }
 
         & > img {
             width: 100%;

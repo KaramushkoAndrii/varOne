@@ -16,6 +16,7 @@ import WorkerPage from './pages/WorkerPage';
 import AdministrativeLawPage from './pages/AdministrativeLawPage';
 import AdministrativeViolationPage from './pages/AdministrativeViolationPage';
 import CasesPage from './pages/casesPage/CasesPage';
+import BrakPage from './pages/BrakPage';
 
 
 
@@ -36,7 +37,8 @@ function App() {
               <Route index element={<HomePage onToggleModal={onToggleModal}/>}/>
               <Route path='cases' element={<CasesPage onToggleModal={onToggleModal}/>}/>
               <Route path='building' element={<BuildingPage onToggleModal={onToggleModal}/>}/>
-              <Route path='family' element={<FamilyPage onToggleModal={onToggleModal}/>} />
+              <Route path='family/*' element={<FamilyPage onToggleModal={onToggleModal}/>} />
+                  <Route path='family/brak' element={<BrakPage onToggleModal={onToggleModal}/>}/>
               <Route path='military' element={<MilitaryPage />} />
               <Route path='lawyer' element={<LawyerPage />} />
               <Route path='duty' element={<DutyPage onToggleModal={onToggleModal}/>} />

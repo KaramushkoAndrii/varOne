@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 
 import './services.scss';
 
@@ -10,7 +11,9 @@ const Services = ({list}) => {
             <ul className='page-services'>
                 {list.map((item, key) => (
                     <li key={key}> 
-                        {t(item)}    
+                        <Link to={item.link}>
+                            {t(item.name)}
+                        </Link>    
                     </li>
                 ))}
             </ul>

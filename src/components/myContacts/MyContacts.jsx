@@ -1,8 +1,8 @@
 
 
 const MyContacts = [
-    'karamushko1997@gmail.com',
-    '+380979863778'
+    'advokatvlad988@gmail.com',
+    '+380982892372'
 ]
 
 export default MyContacts
