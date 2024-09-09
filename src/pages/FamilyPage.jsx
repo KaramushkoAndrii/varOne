@@ -24,7 +24,7 @@ const FamilyPage = ({onToggleModal}) => {
         {link: 'imushestvo',
          name: 'family-services.imushestvo'
         },
-        {link: 'mesto-zhitelsva-rebenka',
+        {link: 'distribution',
          name: 'family-services.mesto-zhitelsva-rebenka'
         },
         {link: 'alimenti',

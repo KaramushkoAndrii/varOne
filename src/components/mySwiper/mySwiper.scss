@@ -70,13 +70,36 @@
     width: 5rem;
     height: 5rem;
     background-color: $primary-color;
-    border-radius: 5px;
+    border-radius: 50%;
+
+    & > svg {
+
+      position: relative;
+
+      path {
+        stroke: white;
+      }
+    }
 }
 
-.swiper-btn-prev {
-    background-image: url('../../resources/arrow.png');
-    object-fit: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    
+.swiper-btn-prev svg {
+  right: 5px;
 }
+
+.swiper-btn-next svg {
+  left: 5px;
+}
+
+// .swiper-btn-prev {
+//   background-image: url('../../resources/arrow.svg');
+//   object-fit: contain;
+//   background-repeat: no-repeat;
+//   background-position: center; 
+// }
+
+// .swiper-btn-next {
+//   background-image: url('../../resources/arrow.svg');
+//   object-fit: contain;
+//   background-repeat: no-repeat;
+//   background-position: center; 
+// }

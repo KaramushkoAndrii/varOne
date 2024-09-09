@@ -23,6 +23,8 @@
         z-index: 3;
         letter-spacing: 0.5rem;
         text-transform: uppercase;
+        padding-inline: 5rem;
+        text-align: center;
     }
 
     &::before {
@@ -86,4 +88,8 @@
 .brak {
     background-image: url('../../resources/alimenti.webp');
     background-position: center;
+}
+
+.distribution {
+    background-image: url('../../resources/distribution.webp');
 }

@@ -4,6 +4,9 @@ import { useTranslation } from "react-i18next";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 
+import {ReactComponent as ArrowPrev} from '../../resources/arrow.svg';
+import {ReactComponent as ArrowNext} from '../../resources/arrowNext.svg';
+
 
 
 import 'swiper/css';
@@ -35,8 +38,12 @@ const MySwiper = ({slides, swiperConfig, moreBtn}) => {
             ))}
         </Swiper>
         <div className="swiper-navigation">
-            <div className="swiper-btn-prev" />
-            <div className="swiper-btn-next" />
+            <div className="swiper-btn-prev">
+                <ArrowPrev />
+            </div>    
+            <div className="swiper-btn-next">
+                <ArrowNext />
+            </div>
         </div>
         </>
     )

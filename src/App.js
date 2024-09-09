@@ -17,6 +17,7 @@ import AdministrativeLawPage from './pages/AdministrativeLawPage';
 import AdministrativeViolationPage from './pages/AdministrativeViolationPage';
 import CasesPage from './pages/casesPage/CasesPage';
 import BrakPage from './pages/brakPage/BrakPage';
+import DistributionPage from './pages/distributionPage/DistributionPage';
 
 
 
@@ -39,6 +40,7 @@ function App() {
               <Route path='building' element={<BuildingPage onToggleModal={onToggleModal}/>}/>
               <Route path='family/*' element={<FamilyPage onToggleModal={onToggleModal}/>} />
                   <Route path='family/brak' element={<BrakPage onToggleModal={onToggleModal}/>}/>
+                  <Route path='family/distribution' element={<DistributionPage />} />
               <Route path='military' element={<MilitaryPage />} />
               <Route path='lawyer' element={<LawyerPage />} />
               <Route path='duty' element={<DutyPage onToggleModal={onToggleModal}/>} />
