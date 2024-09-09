@@ -3,6 +3,9 @@
 import { useTranslation } from "react-i18next";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
+
+
+
 import 'swiper/css';
 import './mySwiper.scss'
 
