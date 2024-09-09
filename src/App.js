@@ -16,7 +16,7 @@ import WorkerPage from './pages/WorkerPage';
 import AdministrativeLawPage from './pages/AdministrativeLawPage';
 import AdministrativeViolationPage from './pages/AdministrativeViolationPage';
 import CasesPage from './pages/casesPage/CasesPage';
-import BrakPage from './pages/BrakPage';
+import BrakPage from './pages/brakPage/BrakPage';
 
 
 

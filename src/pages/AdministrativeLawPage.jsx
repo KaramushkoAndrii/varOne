@@ -21,11 +21,11 @@ const AdministrativeLawPage = ({onToggleModal}) => {
     ]
 
     const adminHelpList = [
-        'administrativeLaw-services.analiz',
-        'administrativeLaw-services.jaloba',
-        'administrativeLaw-services.podgotovka',
-        'administrativeLaw-services.vozrajeniya',
-        'administrativeLaw-services.predstavitelstvo',
+        'analiz',
+        'jaloba',
+        'podgotovka',
+        'vozrajeniya',
+        'predstavitelstvo',
     ]
 
 
@@ -51,7 +51,7 @@ const AdministrativeLawPage = ({onToggleModal}) => {
                             <ul>
                                 {adminHelpList.map((item, key) => (
                                     <li key={key}>
-                                        {t(`${item}`)}
+                                        {t(`administrativeLaw-services.${item}`)}
                                     </li>
                                 ))}
                             </ul>
@@ -60,8 +60,6 @@ const AdministrativeLawPage = ({onToggleModal}) => {
                             
                         </PageContent>
 
-
-                        {/* <Services list={servicesList}/> */}
                     </section>
             </div>
         </>

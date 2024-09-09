@@ -1,13 +1,18 @@
 
 import { useTranslation } from "react-i18next";
 
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
+import MySwiper from "../../components/mySwiper/MySwiper";
 
-import PageHeader from "../components/pageHeader/PageHeader";
-import PageContent from "../components/pageContent/PageContent";
-import InfoCard from "../components/infoCard/InfoCard";
-import RecomendList from "../components/recomendList/RecomendList";
+import PageHeader from "../../components/pageHeader/PageHeader";
+import PageContent from "../../components/pageContent/PageContent";
+import InfoCard from "../../components/infoCard/InfoCard";
+import RecomendList from "../../components/recomendList/RecomendList";
+import foto from '../../resources/cases.webp';
+import foto2 from '../../resources/duty.webp';
+import foto3 from '../../resources/family.webp';
+import foto4 from '../../resources/lawyerH.webp';
+
+import './brakPage.scss';
 
 const BrakPage = ({onToggleModal}) => {
 
@@ -49,28 +54,37 @@ const BrakPage = ({onToggleModal}) => {
         'sixth'
     ]
 
-    const win = [
+    const slideData = [
         {
-            title: "divorce-and-alimony",
-            img: "",
-            url: "https://reyestr.court.gov.ua/Review/110419172"
+            image: foto,
+            alt: 'descr',
+            title:'brak-win.divorce-and-alimony',
+            link: 'https://reyestr.court.gov.ua/Review/110419172 '
         },
         {
-            title: "divorce",
-            img: "",
-            url: "https://reyestr.court.gov.ua/Review/100898590"
+            image: foto2,
+            title: 'brak-win.divorce',
+            link: 'https://reyestr.court.gov.ua/Review/100898590 '
         },
         {
-            title: "alimony",
-            img: "",
-            url: "https://reyestr.court.gov.ua/Review/93891443"
+            image: foto3,
+            alt: 'descr',
+            title: 'brak-win.alimony',
+            link: 'https://reyestr.court.gov.ua/Review/93891443'
         },
         {
-            title: "change-alimony",
-            img: "",
-            url: "https://reyestr.court.gov.ua/Review/98285614"
+            image: foto4,
+            alt: 'descr',
+            title: 'brak-win.change-alimony',
+            link: 'https://reyestr.court.gov.ua/Review/98285614'
         }
     ]
+
+    const swiperConfig = {
+        spaceBetween: 30,
+        slidesPerView: 1,
+        loop: true
+    };
 
     return (
         <>
@@ -113,7 +127,12 @@ const BrakPage = ({onToggleModal}) => {
 
                         <RecomendList />
 
-                        <h2>{t('brak-win.title')}</h2>
+                        <h2 className="brak-win">{t('brak-win.title')}</h2>
+
+                        <MySwiper slides={slideData} 
+                                  swiperConfig={swiperConfig}
+                                  moreBtn={'brak-win.button'} />
+                        
                     </PageContent>
                 </section>
 
