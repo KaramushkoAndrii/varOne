@@ -1,0 +1,7 @@
+
+
+.recomend-list {
+    li:not(:last-child) {
+        padding-bottom: 1rem;
+    }
+}

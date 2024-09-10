@@ -7,7 +7,7 @@ const Services = ({list}) => {
     const { t } = useTranslation();
     return (
         <>
-            <h2>{t('services.services')}</h2>
+            <h2 className='services__title'>{t('services.services')}</h2>
             <ul className='page-services'>
                 {list.map((item, key) => (
                     <li key={key}> 

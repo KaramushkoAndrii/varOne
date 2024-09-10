@@ -3,7 +3,6 @@
 
 
 .swiper {
-    //margin-left: 0;
     max-width: 50vw;
 }
 
@@ -16,7 +15,7 @@
     width: 100%;
     height: 30rem;
     border-radius: 5px;
-    object-fit: cover;
+    object-fit: contain;
   }
   
   .slide-description {
@@ -47,7 +46,6 @@
 
   .swiper-button-prev,
 .swiper-button-next {
-    color: #000; /* Цвет стрелок */
     width: 30px;
     height: 30px;
 }
@@ -90,17 +88,3 @@
 .swiper-btn-next svg {
   left: 5px;
 }
-
-// .swiper-btn-prev {
-//   background-image: url('../../resources/arrow.svg');
-//   object-fit: contain;
-//   background-repeat: no-repeat;
-//   background-position: center; 
-// }
-
-// .swiper-btn-next {
-//   background-image: url('../../resources/arrow.svg');
-//   object-fit: contain;
-//   background-repeat: no-repeat;
-//   background-position: center; 
-// }

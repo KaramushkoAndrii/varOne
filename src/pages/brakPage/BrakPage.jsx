@@ -7,10 +7,10 @@ import PageHeader from "../../components/pageHeader/PageHeader";
 import PageContent from "../../components/pageContent/PageContent";
 import InfoCard from "../../components/infoCard/InfoCard";
 import RecomendList from "../../components/recomendList/RecomendList";
-import foto from '../../resources/cases.webp';
-import foto2 from '../../resources/duty.webp';
-import foto3 from '../../resources/family.webp';
-import foto4 from '../../resources/lawyerH.webp';
+import alimonyForKids from '../../resources/alimony3kids.webp';
+import breakingUp from '../../resources/breakingUp.webp';
+import alimonyForWife from '../../resources/alimonyForWife.webp';
+import alimonyLess from '../../resources/alimonyLess.webp';
 
 import './brakPage.scss';
 
@@ -56,24 +56,24 @@ const BrakPage = ({onToggleModal}) => {
 
     const slideData = [
         {
-            image: foto,
+            image: alimonyForKids,
             alt: 'descr',
             title:'brak-win.divorce-and-alimony',
             link: 'https://reyestr.court.gov.ua/Review/110419172 '
         },
         {
-            image: foto2,
+            image: breakingUp,
             title: 'brak-win.divorce',
             link: 'https://reyestr.court.gov.ua/Review/100898590 '
         },
         {
-            image: foto3,
+            image: alimonyForWife,
             alt: 'descr',
             title: 'brak-win.alimony',
             link: 'https://reyestr.court.gov.ua/Review/93891443'
         },
         {
-            image: foto4,
+            image: alimonyLess,
             alt: 'descr',
             title: 'brak-win.change-alimony',
             link: 'https://reyestr.court.gov.ua/Review/98285614'

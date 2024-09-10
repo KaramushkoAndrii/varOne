@@ -15,7 +15,7 @@ const InfoCard = ({img=modal,
 
     const { t } = useTranslation();
     return (
-        <div className='info-card'>
+        <aside className='info-card'>
             <div className='info-card__img'>
                 <img src={img}  alt={img}/>
             </div>
@@ -37,7 +37,7 @@ const InfoCard = ({img=modal,
             </p>
             <Button text={t('info-card.button')}
                     onClick={onToggleModal}/>
-        </div>
+        </aside>
     )
 }
 

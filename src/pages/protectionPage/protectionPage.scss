@@ -1,0 +1,18 @@
+@import '../../style/var.scss';
+@import '../../style/fonts.scss';
+
+
+.protection__list {
+
+    margin-bottom: 2rem;
+
+    
+    .protection__item {
+        list-style: decimal;
+        margin-bottom: 1rem;
+    
+        &:hover {
+            color: $primary-color;
+        }
+    }
+}

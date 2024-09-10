@@ -11,13 +11,14 @@ import FamilyPage from './pages/FamilyPage';
 import MilitaryPage from './pages/MilitaryPage';
 import LawyerPage from './pages/LawyerPage';
 import DutyPage from './pages/DutyPage';
-import ProtectionPage from './pages/ProtectionPage';
+import ProtectionPage from './pages/protectionPage/ProtectionPage';
 import WorkerPage from './pages/WorkerPage';
 import AdministrativeLawPage from './pages/AdministrativeLawPage';
 import AdministrativeViolationPage from './pages/AdministrativeViolationPage';
 import CasesPage from './pages/casesPage/CasesPage';
 import BrakPage from './pages/brakPage/BrakPage';
 import DistributionPage from './pages/distributionPage/DistributionPage';
+import CreditPage from './pages/creditPage/CreditPage';
 
 
 
@@ -40,11 +41,12 @@ function App() {
               <Route path='building' element={<BuildingPage onToggleModal={onToggleModal}/>}/>
               <Route path='family/*' element={<FamilyPage onToggleModal={onToggleModal}/>} />
                   <Route path='family/brak' element={<BrakPage onToggleModal={onToggleModal}/>}/>
-                  <Route path='family/distribution' element={<DistributionPage />} />
+                  <Route path='family/distribution' element={<DistributionPage onToggleModal={onToggleModal}/>} />
               <Route path='military' element={<MilitaryPage />} />
               <Route path='lawyer' element={<LawyerPage />} />
               <Route path='duty' element={<DutyPage onToggleModal={onToggleModal}/>} />
-              <Route path='protection' element={<ProtectionPage />} />
+              <Route path='protection/*' element={<ProtectionPage onToggleModal={onToggleModal}/>} />
+                  <Route path='protection/security' element={<CreditPage onToggleModal={onToggleModal}/>}/>
               <Route path='worker' element={<WorkerPage/>} />
               <Route path='administrative-law' element={<AdministrativeLawPage onToggleModal={onToggleModal}/>} />
               <Route path='administrative-violation' element={<AdministrativeViolationPage/>} />

@@ -1,0 +1,17 @@
+
+
+@import '../../style/fonts.scss';
+@import '../../style/var.scss';
+
+.credit {
+    p {
+        font-weight: 700;
+    }
+}
+
+
+.credit__help-list {
+    li:not(:last-child) {
+        padding-bottom: 1rem;
+    }
+}
