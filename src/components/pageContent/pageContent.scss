@@ -4,9 +4,6 @@
 @import '../../style/fonts.scss';
 
 .main-section {
-    h2 {
-        margin: 1rem 0;
-    }
 
     h2:nth-child(1) {
         margin-top: 0;
@@ -30,10 +27,6 @@
                 color: $primary-color;
             }
         }
-
-        // li:not(:first-child) {
-        //     padding-top: 0.5rem;
-        // }
     }
 
     button {

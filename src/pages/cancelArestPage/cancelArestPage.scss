@@ -1,0 +1,29 @@
+
+
+@import '../../style/fonts.scss';
+@import '../../style/var.scss';
+
+
+.arest__content {
+    padding-top: 1rem;
+}
+
+.arest__subtitle {
+    text-decoration: underline;
+    padding-top: 2rem;
+}
+
+.arrested-list__item {
+    padding-top: 1rem;
+    list-style: disc;
+}
+
+.how-cancel__list {
+    li {
+        list-style: decimal;
+    }
+}
+
+.arest__conclusion {
+    padding: 2rem 0;
+}
