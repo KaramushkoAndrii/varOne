@@ -21,7 +21,7 @@ const PageContent = ({title,
     const sectionTitle = () => {
         return (
             <>
-                <h2>{t(title)}</h2>
+                <h2 className='page__title'>{t(title)}</h2>
                 {src ? <video scr={src} /> : null}
                 <p className={`main-subtitle ${title}`}>
                     {t(titleDescription)}
@@ -41,9 +41,9 @@ const PageContent = ({title,
                 <p>
                     {t(descriptionTop)}
                 </p>
-                <ul>
+                <ul className='description__list'>
                     {list.map((item, key) => (
-                        <li key={key}>{t(item)}</li>
+                        <li className='description__item' key={key}>{t(item)}</li>
                     ))}
                 </ul>
                 {buttonText ? <Button text={t(buttonText)} onClick={onToggleModal}/> : null}

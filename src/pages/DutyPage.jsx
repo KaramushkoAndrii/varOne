@@ -14,6 +14,7 @@ const DutyPage = ({onToggleModal}) => {
 
                 <section className="page-info">
                     <PageContent title={'duty-page.title'}
+                                buttonText={null}
                                 titleDescription={'duty-page.titleDescription'}
                                 sectionHeader={'duty-page.sectionHeader'}
                                 descriptionTop={'duty-page.descriptionTop'}

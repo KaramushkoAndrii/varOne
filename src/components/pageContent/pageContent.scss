@@ -36,3 +36,11 @@
         margin: 0 auto 1rem;
     }
 }
+
+.page__title {
+    margin-bottom: 1.5rem;
+}
+
+.description__item:not(:last-child) {
+    padding-bottom: 1rem;
+}

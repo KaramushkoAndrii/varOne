@@ -43,7 +43,7 @@ function App() {
               <Route path='family/*' element={<FamilyPage onToggleModal={onToggleModal}/>} />
                   <Route path='family/brak' element={<BrakPage onToggleModal={onToggleModal}/>}/>
                   <Route path='family/distribution' element={<DistributionPage onToggleModal={onToggleModal}/>} />
-              <Route path='military' element={<MilitaryPage />} />
+              <Route path='military' element={<MilitaryPage  onToggleModal={onToggleModal}/>} />
               <Route path='lawyer' element={<LawyerPage />} />
               <Route path='duty' element={<DutyPage onToggleModal={onToggleModal}/>} />
               <Route path='protection/*' element={<ProtectionPage onToggleModal={onToggleModal}/>} />
