@@ -20,6 +20,7 @@ import BrakPage from './pages/brakPage/BrakPage';
 import DistributionPage from './pages/distributionPage/DistributionPage';
 import CreditPage from './pages/creditPage/CreditPage';
 import CancelArestPage from './pages/cancelArestPage/CancelArestPage';
+import PodilMainaPage from './pages/podilMainaPage/PodilMaina';
 
 
 
@@ -43,6 +44,7 @@ function App() {
               <Route path='family/*' element={<FamilyPage onToggleModal={onToggleModal}/>} />
                   <Route path='family/brak' element={<BrakPage onToggleModal={onToggleModal}/>}/>
                   <Route path='family/distribution' element={<DistributionPage onToggleModal={onToggleModal}/>} />
+                  <Route path='family/podil-maina' element={<PodilMainaPage onToggleModal={onToggleModal} />} />
               <Route path='military' element={<MilitaryPage  onToggleModal={onToggleModal}/>} />
               <Route path='lawyer' element={<LawyerPage />} />
               <Route path='duty' element={<DutyPage onToggleModal={onToggleModal}/>} />

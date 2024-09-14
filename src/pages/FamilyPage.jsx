@@ -21,7 +21,7 @@ const FamilyPage = ({onToggleModal}) => {
          name: 'family-services.brak'
         },
 
-        {link: 'imushestvo',
+        {link: 'podil-maina',
          name: 'family-services.imushestvo'
         },
         {link: 'distribution',

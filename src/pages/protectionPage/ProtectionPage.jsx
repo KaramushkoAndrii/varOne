@@ -66,13 +66,6 @@ const ProtectionPage = ({onToggleModal}) => {
                                  descriptionTop={'protection-page.creditors'}>
 
                         <h2>{t('protection-page-list.title')}</h2>
-                        
-                        {/* <ol className="protection__list">
-                            {servicesList.map((item, key) => (
-                                <li key={key} className="protection__item">
-                                    {t(`protection-page-list.${item}`)}
-                                </li>))}
-                        </ol> */}
 
                         <Services list={servicesList} />
 

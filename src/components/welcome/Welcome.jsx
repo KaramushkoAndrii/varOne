@@ -27,20 +27,9 @@ const Welcome = ({onToggleModal}) => {
         />
     );
 
-    const casesList = [
-        'civil-cases',
-        'family-cases',
-        'admin-cases',
-        'admin-cases-more',
-        'arest-cases'
-    ]
-
     const welcomeContent = [
-        'before',
-        'study',
-        'after',
-        'first-company',
-        'second-lawyer',
+        'title',
+        'start',
         'now'
     ]
 
@@ -52,18 +41,22 @@ const Welcome = ({onToggleModal}) => {
 
                 {welcomeContent.map((item, key) => <p key={key} className="welcome_description">{t(`bio.${item}`)}</p>)}
 
-                <ul className="welcome-list">
-                    {casesList.map((item, key) => (
-                        <li key={key} className="welcome-list__item">{t(`bio-list.${item}`)}</li>
-                    ))}
-                </ul>
-
                 <Button text={t('buttons.consultation')} onClick={onToggleModal}/>
 
                 <Button text={film ? 'Назад' : t('buttons.video')} onClick={handleVideoToggle}/>
                 
             </div>
             <div className="welcome_img">
+
+                
+                <div className="welcome__slogan" style={{display: film ? 'none' : 'block'}}>
+                    <p className="welcome__slogan--content">
+                        "Amat  Victoria Curam"
+                        <span>{t('bio.slogan')}</span>
+                    </p>
+                </div>
+
+
                 {film ? 
                          video :
                          <img src={MainFoto} alt={MainFoto} loading={"lazy"}/>}

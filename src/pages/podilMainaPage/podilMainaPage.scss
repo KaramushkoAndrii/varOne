@@ -1,0 +1,20 @@
+
+
+@import '../../style/var.scss';
+@import '../../style/fonts.scss';
+
+.podil__item:not(:last-child) {
+    padding-bottom: 0.5rem;
+}
+
+.razdel__description {
+    margin-bottom: 1rem;
+}
+
+.podil__slider--title {
+    padding-bottom: 2.5rem;
+}
+
+.podil__rezdel--title {
+    margin-top: 2.5rem;
+}

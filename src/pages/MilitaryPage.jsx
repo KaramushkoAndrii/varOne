@@ -56,6 +56,8 @@ const MilitaryPage = ({onToggleModal}) => {
 
                                 <Services list={militaryServices} />
 
+                                <h3 className="protection-page__lower">{t('protection-page.more')}</h3>
+
                     </PageContent>
                 </section>
             </div>

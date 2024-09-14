@@ -131,7 +131,7 @@ const BrakPage = ({onToggleModal}) => {
 
                         <MySwiper slides={slideData} 
                                   swiperConfig={swiperConfig}
-                                  moreBtn={'brak-win.button'} />
+                                  moreBtn={'buttons.detal'} />
                         
                     </PageContent>
                 </section>
