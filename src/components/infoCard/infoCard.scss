@@ -55,3 +55,9 @@
         width: 100%;
     }
 }
+
+@media (max-width: 768px) {
+    .info-card {
+        display: none;
+    }
+}

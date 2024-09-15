@@ -1,0 +1,20 @@
+
+
+@import '../../style/var.scss';
+@import '../../style/fonts.scss';
+
+.vozvrat__title {
+    padding-bottom: 1rem;
+}
+
+.dosudebnoe__list--item:not(:last-child) {
+    padding-bottom: 1rem;
+}
+
+.main-section .dosudebnyi__list {
+    margin-bottom: 1rem;
+}
+
+.wining-list__vozvrat-dolga {
+    margin: 1.5rem 0;
+}

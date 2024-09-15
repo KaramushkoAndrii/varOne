@@ -1,8 +1,17 @@
+
+
+import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+
 import PageHeader from "../components/pageHeader/PageHeader";
 import InfoCard from "../components/infoCard/InfoCard";
 import PageContent from "../components/pageContent/PageContent";
 
 const DutyPage = ({onToggleModal}) => {
+
+    // const a = childrenHref={'/'}
+
+    const { t } = useTranslation();
 
     return (
         <>
@@ -21,10 +30,11 @@ const DutyPage = ({onToggleModal}) => {
                                 onToggleModal={onToggleModal}/>
                     <PageContent sectionHeader={'duty-page.sectionHeaderSecond'}
                                 descriptionTop={'duty-page.descriptionTopSecond'}
-                                descriptionBottom={'duty-page.descriptionBottomSecond'}
-                                onToggleModal={onToggleModal}
-                                chil={'duty-page.dolg'}
-                                childrenHref={'/'}/>
+                                onToggleModal={onToggleModal}>
+                                
+
+                        <span>{t('duty-page.descriptionBottomSecond')}<Link to={'borg'}>{t('duty-page.dolg')}</Link></span>
+                    </PageContent>
                 </section>
             </div>
         </>

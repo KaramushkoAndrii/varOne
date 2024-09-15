@@ -11,8 +11,6 @@ const PageContent = ({title,
                      list = [], 
                      buttonText='buttons.pageButton', 
                      descriptionBottom,
-                     chil = null,
-                     childrenHref = null,
                      children = null,
                      onToggleModal}) => {
                         
@@ -47,10 +45,7 @@ const PageContent = ({title,
                     ))}
                 </ul>
                 {buttonText ? <Button text={t(buttonText)} onClick={onToggleModal}/> : null}
-                <p className={chil ? 'mb-0' : ''}>
-                    {t(descriptionBottom)}
-                </p>
-                    {chil ? <a href={childrenHref}>{t(chil)}</a> : null}
+                <p>{t(descriptionBottom)}</p> 
                     {children}
             </section>
         </>

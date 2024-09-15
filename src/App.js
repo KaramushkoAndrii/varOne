@@ -21,6 +21,7 @@ import DistributionPage from './pages/distributionPage/DistributionPage';
 import CreditPage from './pages/creditPage/CreditPage';
 import CancelArestPage from './pages/cancelArestPage/CancelArestPage';
 import PodilMainaPage from './pages/podilMainaPage/PodilMaina';
+import PovernenyaBorguPage from './pages/povernenyaBorguPage/PovernenyaBorguPage';
 
 
 
@@ -47,7 +48,8 @@ function App() {
                   <Route path='family/podil-maina' element={<PodilMainaPage onToggleModal={onToggleModal} />} />
               <Route path='military' element={<MilitaryPage  onToggleModal={onToggleModal}/>} />
               <Route path='lawyer' element={<LawyerPage />} />
-              <Route path='duty' element={<DutyPage onToggleModal={onToggleModal}/>} />
+              <Route path='duty/*' element={<DutyPage onToggleModal={onToggleModal}/>} />
+                  <Route path='duty/borg' element={<PovernenyaBorguPage onToggleModal={onToggleModal} />} />
               <Route path='protection/*' element={<ProtectionPage onToggleModal={onToggleModal}/>} />
                   <Route path='protection/security' element={<CreditPage onToggleModal={onToggleModal}/>}/>
                   <Route path='protection/cancel' element={<CancelArestPage onToggleModal={onToggleModal}/>} />
