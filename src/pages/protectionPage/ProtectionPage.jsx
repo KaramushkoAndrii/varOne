@@ -63,7 +63,8 @@ const ProtectionPage = ({onToggleModal}) => {
                 <section className="page-info">
                     <PageContent title={'protection-page.title'}
                                  titleDescription={'protection-page.often'}
-                                 descriptionTop={'protection-page.creditors'}>
+                                 descriptionTop={'protection-page.creditors'}
+                                 buttonText={null}>
 
                         <h2>{t('protection-page-list.title')}</h2>
 

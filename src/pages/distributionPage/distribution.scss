@@ -2,3 +2,16 @@
 
 @import '../../style/var.scss';
 @import '../../style/fonts.scss';
+
+.lishenie__prav--item:not(:last-child),.uchastie__item:not(:last-child),
+.lishenie__item:not(:last-child),.posledstviya__item:not(:last-child) {
+    padding-bottom: 1.5rem;
+}
+
+.obshenie__title, .lishenie__title, .distribution__win {
+    padding-bottom: 1.5rem;
+}
+
+.obshenie__title {
+    padding-top: 1rem;
+}
