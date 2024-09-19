@@ -94,6 +94,8 @@ const AdministrativeViolationPage = ({onToggleModal}) => {
                                 </ul>
 
                                 <Services title={'admin-violation-page.services-title'} list={servicesList} />
+
+                                <h3 className="protection-page__lower">{t('protection-page.more')}</h3>
                     </PageContent>
 
                 </section>

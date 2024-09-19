@@ -66,9 +66,7 @@ const ProtectionPage = ({onToggleModal}) => {
                                  descriptionTop={'protection-page.creditors'}
                                  buttonText={null}>
 
-                        <h2>{t('protection-page-list.title')}</h2>
-
-                        <Services list={servicesList} />
+                        <Services title={'protection-page-list.title'} list={servicesList} />
 
                         <Button text={t('buttons.pageButton')} />
 
