@@ -129,7 +129,9 @@ const DistributionPage = ({onToggleModal}) => {
 
 
                                 <h2 className='distribution__win'>{t('distribution-page.win')}</h2>
-                                <MySwiper slides={slideData} swiperConfig={swiperConfig} />
+                                <MySwiper slides={slideData} 
+                                          swiperConfig={swiperConfig}
+                                          moreBtn={'buttons.detal'} />
 
                                 <h3 className='obshenie__title'>{t('distribution-page.poryadok-obsheniya')}</h3>
                                 {poryadokObsheniyaContent.map((item,key) => (

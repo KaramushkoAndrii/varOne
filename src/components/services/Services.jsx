@@ -3,11 +3,11 @@ import { Link } from 'react-router-dom';
 
 import './services.scss';
 
-const Services = ({list}) => {
+const Services = ({list, title = 'services.services'}) => {
     const { t } = useTranslation();
     return (
         <>
-            <h2 className='services__title'>{t('services.services')}</h2>
+            <h2 className='services__title'>{t(`${title}`)}</h2>
             <ul className='page-services'>
                 {list.map((item, key) => (
                     <li key={key}> 

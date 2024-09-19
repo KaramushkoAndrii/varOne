@@ -1,0 +1,18 @@
+
+
+@import '../../style/fonts.scss';
+@import '../../style//var.scss';
+
+
+.worker__description {
+    padding-bottom: 2rem;
+}
+
+
+.worker__more {
+    padding-bottom: 1.5rem;
+
+    &--item {
+        padding-bottom: 1rem;
+    }
+}
