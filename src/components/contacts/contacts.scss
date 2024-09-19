@@ -3,10 +3,14 @@
 
 .contacts_list {
     display: flex;
+    position: relative;
     gap: 1rem;
     font-family: 'Roboto';
 
     a {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
         padding: 0.5rem 1rem;
         border: 1px solid $primary-color;
         border-radius: 5px;
@@ -17,6 +21,41 @@
         &:hover {
             background-color: $secondary-color;
             border-color: $secondary-color;
+        }
+    }
+
+    @media (max-width: 768px) {
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: $primary-color;
+        padding: 1rem;
+        z-index: 1000;
+        gap: 9rem;
+
+
+        &::before {
+            position: absolute;
+            top: 0;
+            content: '';
+            width: 1px;
+            height: 100%;
+            color: $white;
+            background-color: $white;
+        }
+
+        a {
+            padding: 0.5rem;
+            border-radius: 0;
+            width: 100%;
+            text-align: center;
+        }
+
+        .contact-text {
+            display: none;
         }
     }
     
