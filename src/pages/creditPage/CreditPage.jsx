@@ -30,6 +30,7 @@ const CreditPage = ({onToggleModal}) => {
     ]
 
     const creditContentBottom = [
+        'our-way',
         'entirely',
         'free'
     ]

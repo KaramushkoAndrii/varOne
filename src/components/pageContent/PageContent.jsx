@@ -33,7 +33,7 @@ const PageContent = ({title,
             <section className='main-section'>
                 {title ? sectionTitle() : null}
 
-                <h2>
+                <h2 className='page__title'>
                     {t(sectionHeader)}
                 </h2>
                 <p>

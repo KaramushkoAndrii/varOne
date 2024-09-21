@@ -24,7 +24,7 @@ const ProtectionPage = ({onToggleModal}) => {
             name: 'protection-page-list.cancel'
         },
         {
-            link: 'escort',
+            link: 'security',
             name: 'protection-page-list.escort'
         },
         {

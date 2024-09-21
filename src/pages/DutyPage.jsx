@@ -9,8 +9,6 @@ import PageContent from "../components/pageContent/PageContent";
 
 const DutyPage = ({onToggleModal}) => {
 
-    // const a = childrenHref={'/'}
-
     const { t } = useTranslation();
 
     return (

@@ -10,12 +10,6 @@ const FamilyPage = ({onToggleModal}) => {
 
     //Add translation at translation.json list and listBottom
 
-    const listBottom = [
-        'family-list.min',
-        'family-list.justice',
-        'family-list.guard'
-    ]
-
     const servicesList = [
         {link: 'brak',
          name: 'family-services.brak'
@@ -57,12 +51,12 @@ const FamilyPage = ({onToggleModal}) => {
                                 titleDescription={'family-page.titleDescription'}
                                 sectionHeader={'family-page.sectionHeader'}
                                 descriptionTop={'family-page.descriptionTop'}
-                                onToggleModal={onToggleModal}/>
+                                onToggleModal={onToggleModal}
+                                buttonText={null}/>
 
                     <PageContent sectionHeader={'family-page.sectionHeaderSecond'}
                                 descriptionTop={'family-page.descriptionTopSecond'}
                                 descriptionBottom={'family-page.descriptionBottomSecond'}
-                                list={listBottom}
                                 onToggleModal={onToggleModal}/>
 
 

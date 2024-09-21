@@ -3,6 +3,10 @@
 @import '../../style/var.scss';
 @import '../../style/fonts.scss';
 
+.podil__title {
+    padding-bottom: 1.5rem;
+}
+
 .podil__item:not(:last-child) {
     padding-bottom: 0.5rem;
 }

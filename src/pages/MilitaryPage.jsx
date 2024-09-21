@@ -52,9 +52,7 @@ const MilitaryPage = ({onToggleModal}) => {
 
                                 <p><b>{t('military-page.military-lawyer')}</b></p>
 
-                                <h3 className="military__services--title">{t('military-page.military-lawyer-services')}</h3>
-
-                                <Services list={militaryServices} />
+                                <Services title={'military-page.military-lawyer-services'} list={militaryServices} />
 
                                 <h3 className="protection-page__lower">{t('protection-page.more')}</h3>
 

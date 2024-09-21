@@ -170,11 +170,12 @@ const DistributionPage = ({onToggleModal}) => {
                                 <h3 className='lishenie__posledstviya'>{t('distribution-page.posledstviya')}</h3>
                                 <ul className='posledstviya__list'> 
                                     {posledstviyaList.map((item,key) => (
-                                        <li className='posledstviya__item'>
+                                        <li key={key} className='posledstviya__item'>
                                             {t(`distribution-page.${item}`)}
                                         </li>
                                     ))}
                                 </ul>
+                                <p className='distribution__finish'>{t('distribution-page.soderjanie-rebenka')}</p>
 
                                 <RecomendList />
 

@@ -1,4 +1,4 @@
-
+import { useTranslation } from 'react-i18next';
 
 import PageHeader from '../../components/pageHeader/PageHeader';
 import PageContent from '../../components/pageContent/PageContent';
@@ -17,9 +17,16 @@ import podilZemlya from '../../resources/podil-zemlya.webp';
 import './podilMainaPage.scss';
 
 
-import { t } from 'i18next';
-
 const PodilMainaPage = ({onToggleModal}) => {
+
+    const { t } = useTranslation();
+
+    const sudebniyPoryadok = [
+        "top",
+        "middle",
+        "second-middle",
+        "bottom"
+    ]
 
     const razdelList = [
         'razdel-list-a',
@@ -107,6 +114,18 @@ const PodilMainaPage = ({onToggleModal}) => {
                                   swiperConfig={swiperConfig}
                                   moreBtn={'buttons.detal'} />
 
+
+                        <h2 className='podil__title podil--dobrovilny'>{t('podil-page.dobrovolnyi-poryadok-razdel')}</h2>
+                        <p className='podil__description podil__description--dobrovilny'>{t('podil-page.dobrovolnyi-poryadok-razdel-description')}</p>
+
+                        <h2 className='podil__title podil--sudovy'>{t('podil-page.sydebny-poryadok-razdel')}</h2>
+                        <div>
+                            {sudebniyPoryadok.map((item, key) => (
+                                <p key={key} className='podil__description podil__description--sudovy'>
+                                    {t(`podil-page.sydebny-poryadok-razdel-description-${item}`)}
+                                </p>
+                            ))}
+                        </div>
 
                         <h3 className='podil__rezdel--title'>{t('podil-page.pri-razdele')}</h3>
 

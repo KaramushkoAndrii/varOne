@@ -9,7 +9,7 @@ import HomePage from './pages/HomePage';
 import BuildingPage from './pages/BuildingPage';
 import FamilyPage from './pages/FamilyPage';
 import MilitaryPage from './pages/MilitaryPage';
-import LawyerPage from './pages/LawyerPage';
+import LawyerPage from './pages/lawyerPage/LawyerPage';
 import DutyPage from './pages/DutyPage';
 import ProtectionPage from './pages/protectionPage/ProtectionPage';
 import WorkerPage from './pages/workerPage/WorkerPage';
@@ -47,7 +47,7 @@ function App() {
                   <Route path='family/distribution' element={<DistributionPage onToggleModal={onToggleModal}/>} />
                   <Route path='family/podil-maina' element={<PodilMainaPage onToggleModal={onToggleModal} />} />
               <Route path='military' element={<MilitaryPage  onToggleModal={onToggleModal}/>} />
-              <Route path='lawyer' element={<LawyerPage />} />
+              <Route path='lawyer' element={<LawyerPage onToggleModal={onToggleModal}/>} />
               <Route path='duty/*' element={<DutyPage onToggleModal={onToggleModal}/>} />
                   <Route path='duty/borg' element={<PovernenyaBorguPage onToggleModal={onToggleModal} />} />
               <Route path='protection/*' element={<ProtectionPage onToggleModal={onToggleModal}/>} />
