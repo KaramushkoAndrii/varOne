@@ -72,42 +72,43 @@ const Admin130Page = ({onToggleModal}) => {
         {
             image: img,
             alt: 'descr',
-            title:'podil-win.podil-maina',
+            title:'admin130-page.win-bez-sklady',
             link: 'https://reyestr.court.gov.ua/Review/113342322'
         },
         {
             image: img,
-            title: 'podil-win.podil-kvartyra',
+            alt: 'descr',
+            title: 'admin130-page.win-bez-sklady',
             link: 'https://reyestr.court.gov.ua/Review/114067550'
         },
         {
             image: img,
             alt: 'descr',
-            title: 'podil-win.podil-spilne',
+            title: 'admin130-page.win-bez-sklady',
             link: 'https://reyestr.court.gov.ua/Review/114157104'
         },
         {
             image: img,
             alt: 'descr',
-            title: 'podil-win.podil-zemlya',
+            title: 'admin130-page.win-bez-sklady',
             link: 'https://reyestr.court.gov.ua/Review/110850737'
         },
         {
             image: img,
             alt: 'descr',
-            title: 'podil-win.podil-zemlya',
+            title: 'admin130-page.win-bez-sklady',
             link: 'https://reyestr.court.gov.ua/Review/113920755'
         },
         {
             image: img,
             alt: 'descr',
-            title: 'podil-win.podil-zemlya',
+            title: 'admin130-page.win-bez-sklady',
             link: 'https://reyestr.court.gov.ua/Review/116228477'
         },
         {
             image: img,
             alt: 'descr',
-            title: 'podil-win.podil-zemlya',
+            title: 'admin130-page.win-bez-sklady',
             link: 'https://reyestr.court.gov.ua/Review/115612649'
         }
     ]
