@@ -31,31 +31,31 @@ const AdministrativeViolationPage = ({onToggleModal}) => {
 
     const servicesList = [
         {
-            link: '/zahist-klienta-po-130-stati',
+            link: 'zahist-klienta-po-130-stati',
             name: 'admin-violation-page.zashita-klienta-130',
         },
         {
-            link: '/zahist-klienta-po-124-stati',
+            link: 'zahist-klienta-po-124-stati',
             name: 'admin-violation-page.zashita-klienta-124',
         },
         {
-            link: '/vidshkodyvannya-moralnoi-ta-materialnoi-shkody',
+            link: 'vidshkodyvannya-moralnoi-ta-materialnoi-shkody',
             name: 'admin-violation-page.vozmeshenie',
         },
         {
-            link: '/oskarjenya-postanov-policeyskih',
+            link: 'oskarjenya-postanov-policeyskih',
             name: 'admin-violation-page.ojalovanie-postanovleniy',
         },
         {
-            link: '/zahist-klienta-po-164-stati',
+            link: 'zahist-klienta-po-164-stati',
             name: 'admin-violation-page.zashita-klienta-164',
         },
         {
-            link: '/vidshokyvanya-vyplat-pisly-dtp',
+            link: 'vidshokyvanya-vyplat-pisly-dtp',
             name: 'admin-violation-page.advokat-po-strahovym-vyplatam',
         },
         {
-            link: '/vikradenya-avto',
+            link: 'vikradenya-avto',
             name: 'admin-violation-page.advokat-po-ugonu-avto'
         }
     ]
