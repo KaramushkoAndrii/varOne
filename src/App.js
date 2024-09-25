@@ -24,6 +24,7 @@ import PodilMainaPage from './pages/podilMainaPage/PodilMaina';
 import PovernenyaBorguPage from './pages/povernenyaBorguPage/PovernenyaBorguPage';
 import NotariusCancelPage from './pages/notariusCancelPage/NotariusCancelPage';
 import Admin130Page from './pages/admin130Page/Admin130Page';
+import Admin124Page from './pages/admin124Page/Admin124Page';
 
 
 
@@ -60,6 +61,7 @@ function App() {
               <Route path='administrative-law' element={<AdministrativeLawPage onToggleModal={onToggleModal}/>} />
               <Route path='administrative-violation/*' element={<AdministrativeViolationPage onToggleModal={onToggleModal}/>} />
                 <Route path='administrative-violation/zahist-klienta-po-130-stati' element={<Admin130Page onToggleModal={onToggleModal} />} />
+                <Route path='administrative-violation/zahist-klienta-po-124-stati' element={<Admin124Page onToggleModal={onToggleModal}/>} />
             </Route>
           </Routes>
         <Modal onToggle={onToggleModal} isOpen={isModalOpen}/>

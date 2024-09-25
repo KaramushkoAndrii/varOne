@@ -33,6 +33,10 @@ const AdministrativeViolationPage = ({onToggleModal}) => {
         {
             link: 'zahist-klienta-po-130-stati',
             name: 'admin-violation-page.zashita-klienta-130',
+            //При использовании синтаксиса /admin-violation-page.zashita-klienta-130 страница будет отображаться по адресу
+            //главаная страница/admin-violation-page.zashita-klienta-130
+            //в синтаксисе который испоьзуется - страница будет отображаться
+            //главная страница/страница категории/admin-violation-page.zashita-klienta-130
         },
         {
             link: 'zahist-klienta-po-124-stati',
