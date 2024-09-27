@@ -1,6 +1,7 @@
 
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
+import MyContacts from '../myContacts/MyContacts'
 import Button from "../button/Button";
 import './Modal.scss'
 
@@ -43,11 +44,15 @@ const Modal = ({onToggle, isOpen}) => {
             <footer className="modal__footer">
                 <div className="modal__item">
                     <span>E-mail</span>
-                    <a href="mailto:karamushko1997@gmail.com">karamushko1997@gmail.com</a>
+                    <a href={`mailto:${MyContacts[0]}`}>
+                        {MyContacts[0]}
+                    </a>
                 </div>
                 <div className="modal__item">
                     <span>{t('modal.myNumber')}</span>
-                    <a href="tel:+380979863778">+380979863778</a>
+                    <a href={`tel:${MyContacts[1]}`}> 
+                        {MyContacts[1]}
+                    </a>
                 </div>
             </footer>
         </div>

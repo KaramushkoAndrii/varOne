@@ -6,7 +6,7 @@ import ScrollToAim from './components/scrollToAim/ScrollToAim';
 
 import Layout from './components/layout/Layout';
 import HomePage from './pages/HomePage';
-import BuildingPage from './pages/BuildingPage';
+import BuildingPage from './pages/buildingPage/BuildingPage';
 import FamilyPage from './pages/FamilyPage';
 import MilitaryPage from './pages/MilitaryPage';
 import LawyerPage from './pages/lawyerPage/LawyerPage';

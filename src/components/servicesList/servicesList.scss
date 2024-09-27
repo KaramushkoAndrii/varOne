@@ -49,5 +49,9 @@
     h3 {
         margin-top: 1rem;
         font-size: clamp(12px, 2vw, 24px);
+
+        @media (max-width: 768px) {
+            margin-top: 0;
+        }
     }
 }
