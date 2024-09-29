@@ -24,7 +24,7 @@
         }
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: $large) {
         justify-content: center;
         align-items: center;
         position: fixed;

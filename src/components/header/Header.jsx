@@ -8,7 +8,7 @@ const Header = () => {
     return (
         <header className='header'>
             <Nav />
-            <div>
+            <div className='header__contacts'>
                 <Contacts />
                 <ChangeLng />
             </div>

@@ -53,6 +53,10 @@
             border-radius: 5px;
             font-family: inherit;
 
+            @media (max-width: $large) {
+                padding: 1rem;
+            }
+
             &::placeholder {
                 color: $primary-color;
             }
@@ -71,6 +75,11 @@
             color: $white;
             transition: transform 0.3s ease;
             font-family: inherit;
+
+            @media (max-width: $large) {
+                width: 100%;
+                justify-content: center;
+            }
             
             svg {
                 stroke: $white;
@@ -88,6 +97,16 @@
         justify-content: center;
         gap: 2rem;
         z-index: 1;
+
+        @media (max-width: $large) {
+            .form__item {
+                display: flex;
+                flex-direction: column;
+                width: 33%;
+                align-items: center;
+                text-align: center;
+            }
+        }
     }
 
     svg {

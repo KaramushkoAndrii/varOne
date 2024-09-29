@@ -1,39 +1,87 @@
-@import '../../style/var.scss';
+
 @import '../../style/fonts.scss';
+@import '../../style/var.scss';
 
-nav {
-    width: 100%;
-    font-family: 'Roboto';
-    
-    .navigation_list {
-        display: flex;
-        column-gap: 0.5rem;
+.nav-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-        span {
-            position: relative;
-            color: $white;
-            cursor: pointer;
+  .burger__menu {
+    display: none; // Скрываем бургер-меню на десктопе
+    width: 2rem;
+    height: 2rem;
+    z-index: 1100;
 
-            &::after {
-                position: absolute;
-                content: '';
-                width: 100%;
-                height: 1px;
-                background-color: $white;
-                left: 0;
-                top: 1.25rem;
-                transform: scaleX(0);
-                transform-origin: center;
-                transition: transform 0.7s ease;
-            }
-
-            &:hover {
-                opacity: 0.7;
-
-                &::after {
-                    transform: scaleX(1);
-                }
-            }
-        }
+    .burger-bar {
+      width: 100%;
+      height: 2px;
+      background-color: $white;
+      transition: transform 0.3s ease, opacity 0.3s ease;
     }
+
+    @media (max-width: $large) {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      gap: 5px;
+    }
+  }
+
+  .nav {
+    display: flex; // Стандартное меню для ПК
+    align-items: center;
+
+    .navigation_list {
+      display: flex;
+      gap: 1rem;
+
+      li {
+        color: $white;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+
+    @media (max-width: $large) {
+      // На мобильной версии меню будет скрыто по умолчанию и выезжать сбоку
+      position: fixed;
+      top: 0;
+      left: -100%;
+      width: 65dvw;
+      height: 100vh;
+      background-color: $grey;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      transition: left 0.5s ease;
+      z-index: 1000;
+
+      .navigation_list {
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+
+      &.open {
+        left: 0; // Плавно выезжает с левой стороны
+      }
+    }
+  }
+
+  .open {
+    .burger-bar:nth-child(1) {
+      transform: translateY(7px) rotate(45deg);
+    }
+
+    .burger-bar:nth-child(2) {
+      opacity: 0;
+    }
+
+    .burger-bar:nth-child(3) {
+      transform: translateY(-7px) rotate(-45deg);
+    }
+  }
 }

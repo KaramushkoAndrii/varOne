@@ -42,7 +42,7 @@ const Form = () => {
             <ul>
                 {advantages.map((item, key) => {
                     return (
-                        <li key={key}><i>{item.icon}</i>{t(`form.${item.name}`)}</li>
+                        <li className='form__item' key={key}><i>{item.icon}</i>{t(`form.${item.name}`)}</li>
                     )
                 })}
             </ul>

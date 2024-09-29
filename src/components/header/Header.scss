@@ -12,22 +12,9 @@ header {
         z-index: 5;
     
 
-        div {
+        .header__contacts {
             display: flex;
             align-items: center;
             gap: 1rem;
         }
-
-    /*.headerLogo {
-        position: relative;
-        right: 9%;
-        max-width: 4rem;
-        max-height: 4rem;
-
-        img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-        }
-    }*/
 }

@@ -1,3 +1,6 @@
+
+
+import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate, useLocation } from 'react-router-dom'
 
@@ -9,30 +12,19 @@ const Nav = () => {
     const navigate = useNavigate();
     const location = useLocation();
 
+
+    const [menuOpen, setMenuOpen] = useState(false);
+
     const links = [
-        {
-            'href': '/',
-            'title': 'main'
-        },
-        {
-            'href': '#welcome',
-            'title': 'about',
-        },
-        {
-            'href': '#services',
-            'title': 'services',
-        },
-        {
-            'href': 'cases',
-            'title': 'cases'
-        },
-        {
-            'href':'#contact',
-            'title': 'feedback',
-        }
+        { 'href': '/', 'title': 'main'},
+        { 'href': '#welcome', 'title': 'about'},
+        { 'href': '#services', 'title': 'services'},
+        { 'href': 'cases', 'title': 'cases'},
+        { 'href':'#contact', 'title': 'feedback'}
     ];
 
     const handleNavigation = (href) => {
+
         if(href.startsWith('#')) {
             if(location.pathname !== '/') {
                 navigate('/')
@@ -47,23 +39,37 @@ const Nav = () => {
         } else {
             navigate(href)
         }
+
+        setMenuOpen(false);
+    };
+
+    const toggleMenu = () => {
+        setMenuOpen(!menuOpen);
     }
 
-
     return (
-        <nav>
-            <ul className='navigation_list'>
-                {links.map((item, index) => {
-                    return (
-                        <li key={index}>
-                            <span onClick={() => handleNavigation(item.href)}>
-                                {t(`nav.${item.title}`)}
-                            </span>
-                        </li>
-                    )
-                })}
-            </ul>
-        </nav>
+        <div className='nav-wrapper'>
+
+            <div className={`burger__menu ${menuOpen ? 'open' : ''}`} onClick={toggleMenu}>
+                    <span className='burger-bar'></span>
+                    <span className='burger-bar'></span>
+                    <span className='burger-bar'></span>
+            </div>
+
+            <nav className={`nav ${menuOpen ? 'open' : ''}`}>
+                <ul className={`navigation_list`}>
+                    {links.map((item, index) => {
+                        return (
+                            <li key={index}>
+                                <span onClick={() => handleNavigation(item.href)}>
+                                    {t(`nav.${item.title}`)}
+                                </span>
+                            </li>
+                        )
+                    })}
+                </ul>
+            </nav>
+        </div>
     )
 }
 

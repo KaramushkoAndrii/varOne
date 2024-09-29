@@ -42,4 +42,12 @@ footer {
             position: absolute;
         }
     }
+
+    .navigation_list {
+        display: flex;
+    }
+
+    .nav-wrapper .burger__menu  {
+        display: none;
+    }
 }
