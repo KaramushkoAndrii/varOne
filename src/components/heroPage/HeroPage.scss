@@ -39,7 +39,12 @@
         font-weight: bold;
 
         @media (max-width: $large) {
+            font-size: 3rem;
             padding-top: 3dvh;
+
+            p {
+                font-size: 1.5rem;
+            }
         }
     }
 
