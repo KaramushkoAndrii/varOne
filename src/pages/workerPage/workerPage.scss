@@ -6,6 +6,10 @@
 
 .worker__description {
     padding-bottom: 2rem;
+
+    @media (max-width: $large) {
+        font-size: 1rem;
+    }
 }
 
 
