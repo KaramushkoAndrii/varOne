@@ -1,4 +1,8 @@
 
+
+@import '../../style/var.scss';
+
+
 footer {
     display: flex;
     background: #000;
@@ -40,6 +44,10 @@ footer {
         svg {
             visibility: hidden;
             position: absolute;
+        }
+
+        @media (max-width: $large) {
+            padding-bottom: 3rem;
         }
     }
 

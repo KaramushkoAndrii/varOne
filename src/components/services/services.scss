@@ -31,4 +31,8 @@
 
 .services__title {
     margin: 1rem 0;
+
+    @media (max-width: $large) {
+        text-align: center;
+    }
 }

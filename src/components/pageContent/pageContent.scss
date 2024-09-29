@@ -9,8 +9,18 @@
         margin-top: 0;
     }
 
+    @media (max-width: $large) {
+        h2 {
+            font-size: 1.5rem;
+        }
+    }
+
     p {
         margin-bottom: 1rem;
+
+        @media (max-width: $large) {
+            font-size: 0.75rem;
+        }
     }
 
     .mb-0 {
@@ -34,6 +44,16 @@
         justify-content: center;
         width: 50dvh;
         margin: 0 auto 1rem;
+
+        @media (max-height: $large) {
+            width: 75%;
+        }
+    }
+
+    @media (max-height: $large) {
+        .protection-page__lower {
+            text-align: center;
+        }
     }
 }
 

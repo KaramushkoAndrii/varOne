@@ -25,6 +25,11 @@
         text-transform: uppercase;
         padding-inline: 5rem;
         text-align: center;
+
+        @media (max-width: $large) {
+            font-size: 1rem;
+            padding-inline: 0.5rem;
+        }
     }
 
     &::before {
