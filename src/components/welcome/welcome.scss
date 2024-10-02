@@ -131,6 +131,14 @@
                 color: $white;
                 bottom: 2rem;
                 left: 0;
+
+                @media (max-width: $medium) {
+                    bottom: 140%;
+                }
+            }
+
+            @media (max-width: $large) {
+                font-size: clamp(0.75rem, 2vw, 1.75rem);
             }
         }
     }
