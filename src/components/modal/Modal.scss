@@ -1,3 +1,5 @@
+
+
 @import '../../style/var.scss';
 @import '../../style/fonts.scss';
 
@@ -20,6 +22,10 @@
     transition: transform 1s ease, opacity 1s ease;
     font-family: 'Xolonium';
     font-weight: normal;
+
+    @media (max-width: $large) {
+        width: 75%;
+    }
 
     &.modal__open {
         visibility: visible;
@@ -47,6 +53,14 @@
         background-size: cover;
         color: $white;
         z-index: 4;
+
+        @media (max-width: $large) {
+            height: 20dvh;
+
+            h2 {
+                text-align: center;
+            }
+        }
 
         &::before {
             position: absolute;
@@ -97,6 +111,7 @@
 
             label {
                 margin-bottom: 0.5rem;
+                color: $white;
             }
         }
 
@@ -104,6 +119,10 @@
             resize: none;
             padding-bottom: 1rem;
             margin-bottom: 1rem;
+
+            @media (max-width: $large) {
+                padding: 1rem;
+            }
         }
 
         span {
@@ -112,6 +131,19 @@
 
             button {
                 width: 30%;
+            }
+
+            @media (max-width: $large) {
+                flex-direction: column;
+                gap: 1rem;
+
+                #number, button {
+                    width: 100%;
+                }
+
+                #number {
+                    padding: 0.5rem;
+                }
             }
         }
 
@@ -141,6 +173,12 @@
             a {
                 color: $white;
             }
+        }
+
+
+        @media (max-width: $large) {
+            font-size: clamp(0.75rem, 2vw, 1.75rem) ;
+            gap: 1rem;
         }
     }
 }
