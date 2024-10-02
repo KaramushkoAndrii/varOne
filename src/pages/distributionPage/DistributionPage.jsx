@@ -8,7 +8,12 @@ import InfoCard from '../../components/infoCard/InfoCard';
 import PageContent from '../../components/pageContent/PageContent';
 import RecomendList from '../../components/recomendList/RecomendList';
 import MySwiper from '../../components/mySwiper/MySwiper';
-import podil from '../../resources/podil-spilne.webp'
+import podil from '../../resources/podil-spilne.webp';
+import ImgContainer from '../../components/imgContainer/ImgContainer';
+
+
+import misceProzhivannya from '../../resources/familyPage/misce-prozivannya.webp';
+import lisheniePrav from '../../resources/familyPage/pozbavlennya-batkivskih-prav.webp';
 
 import './distribution.scss'
 
@@ -118,7 +123,20 @@ const DistributionPage = ({onToggleModal}) => {
                                  titleDescription={'distribution-page.titleDescription'}
                                  buttonText={null}>
 
-                                {distributionContentList.map((item,key) => <p className='distribution__content' key={key}>{t(`distribution-page.${item}`)}</p>)}
+                                {distributionContentList.map((item,key) => {
+
+                                    if (key === 2) {
+                                        return (
+                                            <>
+                                                <ImgContainer src={misceProzhivannya} alt={'misce-projivannya'} />
+                                                <p className='distribution__content' key={key}>{t(`distribution-page.${item}`)}</p>
+                                            </>
+                                        )
+                                    } else {
+                                        return <p className='distribution__content' key={key}>{t(`distribution-page.${item}`)}</p>
+                                    }
+                                })}
+
                                 <ul className='lishenie__prav--list'>
                                     {lisheniePravList.map((item, key) => (
                                         <li key={key} className='lishenie__prav--item'>
@@ -149,6 +167,7 @@ const DistributionPage = ({onToggleModal}) => {
 
 
                                 <h3 className='lishenie__title'>{t('distribution-page.leshenie-roditelskih-prav')}</h3>
+                                <ImgContainer src={lisheniePrav} alt={'pozbavlennya-batkivskih-prav'} />
                                 <div className='leshenie__container'>
                                     {lesheniePravPrichina.map((item,key) => (
                                         <p key={key} className='leshenie__content'>

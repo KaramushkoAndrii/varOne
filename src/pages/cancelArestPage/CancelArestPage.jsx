@@ -6,7 +6,11 @@ import PageHeader from '../../components/pageHeader/PageHeader';
 import InfoCard from '../../components/infoCard/InfoCard';
 import PageContent from '../../components/pageContent/PageContent';
 import RecomendList from '../../components/recomendList/RecomendList';
+import ImgContainer from '../../components/imgContainer/ImgContainer';
 
+
+import areshtMaina from '../../resources/cancelPage/areshtMaina.webp';
+import arested from '../../resources/cancelPage/arested.webp'
 import './cancelArestPage.scss';
 
 
@@ -66,6 +70,8 @@ const CancelArestPage = ({onToggleModal}) => {
                         <p key={key} className='arest__content'>{t(`cancel-page.${item}`)}</p>
                     ))}
 
+
+                    <ImgContainer src={areshtMaina} alt={'arest-maina'} />
                     <h3 className='arest__subtitle'>{t('cancel-page.sluchai-aresta')}</h3>
 
                     <p className='arest__content'>{t('cancel-page.arrest-reasons')}</p>
@@ -76,6 +82,7 @@ const CancelArestPage = ({onToggleModal}) => {
 
                     <p className='arest__content'>{t('cancel-page.often-reasons')}</p>
 
+                    <ImgContainer src={arested} alt={'na-sho-nakladaut-arest'} />
                     <h3 className='arest__subtitle'>{t('cancel-page.arrested-thinks')}</h3>
 
                     <ul className='arrested-thinks__list'>

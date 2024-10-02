@@ -5,8 +5,10 @@ import PageHeader from '../../components/pageHeader/PageHeader';
 import InfoCard from '../../components/infoCard/InfoCard';
 import PageContent from '../../components/pageContent/PageContent';
 import RecomendList from '../../components/recomendList/RecomendList';
+import ImgContainer from '../../components/imgContainer/ImgContainer';
 
 
+import zahist from '../../resources/securityPage/zahist-prav-ta-interesiv.webp';
 import './creditPage.scss';
 
 const CreditPage = ({onToggleModal}) => {
@@ -47,9 +49,24 @@ const CreditPage = ({onToggleModal}) => {
                 <section className='page-info'>
                     <PageContent title={'credit-page.title'}
                                  buttonText={null}>
-                        {creditContent.map((item, key) => (
-                            <p key={key}>{t(`credit-page.${item}`)}</p>
-                        ))}
+
+
+                        
+                        {creditContent.map((item, key) => {
+
+                            if (key === 2) {
+                                return (
+                                    <>
+                                        <ImgContainer src={zahist} alt={'zahist-prav'} />
+                                        <p key={key}>{t(`credit-page.${item}`)}</p>
+                                    </>
+                                )
+                            } else {
+                                return (
+                                    <p key={key}>{t(`credit-page.${item}`)}</p>
+                                )
+                            }
+                        })}
 
                         <h3 className='credits__subtitle'>{t('credit-page.sub-title')}</h3>
 

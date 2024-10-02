@@ -5,12 +5,14 @@ import PageContent from '../../components/pageContent/PageContent';
 import InfoCard from '../../components/infoCard/InfoCard';
 import RecomendList from '../../components/recomendList/RecomendList';
 import MySwiper from '../../components/mySwiper/MySwiper';
+import ImgContainer from '../../components/imgContainer/ImgContainer';
 
 
 import podilMaina from '../../resources/podil-maina.webp';
 import podilKvartyra from '../../resources/podil-kvartyra.webp';
 import podilSpilne from '../../resources/podil-spilne.webp';
 import podilZemlya from '../../resources/podil-zemlya.webp';
+import podilZUrahuvannyam from '../../resources/familyPage/podil-z-urahuvannyam.webp';
 
 
 
@@ -134,6 +136,7 @@ const PodilMainaPage = ({onToggleModal}) => {
                             {razdelList.map((item, key) => <li key={key} className='podil__item'>{t(`podil-page.${item}`)}</li>)}
                         </ul>
 
+                        <ImgContainer src={podilZUrahuvannyam} alt={'podil-vidbuvaetsya-z-urahuvannyam'} />
                         {razdelDescription.map((item,key) => (
                             <p key={key} className='razdel__description'>{t(`podil-page.${item}`)}</p>
                         ))}

@@ -7,6 +7,12 @@ import PageHeader from "../components/pageHeader/PageHeader";
 import InfoCard from "../components/infoCard/InfoCard";
 import PageContent from "../components/pageContent/PageContent";
 import Services from "../components/services/Services";
+import ImgContainer from "../components/imgContainer/ImgContainer";
+
+
+
+import military from '../resources/lawyerPage/viyskovi-spravy.webp';
+
 
 const MilitaryPage = ({onToggleModal}) => {
 
@@ -48,7 +54,9 @@ const MilitaryPage = ({onToggleModal}) => {
                                  titleDescription={'military-page.titleDescription'}
                                  sectionHeader={'military-page.sectionHeader'} 
                                  list={militaryHelp} >
+                                
 
+                                <ImgContainer src={military} alt={'viyskoviy-advokat'} />
 
                                 <p><b>{t('military-page.military-lawyer')}</b></p>
 

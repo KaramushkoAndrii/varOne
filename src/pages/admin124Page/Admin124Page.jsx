@@ -7,6 +7,8 @@ import PageContent from '../../components/pageContent/PageContent';
 import InfoCard from '../../components/infoCard/InfoCard';
 import RecomendList from '../../components/recomendList/RecomendList';
 import MySwiper from '../../components/mySwiper/MySwiper';
+import ImgContainer from '../../components/imgContainer/ImgContainer';
+import pdd from '../../resources/124Page/zahist-pdd.webp';
 import img from '../../resources/podil-zemlya.webp';
 
 import './admin124Page.scss'
@@ -103,7 +105,9 @@ const Admin124Page =({onToggleModal}) => {
                         <h2 className='admin124__subtitle'>{t('admin124-page.lawyer-services')}</h2>
                         <p className='admin124__description'>{t('admin124-page.poslugi-7-years')}</p>
 
+
                         <div className='admin124__zahist'>
+                            <ImgContainer src={pdd} alt={'zahist-pri-pdd'} />
                             <h3 className='admin124__subtitle'>{t('admin124-page.zashita-title')}</h3>
                             <ul className='admin124__list'>
                                 {securityList.map((item, key) => (

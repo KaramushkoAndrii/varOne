@@ -6,7 +6,10 @@ import PageHeader from "../../components/pageHeader/PageHeader";
 import InfoCard from "../../components/infoCard/InfoCard";
 import PageContent from "../../components/pageContent/PageContent";
 import Services from "../../components/services/Services";
+import ImgContainer from "../../components/imgContainer/ImgContainer";
 
+
+import pravoporushennya from '../../resources/adminPravoporushennyaPage/pravoporushennya-poslugi.webp';
 import './administrativeViolationPage.scss'
 
 const AdministrativeViolationPage = ({onToggleModal}) => {
@@ -81,6 +84,7 @@ const AdministrativeViolationPage = ({onToggleModal}) => {
                                 
 
                                 <h3 className="admin-violation__title">{t('admin-violation-page.uslugi-title')}</h3>
+                                <ImgContainer src={pravoporushennya} alt={'poslygi-advokata'} />
                                 <div className="lawyer__services">
                                     {lawyerServices.map((item,key) => (
                                         <p key={key} className="lawyer__services--item">{t(`admin-violation-page.${item}`)}</p>

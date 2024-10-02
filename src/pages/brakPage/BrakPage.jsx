@@ -2,6 +2,7 @@
 import { useTranslation } from "react-i18next";
 
 import MySwiper from "../../components/mySwiper/MySwiper";
+import ImgContainer from "../../components/imgContainer/ImgContainer";
 
 import PageHeader from "../../components/pageHeader/PageHeader";
 import PageContent from "../../components/pageContent/PageContent";
@@ -11,6 +12,8 @@ import alimonyForKids from '../../resources/alimony3kids.webp';
 import breakingUp from '../../resources/breakingUp.webp';
 import alimonyForWife from '../../resources/alimonyForWife.webp';
 import alimonyLess from '../../resources/alimonyLess.webp';
+import rozirvanyaShluvy from '../../resources/familyPage/rozirvannya-shlybu.webp';
+import pozov from '../../resources/familyPage/pozov.webp'
 
 import './brakPage.scss';
 
@@ -101,6 +104,7 @@ const BrakPage = ({onToggleModal}) => {
                         <p>{t('brak-page.with-out-you')}</p>
                         <p>{t('brak-page.seven-years')}</p>
 
+                        <ImgContainer src={rozirvanyaShluvy} alt={'rozirvannya-shlubu-ta-styagnenya-alimentiv'} />
                         <h2>{t('brak-page.title-divorce')}</h2>
 
                         <ul className="divorced-list">
@@ -119,9 +123,19 @@ const BrakPage = ({onToggleModal}) => {
                             {alimonyList.map((item, key) => <li key={key}>{t(`collection-of-alimony-list.${item}`)}</li>)}
                         </ul>
 
-                        {alimonyDescriptionList.map((item,key) => (
-                            <p className="alimony-description" key={key}>{t(`collection-of-alimony-description.${item}`)}</p>
-                        ))}
+                        {alimonyDescriptionList.map((item,key) => {
+
+                            if (key === 1) {
+                                return (
+                                    <>
+                                        <ImgContainer src={pozov} alt={'pozov'} />
+                                        <p className="alimony-description" key={key}>{t(`collection-of-alimony-description.${item}`)}</p>
+                                    </>
+                                )
+                            } else {
+                                return <p className="alimony-description" key={key}>{t(`collection-of-alimony-description.${item}`)}</p>
+                            }
+                        })}
 
                         <h3>{t('brak-page.consultation')}</h3>
 

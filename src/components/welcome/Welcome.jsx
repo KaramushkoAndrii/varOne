@@ -19,7 +19,7 @@ const Welcome = ({onToggleModal}) => {
 
     const video = (
         <iframe
-            src="https://www.youtube.com/watch?v=SwmRyntv9sM"
+            src="https://youtu.be/SwmRyntv9sM?si=Wh9AiE-9XOjpYeoz"
             title="YouTube video player"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

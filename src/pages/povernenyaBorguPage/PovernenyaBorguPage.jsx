@@ -7,8 +7,10 @@ import PageContent from '../../components/pageContent/PageContent';
 import InfoCard from '../../components/infoCard/InfoCard';
 import RecomendList from '../../components/recomendList/RecomendList';
 import MySwiper from '../../components/mySwiper/MySwiper';
+import ImgContainer from '../../components/imgContainer/ImgContainer';
 
 import podil from '../../resources/podil-maina.webp';
+import sudovyPoryadok from '../../resources/borgPage/styagnenya-sudovyi-poryadok.webp';
 import './povernenyaBorguPage.scss'
 
 const PovernenyaBorguPage = ({onToggleModal}) => {
@@ -100,6 +102,8 @@ const PovernenyaBorguPage = ({onToggleModal}) => {
                             ))}
                         </ul>
 
+
+                        <ImgContainer src={sudovyPoryadok} alt={'styagnenya-u-sudovomy-poryadky'} />
                         <h3 className='vozvrat__title'>{t('vozvrat-dolga-page.sudebnyi-poryadok')}</h3>
                         <div className='sudebnyi-poryadok__content'>
                             {sudebnyPoryadokList.map((item,key) => (

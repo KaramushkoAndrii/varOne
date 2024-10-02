@@ -6,6 +6,11 @@ import { useTranslation } from "react-i18next";
 import PageHeader from "../components/pageHeader/PageHeader";
 import InfoCard from "../components/infoCard/InfoCard";
 import PageContent from "../components/pageContent/PageContent";
+import ImgContainer from "../components/imgContainer/ImgContainer";
+
+
+
+import povernenyaBorgu from '../resources/borgPage/povernennya-borgu.webp';
 
 const DutyPage = ({onToggleModal}) => {
 
@@ -26,6 +31,7 @@ const DutyPage = ({onToggleModal}) => {
                                 sectionHeader={'duty-page.sectionHeader'}
                                 descriptionTop={'duty-page.descriptionTop'}
                                 onToggleModal={onToggleModal}/>
+                    <ImgContainer src={povernenyaBorgu} alt={'povernenya-borgu'} />
                     <PageContent sectionHeader={'duty-page.sectionHeaderSecond'}
                                 descriptionTop={'duty-page.descriptionTopSecond'}
                                 onToggleModal={onToggleModal}>

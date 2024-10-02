@@ -12,7 +12,9 @@ import ImgContainer from "../../components/imgContainer/ImgContainer";
 import lawyerContrant from '../../resources/lawyerPage/na-pidstavi-chogo-pracuvaty-z-advokatom.webp';
 import categoryFamily from '../../resources/lawyerPage/kategoriya-simeynih-sprav.webp';
 import borgoviZabovyazannya from '../../resources/lawyerPage/borgovi-zabovyazannya.webp';
-
+import adminDela from '../../resources/lawyerPage/admin-dela.webp';
+import adminPravoporushennya from '../../resources/lawyerPage/admin-pravoporushennya.webp';
+import viyskoviSpravy from '../../resources/lawyerPage/viyskovi-spravy.webp';
 
 import './lawyerPage.scss'
 
@@ -105,12 +107,16 @@ const LawyerPage = ({onToggleModal}) => {
                                 <Services title={'uslugi-page.dolg-category-title'} 
                                           list={servicesList}/>
 
+
+                                <ImgContainer src={adminDela} alt={'administrativne-pravo'}/>
                                 <Services title={'uslugi-page.admin-category-title'}
                                           list={servicesList}/>
 
+                                <ImgContainer src={adminPravoporushennya} alt={'admin-pravoporushennya'}/>
                                 <Services title={'uslugi-page.admin-narushenie-category-title'} 
                                           list={servicesList}/>
 
+                                <ImgContainer src={viyskoviSpravy} alt={'viyskovi-spravy'} />
                                 <Services title={'uslugi-page.military-title'} 
                                           list={servicesList}/>
 

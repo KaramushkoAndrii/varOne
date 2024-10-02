@@ -5,6 +5,9 @@ import PageHeader from "../../components/pageHeader/PageHeader";
 import InfoCard from "../../components/infoCard/InfoCard";
 import PageContent from "../../components/pageContent/PageContent";
 import Services from "../../components/services/Services";
+import ImgContainer from "../../components/imgContainer/ImgContainer";
+
+import trydoviSpory from '../../resources/workerPage/trudovi-spory.webp';
 
 import './workerPage.scss';
 
@@ -68,6 +71,7 @@ const WorkerPage = ({onToggleModal}) => {
                                  descriptionBottom={'worker-page.advokat-zashitit'}
                                  buttonText={null}/>
 
+                        <ImgContainer src={trydoviSpory} alt={'trudovi-spory'} />
                         <p className="worker__description">
                             {t('worker-page.obrativshis-k-advokatu')}
                         </p>

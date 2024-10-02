@@ -4,6 +4,9 @@ import PageHeader from "../components/pageHeader/PageHeader";
 import InfoCard from "../components/infoCard/InfoCard";
 import PageContent from "../components/pageContent/PageContent";
 import RecomendList from "../components/recomendList/RecomendList";
+import ImgContainer from "../components/imgContainer/ImgContainer";
+
+import adminPravo from '../resources/lawyerPage/admin-dela.webp';
 
 const AdministrativeLawPage = ({onToggleModal}) => {
 
@@ -43,6 +46,7 @@ const AdministrativeLawPage = ({onToggleModal}) => {
                                     descriptionTop={'administrativeLaw-page.descriptionTop'}
                                     descriptionBottom={'administrativeLaw-page.descriptionBottom'}
                                     buttonText={null}/>
+                        <ImgContainer src={adminPravo} alt={'pravova-dopomoga'} />
                         <PageContent title={'administrativeLaw-page.titleBottom'} 
                                      list={help}
                                      buttonText={null}

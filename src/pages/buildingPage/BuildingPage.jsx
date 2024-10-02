@@ -6,6 +6,9 @@ import PageHeader from "../../components/pageHeader/PageHeader";
 import InfoCard from "../../components/infoCard/InfoCard";
 import PageContent from "../../components/pageContent/PageContent";
 import Services from "../../components/services/Services";
+import ImgContainer from "../../components/imgContainer/ImgContainer";
+
+import neruhomist from '../../resources/neruhomistPage/neruhomist.webp';
 
 import './buildingPage.scss';
 
@@ -83,6 +86,7 @@ const BuildingPage = () => {
                                  buttonText={null}>
 
                         <div className="building__content building-narushenie__content">
+                            <ImgContainer src={neruhomist} alt={'neruhomist-ts-zhitlovi-spory'} />
                             <h2 className="building__subtitle">{t('building-page.vidy')}</h2>
                             <ul className="building__list">
                                 {tipyNarusheniy.map((item, key) => (

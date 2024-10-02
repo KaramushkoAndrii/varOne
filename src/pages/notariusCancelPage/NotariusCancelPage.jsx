@@ -6,7 +6,10 @@ import PageHeader from '../../components/pageHeader/PageHeader';
 import PageContent from '../../components/pageContent/PageContent';
 import InfoCard from '../../components/infoCard/InfoCard';
 import RecomendList from '../../components/recomendList/RecomendList';
+import ImgContainer from '../../components/imgContainer/ImgContainer';
 
+
+import oskarjennya from '../../resources/notariusPage/oskarjennya.webp';
 import './notariusCancelPage.scss';
 
 const NotariusCancelPage = ({onToggleModal}) => {
@@ -45,6 +48,7 @@ const NotariusCancelPage = ({onToggleModal}) => {
                                  titleDescription={'notarius-page.each'}
                                  buttonText={null}>
 
+                        <ImgContainer src={oskarjennya} alt={'oskarjennya-notarius'} />
                         <div className='notarius__content'>
                             {notariusDescriptionTop.map((item,key) => (
                                 <p key={key} className='notarius__content--item'>{t(`notarius-page.${item}`)}</p>

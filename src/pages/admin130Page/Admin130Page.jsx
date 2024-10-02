@@ -7,6 +7,10 @@ import PageContent from '../../components/pageContent/PageContent';
 import InfoCard from '../../components/infoCard/InfoCard';
 import RecomendList from '../../components/recomendList/RecomendList';
 import MySwiper from '../../components/mySwiper/MySwiper';
+import ImgContainer from '../../components/imgContainer/ImgContainer';
+
+
+import vidpovidalnist from '../../resources/lawyerPage/admin-pravoporushennya.webp';
 import img from '../../resources/podil-zemlya.webp';
 
 import './admin130Page.scss'
@@ -139,6 +143,8 @@ const Admin130Page = ({onToggleModal}) => {
                                       slides={slideData} 
                                       moreBtn={'buttons.detal'} />
 
+
+                            <ImgContainer src={vidpovidalnist} alt={'vidpovidalnist-nastypae'} />
                             <h2 className='admin130__subtitle'>{t('admin130-page.otvetstvennost')}</h2>
                             <ul className='admin130__list'>
                                 {topList.map((item, key) => (
