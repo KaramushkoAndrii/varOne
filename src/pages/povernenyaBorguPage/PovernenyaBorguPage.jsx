@@ -33,7 +33,8 @@ const PovernenyaBorguPage = ({onToggleModal}) => {
         "ne-nameren",
         "pered-sudom",
         "pri-razrabotke",
-        "posle-resheniya"
+        "posle-resheniya",
+        "finaly"
     ]
 
     const slideData = [
