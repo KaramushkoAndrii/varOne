@@ -36,7 +36,7 @@ const Form = () => {
                 </p>
             </div>
             <form>
-                <input type="phone" name='phone' placeholder={t('form.placeholder')}></input>
+                <input type="tel" name='phone' placeholder={t('form.placeholder')}></input>
                 <button><i><FiPhoneCall /></i>{t('form.call')}</button>
             </form>
             <ul>
