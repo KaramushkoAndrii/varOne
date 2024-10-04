@@ -28,6 +28,7 @@ const BuildingPage = () => {
     ]
 
     const helpList = [
+        "protection-help",
         "dosudebnoe-uregulirovanie-help",
         "podgotovka-help",
         "predstavlenie-interesov-help",

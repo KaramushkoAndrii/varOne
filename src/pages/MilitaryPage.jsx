@@ -8,6 +8,7 @@ import InfoCard from "../components/infoCard/InfoCard";
 import PageContent from "../components/pageContent/PageContent";
 import Services from "../components/services/Services";
 import ImgContainer from "../components/imgContainer/ImgContainer";
+import { militaryServices } from "../components/lists/Lists";
 
 
 
@@ -27,18 +28,7 @@ const MilitaryPage = ({onToggleModal}) => {
         'military-page.compensation'
     ]
 
-    const militaryServices = [
-        {link:'zvilnenya-z-viyskovoi-sluzhby', name: 'military-page.services-help'},
-        {link:'otrymanya-vidsrochki', name: 'military-page.services.otsrochka'},
-        {link:'oskarzhenya-vlk', name: 'military-page.services.vlk'},
-        {link:'oscarzhenya-rishen-tck', name: 'military-page.services.tck'},
-        {link: 'zahust-vid-nezakonnogo-utrymanya-tck', name: 'military-page.services.uderszhanie'},
-        {link: 'skladanya-raporty-ta-inshih-documentiv', name: 'military-page.services.raport'},
-        {link: 'suprovid-simeynih-ta-inshih-sprav', name: 'military-page.services.soprovoszhdenie'},
-        {link: 'dopomoga-v-otrymanii-15-millions', name: 'military-page.services.millions'},
-        {link: 'styagnenya-ne-splachenogo-zabezpechenya', name: 'military-page.services.vziskanie'},
-        {link: 'oskarzhenya-ne-provomirnyh-rishen', name: 'military-page.services.nepravomernie'}
-    ]
+
 
     return (
         <>

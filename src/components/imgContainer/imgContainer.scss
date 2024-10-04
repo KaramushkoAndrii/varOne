@@ -12,6 +12,10 @@
         height: 35dvh;
     }
 
+    @media (min-width: calc($large + 1px)) and (max-width: $xl2) {
+        height: 20dvh;
+    }
+
     img {
         width: 100%;
         height: 100%;

@@ -4,39 +4,9 @@ import PageHeader from "../components/pageHeader/PageHeader";
 import InfoCard from "../components/infoCard/InfoCard";
 import PageContent from "../components/pageContent/PageContent";
 import Services from "../components/services/Services";
+import { familyList } from "../components/lists/Lists";
 
 const FamilyPage = ({onToggleModal}) => {
-
-
-    //Add translation at translation.json list and listBottom
-
-    const servicesList = [
-        {link: 'brak',
-         name: 'family-services.brak'
-        },
-
-        {link: 'podil-maina',
-         name: 'family-services.imushestvo'
-        },
-        {link: 'distribution',
-         name: 'family-services.mesto-zhitelsva-rebenka'
-        },
-        {link: 'alimenti',
-         name: 'family-services.alimenti'
-        },
-        {link: 'osparivanie',
-         name: 'family-services.osparivanie'
-        },
-        {link: 'priznanie-nedeesposobnym',
-         name: 'family-services.priznanie-nedeesposobnym'
-        },
-        {link: 'projivanie-odnoy-semiey',
-         name:'family-services.projivanie-odnoy-semiey'
-        },
-        {link: 'drygie-factory',
-         name: 'family-services.drygie-factory'
-        }  
-    ]
     
     return (
         <>
@@ -60,7 +30,7 @@ const FamilyPage = ({onToggleModal}) => {
                                 onToggleModal={onToggleModal}/>
 
 
-                    <Services list={servicesList}/>
+                    <Services list={familyList}/>
                 </section>
             </div>
         </>

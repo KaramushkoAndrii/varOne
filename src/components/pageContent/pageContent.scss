@@ -45,12 +45,16 @@
         width: 50dvh;
         margin: 0 auto 1rem;
 
-        @media (max-height: $large) {
+        @media (max-width: $large) {
             width: 75%;
+        }
+
+        @media (max-width: $xl2) {
+            width: 100%;
         }
     }
 
-    @media (max-height: $large) {
+    @media (max-width: $large) {
         .protection-page__lower {
             text-align: center;
         }

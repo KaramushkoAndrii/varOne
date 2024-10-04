@@ -5,23 +5,14 @@ import InfoCard from "../components/infoCard/InfoCard";
 import PageContent from "../components/pageContent/PageContent";
 import RecomendList from "../components/recomendList/RecomendList";
 import ImgContainer from "../components/imgContainer/ImgContainer";
+import Services from "../components/services/Services";
+import { administrativeList } from "../components/lists/Lists";
 
 import adminPravo from '../resources/lawyerPage/admin-dela.webp';
 
 const AdministrativeLawPage = ({onToggleModal}) => {
 
     const { t } = useTranslation()
-
-    const help = [
-        'administrativeLaw-services.pdd',
-        'administrativeLaw-services.pensiya',
-        'administrativeLaw-services.objalovanie',
-        'administrativeLaw-services.gossluzhashiy',
-        'administrativeLaw-services.publichnaya-slujba',
-        'administrativeLaw-services.nalog',
-        'administrativeLaw-services.control',
-        'administrativeLaw-services.tck'
-    ]
 
     const adminHelpList = [
         'analiz',
@@ -45,16 +36,15 @@ const AdministrativeLawPage = ({onToggleModal}) => {
                                     titleDescription={'administrativeLaw-page.titleDescription'}
                                     descriptionTop={'administrativeLaw-page.descriptionTop'}
                                     descriptionBottom={'administrativeLaw-page.descriptionBottom'}
-                                    buttonText={null}/>
+                                    buttonText={null}>
                         <ImgContainer src={adminPravo} alt={'pravova-dopomoga'} />
-                        <PageContent title={'administrativeLaw-page.titleBottom'} 
-                                     list={help}
-                                     buttonText={null}
-                                     descriptionBottom={'administrativeLaw-page.descriptionBottomSecond'}>
+                        
+                            <Services title={'administrativeLaw-page.titleBottom'} list={administrativeList} />
+                            <p>{t('administrativeLaw-page.descriptionBottomSecond')}</p>
                             <p>{t('administrativeLaw-page.help')}</p>
                             <ul>
                                 {adminHelpList.map((item, key) => (
-                                    <li key={key}>
+                                    <li className="description__item" key={key}>
                                         {t(`administrativeLaw-services.${item}`)}
                                     </li>
                                 ))}

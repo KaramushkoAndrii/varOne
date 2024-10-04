@@ -7,6 +7,7 @@ import InfoCard from "../../components/infoCard/InfoCard";
 import PageContent from "../../components/pageContent/PageContent";
 import Services from "../../components/services/Services";
 import ImgContainer from "../../components/imgContainer/ImgContainer";
+import { AdministrativeViolationList } from "../../components/lists/Lists";
 
 
 import pravoporushennya from '../../resources/adminPravoporushennyaPage/pravoporushennya-poslugi.webp';
@@ -31,42 +32,6 @@ const AdministrativeViolationPage = ({onToggleModal}) => {
         'dokazatelstv',
         'pomosh'
     ]
-
-    const servicesList = [
-        {
-            link: 'zahist-klienta-po-130-stati',
-            name: 'admin-violation-page.zashita-klienta-130',
-            //При использовании синтаксиса /admin-violation-page.zashita-klienta-130 страница будет отображаться по адресу
-            //главаная страница/admin-violation-page.zashita-klienta-130
-            //в синтаксисе который испоьзуется - страница будет отображаться
-            //главная страница/страница категории/admin-violation-page.zashita-klienta-130
-        },
-        {
-            link: 'zahist-klienta-po-124-stati',
-            name: 'admin-violation-page.zashita-klienta-124',
-        },
-        {
-            link: 'vidshkodyvannya-moralnoi-ta-materialnoi-shkody',
-            name: 'admin-violation-page.vozmeshenie',
-        },
-        {
-            link: 'oskarjenya-postanov-policeyskih',
-            name: 'admin-violation-page.ojalovanie-postanovleniy',
-        },
-        {
-            link: 'zahist-klienta-po-164-stati',
-            name: 'admin-violation-page.zashita-klienta-164',
-        },
-        {
-            link: 'vidshokyvanya-vyplat-pisly-dtp',
-            name: 'admin-violation-page.advokat-po-strahovym-vyplatam',
-        },
-        {
-            link: 'vikradenya-avto',
-            name: 'admin-violation-page.advokat-po-ugonu-avto'
-        }
-    ]
-
 
     return (
         <>
@@ -101,7 +66,7 @@ const AdministrativeViolationPage = ({onToggleModal}) => {
                                     ))}
                                 </ul>
 
-                                <Services title={'admin-violation-page.services-title'} list={servicesList} />
+                                <Services title={'admin-violation-page.services-title'} list={AdministrativeViolationList} />
 
                                 <h3 className="protection-page__lower">{t('protection-page.more')}</h3>
                     </PageContent>

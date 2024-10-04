@@ -49,16 +49,29 @@ function App() {
                   <Route path='family/brak' element={<BrakPage onToggleModal={onToggleModal}/>}/>
                   <Route path='family/distribution' element={<DistributionPage onToggleModal={onToggleModal}/>} />
                   <Route path='family/podil-maina' element={<PodilMainaPage onToggleModal={onToggleModal} />} />
+
+
               <Route path='military' element={<MilitaryPage  onToggleModal={onToggleModal}/>} />
-              <Route path='lawyer' element={<LawyerPage onToggleModal={onToggleModal}/>} />
-              <Route path='duty/*' element={<DutyPage onToggleModal={onToggleModal}/>} />
+              <Route path='lawyer/*' element={<LawyerPage onToggleModal={onToggleModal}/>} />
+                  <Route path='lawyer/brak' element={<BrakPage onToggleModal={onToggleModal}/>} />
+                  <Route path='lawyer/distribution' element={<DistributionPage onToggleModal={onToggleModal}/>} />
+                  <Route path='lawyer/podil-maina' element={<PodilMainaPage onToggleModal={onToggleModal} />} />
+
+
+              <Route path='duty' element={<DutyPage onToggleModal={onToggleModal}/>} />
                   <Route path='duty/borg' element={<PovernenyaBorguPage onToggleModal={onToggleModal} />} />
-              <Route path='protection/*' element={<ProtectionPage onToggleModal={onToggleModal}/>} />
+
+
+              <Route path='protection' element={<ProtectionPage onToggleModal={onToggleModal}/>} />
                   <Route path='protection/security' element={<CreditPage onToggleModal={onToggleModal}/>}/>
                   <Route path='protection/cancel' element={<CancelArestPage onToggleModal={onToggleModal}/>} />
                   <Route path='protection/notarius' element={<NotariusCancelPage onToggleModal={onToggleModal}/>} />
+
+
               <Route path='worker' element={<WorkerPage onToggleModal={onToggleModal}/>} />
               <Route path='administrative-law' element={<AdministrativeLawPage onToggleModal={onToggleModal}/>} />
+
+              
               <Route path='administrative-violation/*' element={<AdministrativeViolationPage onToggleModal={onToggleModal}/>} />
                 <Route path='administrative-violation/zahist-klienta-po-130-stati' element={<Admin130Page onToggleModal={onToggleModal} />} />
                 <Route path='administrative-violation/zahist-klienta-po-124-stati' element={<Admin124Page onToggleModal={onToggleModal}/>} />

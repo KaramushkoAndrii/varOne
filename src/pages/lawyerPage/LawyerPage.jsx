@@ -7,6 +7,7 @@ import InfoCard from "../../components/infoCard/InfoCard";
 import PageContent from "../../components/pageContent/PageContent";
 import Services from "../../components/services/Services";
 import ImgContainer from "../../components/imgContainer/ImgContainer";
+import { familyList, AdministrativeViolationList, militaryServices, administrativeList, dutyList } from "../../components/lists/Lists";
 
 
 import lawyerContrant from '../../resources/lawyerPage/na-pidstavi-chogo-pracuvaty-z-advokatom.webp';
@@ -30,45 +31,6 @@ const LawyerPage = ({onToggleModal}) => {
         "chat"
     ]
 
-    const servicesList = [
-
-        {   
-            link: 'security',
-            name: 'protection-page-list.security'
-        },
-        {
-            link:'cancel',
-            name: 'protection-page-list.cancel'
-        },
-        {
-            link: 'escort',
-            name: 'protection-page-list.escort'
-        },
-        {
-            link: 'less-damage',
-            name: 'protection-page-list.less-damage'
-        },
-        {
-            link: 'notarius',
-            name: 'protection-page-list.notarius'
-        },
-        {
-            link: 'inaction',
-            name: 'protection-page-list.inaction'
-        },
-        {
-            link: 'assessment',
-            name: 'protection-page-list.assessment'
-        },
-        {
-            link: 'credit',
-            name: 'protection-page-list.credit'
-        },
-        {
-            link: 'debt',
-            name: 'protection-page-list.debt'
-        },
-    ]
 
     return (
         <>
@@ -100,25 +62,25 @@ const LawyerPage = ({onToggleModal}) => {
 
                                 <ImgContainer src={categoryFamily} alt={'kategoriya-simeynih-sprav'} />
                                 <Services title={'uslugi-page.family-category-title'} 
-                                          list={servicesList}/>
+                                          list={familyList}/>
 
 
                                 <ImgContainer src={borgoviZabovyazannya} alt={'borgovi-zabovyazannya'} />
                                 <Services title={'uslugi-page.dolg-category-title'} 
-                                          list={servicesList}/>
+                                          list={dutyList}/>
 
 
                                 <ImgContainer src={adminDela} alt={'administrativne-pravo'}/>
                                 <Services title={'uslugi-page.admin-category-title'}
-                                          list={servicesList}/>
+                                          list={administrativeList}/>
 
                                 <ImgContainer src={adminPravoporushennya} alt={'admin-pravoporushennya'}/>
                                 <Services title={'uslugi-page.admin-narushenie-category-title'} 
-                                          list={servicesList}/>
+                                          list={AdministrativeViolationList}/>
 
                                 <ImgContainer src={viyskoviSpravy} alt={'viyskovi-spravy'} />
                                 <Services title={'uslugi-page.military-title'} 
-                                          list={servicesList}/>
+                                          list={militaryServices}/>
 
                                 <h3 className="protection-page__lower">{t('protection-page.more')}</h3>
 
