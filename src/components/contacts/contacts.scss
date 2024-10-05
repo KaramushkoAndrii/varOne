@@ -18,6 +18,18 @@
         transition: background-color 0.7s ease, border-color 0.7s ease;
         color: $white;
 
+        svg {
+            display: block;
+
+            @media (min-width: $medium) {
+                display: none;
+            }
+
+            @media (min-width: $tablet-horizontal) {
+                display: block;
+            }
+        }
+
         &:hover {
             background-color: $secondary-color;
             border-color: $secondary-color;

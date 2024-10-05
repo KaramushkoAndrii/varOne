@@ -7,10 +7,17 @@
 
     .cases__list {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
         gap: 1rem;
         font-family: 'Xolonium';
         font-weight: normal;
+
+        @media (min-width: $medium) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media (min-width: $tablet-horizontal) {
+            grid-template-columns: repeat(3, 1fr);
+        }
         
 
         .cases__item {
@@ -18,7 +25,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            
+            height: 30vh;
             text-align: center;
             border-radius: 5px;
             list-style: none;
@@ -26,10 +33,11 @@
 
             a {
                 position: relative;
-                padding: clamp(1rem, 4vw, 5rem);
+                padding: 5rem;
+                padding-inline: clamp(1rem, 4vw, 5rem);
                 color: $white;
                 width: 100%;
-                z-index: 5;
+                z-index: 4;
             }
 
             &::before {
@@ -51,13 +59,9 @@
                 }
             }
 
-            @media (max-width: $large) {
-                height: 30vh;
+            @media (min-width: $large) {
+                height: 100%;
             }
-        }
-
-        @media (max-width: $large) {
-            grid-template-columns: repeat(2, 1fr);
         }
 
         li:nth-child(10n - 9) {

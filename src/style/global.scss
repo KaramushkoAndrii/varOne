@@ -34,4 +34,9 @@ h1, h2, h3 {
         margin: 1rem 0;
         padding-inline: 1.5rem;
     }
+
+    @media (min-width: calc($large + 1px)) and (max-width: $tablet-horizontal) {
+        margin: 3rem;
+        gap: 3rem;
+    }
 }
