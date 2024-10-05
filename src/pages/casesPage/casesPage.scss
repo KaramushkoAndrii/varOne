@@ -14,43 +14,66 @@
         
 
         .cases__item {
+            position: relative;
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 5rem;
+            
             text-align: center;
             border-radius: 5px;
             list-style: none;
+            color: $white;
+
+            a {
+                position: relative;
+                padding: clamp(1rem, 4vw, 5rem);
+                color: $white;
+                width: 100%;
+                z-index: 5;
+            }
+
+            &::before {
+                position: absolute;
+                content: "";
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                background-color: $primary-color;
+                opacity: 0;
+                transition: opacity 0.3s ease;
+                z-index: 0;
+            }
+
+            &:hover {
+                &::before {
+                    opacity: 0.5;
+                }
+            }
+
+            @media (max-width: $large) {
+                height: 30vh;
+            }
+        }
+
+        @media (max-width: $large) {
+            grid-template-columns: repeat(2, 1fr);
         }
 
         li:nth-child(10n - 9) {
             grid-row: span 2;
+
+            @media (max-width: $large) {
+                grid-row: auto;
+            }
         }
 
         li:nth-child(10n - 2) {
             grid-row: span 2;
+
+            @media (max-width: $large) {
+                grid-row: auto;
+            }
         }
-    //     li:nth-child(6n-5) {
-    //       grid-column: 1 / 2; /* Объединяем первый элемент первой и второй строки */
-    //       grid-row: span 2;
-    //     }
-        
-    //     li:nth-child(6n-4) {
-    //       grid-column: 2 / 3; /* Обычное расположение для второго элемента */
-    //     }
-        
-    //     li:nth-child(6n-3) {
-    //       grid-column: 3 / 4; /* Объединяем третий элемент первой и второй строки */
-    //       grid-row: span 2;
-    //     }
-        
-    //     li:nth-child(6n-2),
-    //     li:nth-child(6n-1) {
-    //       grid-column: span 1; /* Обычное расположение для оставшихся элементов */
-    //     }
-        
-    //     li:nth-child(6n) {
-    //       grid-column: 3 / 4;
-    //     }
     }
 }

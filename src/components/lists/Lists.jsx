@@ -1,4 +1,4 @@
-
+import Mainfoto from '../../resources/MainFoto.webp';
 
 export const familyList = [
     {link:'brak', name: 'family-services.brak'},
@@ -61,4 +61,27 @@ export const dutyList = [
     {link:'assessment',name:'protection-page-list.assessment'},
     {link:'credit',name:'protection-page-list.credit'},
     {link:'debt',name:'protection-page-list.debt'},
+]
+
+export const caseList = [
+    {title: 'Заголовок1', bg: Mainfoto, link: '/'},
+    {title: 'Заголовок2', bg: Mainfoto, link: '/'},
+    {title: 'Заголовок3', bg: Mainfoto, link: '/'},
+    {title: 'Заголовок4', bg: Mainfoto, link: '/'},
+    {title: 'Заголовок5', bg: Mainfoto, link: '/'},
+    {title: 'Заголовок6', bg: Mainfoto, link: '/'},
+    {title: 'Заголовок7', bg: Mainfoto, link: '/'},
+    {title: 'Заголовок8', bg: Mainfoto, link: '/'},
+    {title: 'Заголовок9', bg: Mainfoto, link: '/'},
+    {title: 'Заголовок10', bg: Mainfoto, link: '/'},
+    {title: 'Заголовок11', bg: Mainfoto, link: '/'},
+    {title: 'Заголовок12', bg: Mainfoto, link: '/'},
+    {title: 'Заголовок13', bg: Mainfoto, link: '/'},
+    {title: 'Заголовок14', bg: Mainfoto, link: '/'},
+    {title: 'Заголовок15', bg: Mainfoto, link: '/'},
+    {title: 'Заголовок16', bg: Mainfoto, link: '/'},
+    {title: 'Заголовок17', bg: Mainfoto, link: '/'},
+    {title: 'Заголовок18', bg: Mainfoto, link: '/'},
+    {title: 'Заголовок19', bg: Mainfoto, link: '/'},
+    {title: 'Заголовок20', bg: Mainfoto, link: '/'}
 ]

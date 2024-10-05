@@ -27,11 +27,16 @@
     color: #fff;
     padding: 10px;
     border-radius: 5px;
+    width: 80%;
+
+    @media (max-width: $large) {
+      width: 100%;
+    }
   }
   
   .slide-description h3 {
     margin: 0;
-    font-size: 1.5rem;
+    font-size: clamp(1rem, 3vw ,1.5rem);
   }
   
   .slide-description p {
