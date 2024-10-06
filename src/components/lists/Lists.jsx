@@ -1,4 +1,5 @@
 import Mainfoto from '../../resources/MainFoto.webp';
+import podilMaina from '../../resources/podil-maina.webp';
 
 export const familyList = [
     {link:'brak', name: 'family-services.brak'},
@@ -64,24 +65,29 @@ export const dutyList = [
 ]
 
 export const caseList = [
-    {title: 'Заголовок1', bg: Mainfoto, link: '/'},
-    {title: 'Заголовок2', bg: Mainfoto, link: '/'},
-    {title: 'Заголовок3', bg: Mainfoto, link: '/'},
-    {title: 'Заголовок4', bg: Mainfoto, link: '/'},
-    {title: 'Заголовок5', bg: Mainfoto, link: '/'},
-    {title: 'Заголовок6', bg: Mainfoto, link: '/'},
-    {title: 'Заголовок7', bg: Mainfoto, link: '/'},
-    {title: 'Заголовок8', bg: Mainfoto, link: '/'},
-    {title: 'Заголовок9', bg: Mainfoto, link: '/'},
-    {title: 'Заголовок10', bg: Mainfoto, link: '/'},
-    {title: 'Заголовок11', bg: Mainfoto, link: '/'},
-    {title: 'Заголовок12', bg: Mainfoto, link: '/'},
-    {title: 'Заголовок13', bg: Mainfoto, link: '/'},
-    {title: 'Заголовок14', bg: Mainfoto, link: '/'},
-    {title: 'Заголовок15', bg: Mainfoto, link: '/'},
-    {title: 'Заголовок16', bg: Mainfoto, link: '/'},
-    {title: 'Заголовок17', bg: Mainfoto, link: '/'},
-    {title: 'Заголовок18', bg: Mainfoto, link: '/'},
-    {title: 'Заголовок19', bg: Mainfoto, link: '/'},
-    {title: 'Заголовок20', bg: Mainfoto, link: '/'}
+    {title: 'cases-page.case-win-podil', bg: podilMaina, link: 'https://reyestr.court.gov.ua/Review/104454342'},
+    {title: 'cases-page.case-win-podil-1/2', bg: podilMaina, link: 'https://reyestr.court.gov.ua/Review/106214322'},
+    {title: 'cases-page.case-win-podil', bg: podilMaina, link: 'https://reyestr.court.gov.ua/Review/117779520'},
+    {title: 'cases-page.case-win-dilyanka', bg: Mainfoto, link: 'https://reyestr.court.gov.ua/Review/93609451'},
+    {title: 'cases-page.case-win-borg-400', bg: Mainfoto, link: 'https://reyestr.court.gov.ua/Review/113909704'},
+    {title: 'cases-page.case-win-borg-200', bg: Mainfoto, link: 'https://reyestr.court.gov.ua/Review/95816615'},
+    {title: 'cases-page.case-win-borg-100', bg: Mainfoto, link: 'https://reyestr.court.gov.ua/Review/103342181'},
+    {title: 'cases-page.case-win-3-rebenka', bg: Mainfoto, link: 'https://reyestr.court.gov.ua/Review/110419172'},
+    {title: 'cases-page.casse-win-shlub', bg: Mainfoto, link: 'https://reyestr.court.gov.ua/Review/100898590'},
+    {title: 'cases-page.case-win-alimenti', bg: Mainfoto, link: 'https://reyestr.court.gov.ua/Review/93891443'},
+    {title: 'cases-page.case-win-zmenshennya-alimentiv', bg: Mainfoto, link: 'https://reyestr.court.gov.ua/Review/98285614'},
+    {title: 'cases-page.case-win-pozbavlennya-batkivskih-prav', bg: Mainfoto, link: 'https://reyestr.court.gov.ua/Review/119350497'},
+    {title: 'cases-page.case-win-misce-projivannya-dityny', bg: Mainfoto, link: 'https://reyestr.court.gov.ua/Review/105222656'},
+    {title: 'cases-page.case-win-usunennya-pereshkod', bg: Mainfoto, link: 'https://reyestr.court.gov.ua/Review/104812131'},
+    {title: 'cases-page.case-win-vidsutnist-skladu-124', bg: Mainfoto, link: 'https://reyestr.court.gov.ua/Review/83013158'},
+    {title: 'cases-page.case-win-vidsutnist-skladu-124', bg: Mainfoto, link: 'https://reyestr.court.gov.ua/Review/76502281'},
+    {title: 'cases-page.case-win-vidsutnist-skladu-124', bg: Mainfoto, link: 'https://reyestr.court.gov.ua/Review/80038689'},
+    {title: 'cases-page.case-win-vidsutnist-skladu-124', bg: Mainfoto, link: 'https://reyestr.court.gov.ua/Review/75185739'},
+    {title: 'cases-page.case-win-vidsutnist-skladu-130', bg: Mainfoto, link: 'https://reyestr.court.gov.ua/Review/113342322'},
+    {title: 'cases-page.case-win-vidsutnist-skladu-130', bg: Mainfoto, link: 'https://reyestr.court.gov.ua/Review/114067550'},
+    {title: 'cases-page.case-win-vidsutnist-skladu-130', bg: Mainfoto, link: 'https://reyestr.court.gov.ua/Review/114157104'},
+    {title: 'cases-page.case-win-vidsutnist-skladu-130', bg: Mainfoto, link: 'https://reyestr.court.gov.ua/Review/110850737'},
+    {title: 'cases-page.case-win-vidsutnist-skladu-130', bg: Mainfoto, link: 'https://reyestr.court.gov.ua/Review/113920755'},
+    {title: 'cases-page.case-win-vidsutnist-skladu-130', bg: Mainfoto, link: 'https://reyestr.court.gov.ua/Review/116228477'},
+    {title: 'cases-page.case-win-vidsutnist-skladu-130', bg: Mainfoto, link: 'https://reyestr.court.gov.ua/Review/115612649'},
 ]

@@ -29,7 +29,7 @@ const CasesPage  = ({onToggleModal}) => {
                             {caseList.map((item, key) => (
                                 <li className="cases__item" style={{backgroundImage: `url(${item.bg})`}} key={key}>
                                     <Link to={item.link}> 
-                                        {item.title}
+                                        {t(item.title)}
                                     </Link>
                                 </li>))} 
                         </ul>

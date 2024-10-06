@@ -45,6 +45,7 @@ function App() {
               <Route index element={<HomePage onToggleModal={onToggleModal}/>}/>
               <Route path='cases' element={<CasesPage onToggleModal={onToggleModal}/>}/>
               <Route path='building' element={<BuildingPage onToggleModal={onToggleModal}/>}/>
+
               <Route path='family/*' element={<FamilyPage onToggleModal={onToggleModal}/>} />
                   <Route path='family/brak' element={<BrakPage onToggleModal={onToggleModal}/>}/>
                   <Route path='family/distribution' element={<DistributionPage onToggleModal={onToggleModal}/>} />
@@ -56,6 +57,13 @@ function App() {
                   <Route path='lawyer/brak' element={<BrakPage onToggleModal={onToggleModal}/>} />
                   <Route path='lawyer/distribution' element={<DistributionPage onToggleModal={onToggleModal}/>} />
                   <Route path='lawyer/podil-maina' element={<PodilMainaPage onToggleModal={onToggleModal} />} />
+
+                  <Route path='lawyer/zahist-klienta-po-130-stati' element={<Admin130Page onToggleModal={onToggleModal} />} />
+                  <Route path='lawyer/zahist-klienta-po-124-stati' element={<Admin124Page onToggleModal={onToggleModal}/>} />
+
+                  <Route path='lawyer/security' element={<CreditPage onToggleModal={onToggleModal}/>}/>
+                  <Route path='lawyer/cancel' element={<CancelArestPage onToggleModal={onToggleModal}/>} />
+                  <Route path='lawyer/notarius' element={<NotariusCancelPage onToggleModal={onToggleModal}/>} />
 
 
               <Route path='duty' element={<DutyPage onToggleModal={onToggleModal}/>} />
