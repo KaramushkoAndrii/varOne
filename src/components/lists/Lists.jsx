@@ -17,6 +17,17 @@ export const familyList = [
     {link:'drygie-factory', name:'family-services.drygie-factory'}  
 ]
 
+export const buildingList = [
+{link:'suprovid-spravy-pro-vitrebuvanna-neruhomogo-maina', name:'building-page.services-istrebovanie'},
+{link:'rozarvannya-dogovory-orendy-zemli', name:'building-page.services-rastorjenie'},
+{link:'spory-pro-vyznanya-prava-vlasnosti-na-neruhome-maino', name:'building-page.services-spory'},
+{link:'spravy-pro-vyselennya-z-primishennya', name:'building-page.servives-vyselenie'},
+{link:'scasuvannya-dogovoriv-z-neruhomym-mainom', name:'building-page.services-rastorjenie-nedvijemost'},
+{link:'oformlennya-samovilno-zbudovanyh-objectiv', name:'building-page.services-oformlenie-postroek'},
+{link:'vydil-na-podil-maina-v-narure', name:'building-page.services-vydel'},
+{link:'suprovid-pryvatyzacii-kvartyry', name:'building-page.services-privatizaciya'},
+]
+
 
 export const AdministrativeViolationList = [
     {link: 'zahist-klienta-po-130-stati', name:'admin-violation-page.zashita-klienta-130'},
@@ -30,7 +41,7 @@ export const AdministrativeViolationList = [
     {link: 'zahist-klienta-po-164-stati', name:'admin-violation-page.zashita-klienta-164'},
     {link: 'vidshokyvanya-vyplat-pisly-dtp', name:'admin-violation-page.advokat-po-strahovym-vyplatam'},
     {link: 'vikradenya-avto', name:'admin-violation-page.advokat-po-ugonu-avto'}
-    ]
+]
 
 export const militaryServices = [
     {link:'zvilnenya-z-viyskovoi-sluzhby', name: 'military-page.services-help'},
@@ -70,6 +81,7 @@ export const dutyList = [
 ]
 
 export const caseList = [
+    {title: 'cases-page.case-win-vidsutnist-skladu-130', bg: st130, link: 'https://reyestr.court.gov.ua/Review/115612649'},
     {title: 'cases-page.case-win-podil', bg: podilMaina, link: 'https://reyestr.court.gov.ua/Review/104454342'},
     {title: 'cases-page.case-win-podil-1/2', bg: podilMaina, link: 'https://reyestr.court.gov.ua/Review/106214322'},
     {title: 'cases-page.case-win-podil', bg: podilMaina, link: 'https://reyestr.court.gov.ua/Review/117779520'},
@@ -94,5 +106,14 @@ export const caseList = [
     {title: 'cases-page.case-win-vidsutnist-skladu-130', bg: st130, link: 'https://reyestr.court.gov.ua/Review/110850737'},
     {title: 'cases-page.case-win-vidsutnist-skladu-130', bg: st130, link: 'https://reyestr.court.gov.ua/Review/113920755'},
     {title: 'cases-page.case-win-vidsutnist-skladu-130', bg: st130, link: 'https://reyestr.court.gov.ua/Review/116228477'},
-    {title: 'cases-page.case-win-vidsutnist-skladu-130', bg: st130, link: 'https://reyestr.court.gov.ua/Review/115612649'},
+]
+
+export const workerList = [
+    {link:'styagnenya-zaborgovonosti', name:'worker-page.vziskanie'},
+    {link:'suprovid-trudovogo-spory', name:'worker-page.trudovoy-spor'},
+    {link:'styagnenya-dopomogy-pry-zvilnenni', name:'worker-page.vyhodnoe-posobie'},
+    {link:'ponovlenya-na-roboti', name:'worker-page.vozobnovlenie-na-rabote'},
+    {link:'tyagnenya-materialnoy-shkody', name:'worker-page.vziskanie-materialnogo-usherba'},
+    {link:'yuredichniy-analiz', name:'worker-page.juredicheskiy-analiz'},
+    {link:'skasyvanya-shtrafiv-derjpaci', name:'worker-page.otmena-shtrafov'}
 ]

@@ -6,6 +6,7 @@ import InfoCard from "../../components/infoCard/InfoCard";
 import PageContent from "../../components/pageContent/PageContent";
 import Services from "../../components/services/Services";
 import ImgContainer from "../../components/imgContainer/ImgContainer";
+import { workerList } from "../../components/lists/Lists";
 
 import trydoviSpory from '../../resources/workerPage/trudovi-spory.webp';
 
@@ -22,38 +23,6 @@ const WorkerPage = ({onToggleModal}) => {
         'podgotovka',
         'predstavitelstvo',
         'v-slychae-neobhodimosti'
-    ]
-
-    const servicesList = [
-        {
-            link: 'styagnenya-zaborgovonosti',
-            name: 'worker-page.vziskanie'
-        },
-
-        {
-            link: 'suprovid-trudovogo-spory',
-            name: 'worker-page.trudovoy-spor'
-        },
-        {
-            link: 'styagnenya-dopomogy-pry-zvilnenni',
-            name: 'worker-page.vyhodnoe-posobie'
-        },
-        {
-            link: 'ponovlenya-na-roboti',
-            name: 'worker-page.vozobnovlenie-na-rabote'
-        },
-        {
-            link: 'tyagnenya-materialnoy-shkody',
-            name: 'worker-page.vziskanie-materialnogo-usherba'
-        },
-        {
-            link: 'yuredichniy-analiz',
-            name: 'worker-page.juredicheskiy-analiz'
-        },
-        {
-            link: 'skasyvanya-shtrafiv-derjpaci',
-            name:'worker-page.otmena-shtrafov'
-        }
     ]
 
     return (
@@ -87,7 +56,7 @@ const WorkerPage = ({onToggleModal}) => {
                             ))}
                         </ul>
 
-                        <Services list={servicesList} />
+                        <Services list={workerList} />
                         <h3 className="worker__lower">{t('protection-page.more')}</h3>
                 </section>
 

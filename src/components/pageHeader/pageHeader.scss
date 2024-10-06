@@ -10,16 +10,12 @@
     justify-content: center;
     align-items: center;
 
-    height: 100%;
+    height: 100dvh;
     color: $white;
     
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-
-    @media (min-width: $tablet-horizontal) {
-        height: 100dvh;
-    }
 
     & h2 {
         font-family: 'Xolonium';
@@ -128,9 +124,13 @@
 }
 
 .admin130 {
-    background-image: url('../../resources//130Header.webp');
+    background-image: url('../../resources/130Header.webp');
 }
 
 .admin124 {
-    background-image: url('../../resources//124Header.webp');
+    background-image: url('../../resources/124Header.webp');
+}
+
+.dev {
+    background-image: url('../../resources/dev.webp');
 }

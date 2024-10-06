@@ -7,6 +7,7 @@ import InfoCard from "../../components/infoCard/InfoCard";
 import PageContent from "../../components/pageContent/PageContent";
 import Services from "../../components/services/Services";
 import ImgContainer from "../../components/imgContainer/ImgContainer";
+import { buildingList } from "../../components/lists/Lists";
 
 import neruhomist from '../../resources/neruhomistPage/neruhomist.webp';
 
@@ -33,42 +34,6 @@ const BuildingPage = () => {
         "podgotovka-help",
         "predstavlenie-interesov-help",
         "objalovanie-help"
-    ]
-
-    const servicesList = [
-        {
-            link: 'suprovid-spravy-pro-vitrebuvanna-neruhomogo-maina',
-            name: 'building-page.services-istrebovanie'
-        },
-        {
-            link: 'rozarvannya-dogovory-orendy-zemli',
-            name: 'building-page.services-rastorjenie'
-        },
-        {
-            link: 'spory-pro-vyznanya-prava-vlasnosti-na-neruhome-maino',
-            name: 'building-page.services-spory'
-        },
-        {
-            link: 'spravy-pro-vyselennya-z-primishennya',
-            name: 'building-page.servives-vyselenie'
-        },
-        {
-            link: 'scasuvannya-dogovoriv-z-neruhomym-mainom',
-            name: 'building-page.services-rastorjenie-nedvijemost'
-        },
-        {
-            link: 'oformlennya-samovilno-zbudovanyh-objectiv',
-            name: 'building-page.services-oformlenie-postroek'
-        },
-        {
-            link: 'vydil-na-podil-maina-v-narure',
-            name: 'building-page.services-vydel'
-        },
-        {
-            link: 'suprovid-pryvatyzacii-kvartyry',
-            name: 'building-page.services-privatizaciya'
-            
-        },
     ]
 
     return (
@@ -116,7 +81,7 @@ const BuildingPage = () => {
                         </div>
 
 
-                        <Services list={servicesList} title={'building-page.services-title'}/>
+                        <Services list={buildingList} title={'building-page.services-title'}/>
 
                     </PageContent>
                 </section>

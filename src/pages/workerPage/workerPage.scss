@@ -21,9 +21,7 @@
     }
 }
 
-@media (max-width: $large) {
-    .worker__lower {
-        padding-top: 1rem;
-        text-align: center;
-    }
+.worker__lower {
+    padding-top: 1rem;
+    text-align: center;
 }
