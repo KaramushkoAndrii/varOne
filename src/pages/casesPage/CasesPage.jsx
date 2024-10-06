@@ -31,7 +31,8 @@ const CasesPage  = ({onToggleModal}) => {
                                     <Link to={item.link}> 
                                         {t(item.title)}
                                     </Link>
-                                </li>))} 
+                                </li>))
+                            } 
                         </ul>
                     </section>
                 </section> 
