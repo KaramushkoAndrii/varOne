@@ -1,3 +1,6 @@
+
+import axios from 'axios';
+import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { FiPhoneCall, FiDollarSign, FiClock, FiMapPin } from "react-icons/fi";
 
@@ -5,7 +8,34 @@ import './form.scss';
 
 const Form = () => {
 
-    const {t} = useTranslation();
+    const SHEET_URL = 'https://api.sheetbest.com/sheets/9a4149fb-e8af-4e21-bf83-08f7db89106b'
+    const { t } = useTranslation();
+
+    const [formData, setFortData] = useState({
+        number: ''
+    })
+
+    const changeHandler = (e) => {
+        setFortData({
+            ...formData,
+            [e.target.name]: e.target.value
+        });
+    };
+
+    const submitHandler = e => {
+        e.preventDefault();
+
+        const formDataWithDate = {
+            ...formData,
+            date: new Date().toLocaleString()
+        }
+        console.log(formDataWithDate);
+
+        axios.post(SHEET_URL, formDataWithDate)
+            .then(response => {
+                console.log(response)
+            })
+    }
 
     const advantages = [
         {
@@ -35,8 +65,8 @@ const Form = () => {
                     {t('form.action')}
                 </p>
             </div>
-            <form>
-                <input type="tel" name='phone' placeholder={t('form.placeholder')}></input>
+            <form onSubmit={submitHandler}>
+                <input value={formData.number} type="tel" name='number' onChange={changeHandler}  placeholder={t('form.placeholder')}></input>
                 <button><i><FiPhoneCall /></i>{t('form.call')}</button>
             </form>
             <ul>

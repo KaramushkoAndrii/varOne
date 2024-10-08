@@ -25,9 +25,14 @@ const Modal = ({onToggle, isOpen}) => {
 
     const submitHandler = e => {
         e.preventDefault();
-        console.log(formData);
 
-        axios.post(SHEET_URL, formData)
+        const formDataWithDate = {
+            ...formData,
+            date: new Date().toLocaleString()
+        }
+        console.log(formDataWithDate);
+
+        axios.post(SHEET_URL, formDataWithDate)
             .then(response => {
                 console.log(response)
             })
