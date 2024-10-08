@@ -1,4 +1,5 @@
 
+import axios from "axios";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import MyContacts from '../myContacts/MyContacts'
@@ -7,17 +8,29 @@ import './Modal.scss'
 
 const Modal = ({onToggle, isOpen}) => {
 
+    const SHEET_URL = 'https://api.sheetbest.com/sheets/9a4149fb-e8af-4e21-bf83-08f7db89106b'
     const { t } = useTranslation();
 
-    const [task, setTask] = useState('');
-    const [number, setNumber] = useState('')
+    const [formData, setFortData] = useState({
+        task: '',
+        number: ''
+    })
 
-    const changedTask = (e) => {
-        setTask(e.target.value)
-    }
+    const changeHandler = (e) => {
+        setFortData({
+            ...formData,
+            [e.target.name]: e.target.value
+        });
+    };
 
-    const changedNumber = (e) => {
-        setNumber(e.target.value)
+    const submitHandler = e => {
+        e.preventDefault();
+        console.log(formData);
+
+        axios.post(SHEET_URL, formData)
+            .then(response => {
+                console.log(response)
+            })
     }
 
     return (
@@ -29,13 +42,13 @@ const Modal = ({onToggle, isOpen}) => {
                 <span className="modal__close" onClick={onToggle}>X</span>
             </header>
             <div className="modal__body">
-                <form>
+                <form onSubmit={submitHandler}>
                     <label htmlFor="task">{t('modal.task')}</label>
-                    <textarea name="task" id="task" value={task} onChange={changedTask} placeholder={t('modal.text')}/>
+                    <textarea name="task" id="task" value={formData.task} onChange={changeHandler} placeholder={t('modal.text')}/>
 
                     <label htmlFor="number">{t('modal.number')}</label>
                     <span>
-                        <input name="number" id="number" type="tel" value={number} onChange={changedNumber} 
+                        <input name="number" id="number" type="tel" value={formData.number} onChange={changeHandler} 
                             placeholder="050 123 456 78 89" />
                         <Button text={t('modal.send')} />
                     </span>
