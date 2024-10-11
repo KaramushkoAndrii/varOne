@@ -7,7 +7,7 @@ import Button from "../button/Button";
 import Spiner from "../spiner/Spiner";
 import './Modal.scss'
 
-const Modal = ({onToggle, isOpen}) => {
+const Modal = ({isClose , isModalOpen}) => {
 
     const SHEET_URL = 'https://api.sheetbest.com/sheets/9a4149fb-e8af-4e21-bf83-08f7db89106b'
     const { t } = useTranslation();
@@ -68,7 +68,7 @@ const Modal = ({onToggle, isOpen}) => {
 
                 // Закрытие модального окна через 3 секунды
                 const closeTimeoutId = setTimeout(() => {
-                    onToggle(); // Закрытие модального окна
+                    isClose(); // Закрытие модального окна
                 }, 3000);
                 setCloseTimeout(closeTimeoutId);
 
@@ -103,12 +103,12 @@ const Modal = ({onToggle, isOpen}) => {
     }, [closeTimeout, resetTimeout]);
 
     return (
-        <div className={`modal ${isOpen ? 'modal__open' : ''}`}>
+        <div className={`modal ${isModalOpen ? 'modal__open' : ''}`}>
             <header className="modal__header">
                 <h2 className="modal__title">
                     {isSubmitting ? <Spiner /> : modalMessage}
                 </h2>
-                <span className="modal__close" onClick={onToggle}>X</span>
+                <span className="modal__close" onClick={isClose}>X</span>
             </header>
             <div className="modal__body" style={{ display: hideContent ? 'none' : 'block' }}>
                 <form onSubmit={submitHandler}>

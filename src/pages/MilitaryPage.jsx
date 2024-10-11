@@ -15,7 +15,7 @@ import { militaryServices } from "../components/lists/Lists";
 import military from '../resources/lawyerPage/viyskovi-spravy.webp';
 
 
-const MilitaryPage = ({onToggleModal}) => {
+const MilitaryPage = ({isOpen}) => {
 
     const { t } = useTranslation();
 
@@ -36,7 +36,7 @@ const MilitaryPage = ({onToggleModal}) => {
                         bgClass={'military'} />
 
             <div className="page-container">
-                <InfoCard onToggleModal={onToggleModal} />
+                <InfoCard isOpen={isOpen} />
 
 
                 <section className="page-info">

@@ -6,7 +6,7 @@ import InfoCard from '../../components/infoCard/InfoCard';
 import './notPage.scss';
 
 
-const NotPage = ({onToggleModal}) => {
+const NotPage = ({isOpen}) => {
 
     const { t } =useTranslation();
 
@@ -17,7 +17,7 @@ const NotPage = ({onToggleModal}) => {
 
             <div className="page-container">
 
-                <InfoCard  onToggleModal={onToggleModal}/>
+                <InfoCard  isOpen={isOpen}/>
 
                 <section className="page-info">
                     <section className="main-section">

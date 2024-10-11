@@ -14,7 +14,7 @@ import arested from '../../resources/cancelPage/arested.webp'
 import './cancelArestPage.scss';
 
 
-const CancelArestPage = ({onToggleModal}) => {
+const CancelArestPage = ({isOpen}) => {
 
     const { t } = useTranslation();
 
@@ -59,7 +59,7 @@ const CancelArestPage = ({onToggleModal}) => {
                         bgClass={'cancel'}/>
 
             <div className='page-container'>
-                <InfoCard onToggleModal={onToggleModal} />
+                <InfoCard isOpen={isOpen} />
 
                 <section className='page-info'>
                     <PageContent title={'cancel-page.title'} 

@@ -10,7 +10,7 @@ import { administrativeList } from "../components/lists/Lists";
 
 import adminPravo from '../resources/lawyerPage/admin-dela.webp';
 
-const AdministrativeLawPage = ({onToggleModal}) => {
+const AdministrativeLawPage = ({isOpen}) => {
 
     const { t } = useTranslation()
 
@@ -29,7 +29,7 @@ const AdministrativeLawPage = ({onToggleModal}) => {
                         bgClass={'administrative-law'}/>
 
             <div className="page-container">
-                    <InfoCard onToggleModal={onToggleModal}/>
+                    <InfoCard isOpen={isOpen}/>
 
                     <section className="page-info">
                         <PageContent title={'administrativeLaw-page.title'}

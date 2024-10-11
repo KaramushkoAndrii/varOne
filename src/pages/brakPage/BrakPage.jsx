@@ -17,7 +17,7 @@ import pozov from '../../resources/familyPage/pozov.webp'
 
 import './brakPage.scss';
 
-const BrakPage = ({onToggleModal}) => {
+const BrakPage = ({isOpen}) => {
 
     const { t } = useTranslation();
 
@@ -94,7 +94,7 @@ const BrakPage = ({onToggleModal}) => {
             <PageHeader text={'brak'}
                         bgClass={'brak'}/>
             <div className="page-container">
-                <InfoCard onToggleModal={onToggleModal}/>
+                <InfoCard isOpen={isOpen}/>
 
                 <section className="page-info">
                     <PageContent title={'brak-page.title'} 

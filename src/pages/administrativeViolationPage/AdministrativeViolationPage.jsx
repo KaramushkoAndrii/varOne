@@ -13,7 +13,7 @@ import { AdministrativeViolationList } from "../../components/lists/Lists";
 import pravoporushennya from '../../resources/adminPravoporushennyaPage/pravoporushennya-poslugi.webp';
 import './administrativeViolationPage.scss'
 
-const AdministrativeViolationPage = ({onToggleModal}) => {
+const AdministrativeViolationPage = ({isOpen}) => {
 
     const { t } = useTranslation();
 
@@ -38,7 +38,7 @@ const AdministrativeViolationPage = ({onToggleModal}) => {
             <PageHeader text={'administrative-violation'} bgClass={'administrative-violation'} />
 
             <div className='page-container'>
-                <InfoCard onToggleModal={onToggleModal} />
+                <InfoCard isOpen={isOpen} />
                 
                 <section className='page-info'>
                     <PageContent title={'admin-violation-page.title'}

@@ -14,7 +14,7 @@ import img from '../../resources/podil-zemlya.webp';
 import './admin124Page.scss'
 
 
-const Admin124Page =({onToggleModal}) => {
+const Admin124Page =({isOpen}) => {
 
     const { t } = useTranslation();
 
@@ -85,7 +85,7 @@ const Admin124Page =({onToggleModal}) => {
                         bgClass={'admin124'} />
 
             <div className="page-container">
-                <InfoCard onToggleModal={onToggleModal} />
+                <InfoCard isOpen={isOpen} />
 
                 <section className="page-info">
 

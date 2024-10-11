@@ -4,12 +4,12 @@ import HeroPage from "../components/heroPage/HeroPage";
 import Welcome from "../components/welcome/Welcome";
 import MainServices from "../components/mainServices/MainServices";
 
-const HomePage = ({onToggleModal}) => {
+const HomePage = ({isOpen}) => {
     return (
         <>
-            <HeroPage onToggleModal={onToggleModal}/>
-            <Welcome onToggleModal={onToggleModal}/>
-            <MainServices onToggleModal={onToggleModal}/>
+            <HeroPage isOpen={isOpen}/>
+            <Welcome isOpen={isOpen}/>
+            <MainServices isOpen={isOpen}/>
         </>
     )
 }

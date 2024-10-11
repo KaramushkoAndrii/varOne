@@ -11,7 +11,7 @@ const InfoCard = ({img=modal,
                    mail=MyContacts[0], 
                    number=MyContacts[1], 
                    about='info-card.about',
-                   onToggleModal}) => {
+                   isOpen}) => {
 
     const { t } = useTranslation();
     return (
@@ -36,7 +36,7 @@ const InfoCard = ({img=modal,
                 {t(about)}
             </p>
             <Button text={t('info-card.button')}
-                    onClick={onToggleModal}/>
+                    onClick={isOpen}/>
         </aside>
     )
 }

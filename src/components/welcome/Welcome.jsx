@@ -7,7 +7,7 @@ import Button from "../button/Button";
 import MainFoto from '../../resources/MainFoto.webp'
 import './welcome.scss'
 
-const Welcome = ({onToggleModal}) => {
+const Welcome = ({isOpen}) => {
 
     const { t } = useTranslation();
 
@@ -41,7 +41,7 @@ const Welcome = ({onToggleModal}) => {
 
                 {welcomeContent.map((item, key) => <p key={key} className="welcome_description">{t(`bio.${item}`)}</p>)}
 
-                <Button text={t('buttons.consultation')} onClick={onToggleModal}/>
+                <Button text={t('buttons.consultation')} onClick={isOpen}/>
 
                 <Button text={film ? 'Назад' : t('buttons.video')} onClick={handleVideoToggle}/>
                 

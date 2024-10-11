@@ -12,7 +12,7 @@ import trydoviSpory from '../../resources/workerPage/trudovi-spory.webp';
 
 import './workerPage.scss';
 
-const WorkerPage = ({onToggleModal}) => {
+const WorkerPage = ({isOpen}) => {
 
     const { t } = useTranslation();
 
@@ -31,7 +31,7 @@ const WorkerPage = ({onToggleModal}) => {
 
             <div className='page-container'>
 
-                <InfoCard onToggleModal={onToggleModal} />
+                <InfoCard isOpen={isOpen} />
 
                 <section className='page-info'>
                     <PageContent title={'worker-page.title'}

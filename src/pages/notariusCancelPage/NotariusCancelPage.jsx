@@ -12,7 +12,7 @@ import ImgContainer from '../../components/imgContainer/ImgContainer';
 import oskarjennya from '../../resources/notariusPage/oskarjennya.webp';
 import './notariusCancelPage.scss';
 
-const NotariusCancelPage = ({onToggleModal}) => {
+const NotariusCancelPage = ({isOpen}) => {
 
     const { t } = useTranslation();
 
@@ -41,7 +41,7 @@ const NotariusCancelPage = ({onToggleModal}) => {
                         bgClass={'notarius'}/>
 
             <div className="page-container">
-                <InfoCard onToggleModal={onToggleModal} />
+                <InfoCard isOpen={isOpen} />
 
                 <section className="page-info">
                     <PageContent title={'notarius-page.title'}

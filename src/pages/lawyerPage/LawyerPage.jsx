@@ -19,7 +19,7 @@ import viyskoviSpravy from '../../resources/lawyerPage/viyskovi-spravy.webp';
 
 import './lawyerPage.scss'
 
-const LawyerPage = ({onToggleModal}) => {
+const LawyerPage = ({isOpen}) => {
 
     const { t } = useTranslation();
 
@@ -37,7 +37,7 @@ const LawyerPage = ({onToggleModal}) => {
             <PageHeader text={'lawyer'} bgClass={'lawyer'} />
 
             <div className="page-container">
-                <InfoCard onToggleModal={onToggleModal} />
+                <InfoCard isOpen={isOpen} />
 
                 <section className="page-info">
                     <PageContent title={'uslugi-page.uslugi-title'}

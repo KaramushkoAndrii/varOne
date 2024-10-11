@@ -13,7 +13,7 @@ import neruhomist from '../../resources/neruhomistPage/neruhomist.webp';
 
 import './buildingPage.scss';
 
-const BuildingPage = () => {
+const BuildingPage = ({isOpen}) => {
 
     const { t } = useTranslation();
 
@@ -43,7 +43,7 @@ const BuildingPage = () => {
 
             <div className="page-container">
 
-                <InfoCard />
+                <InfoCard isOpen={isOpen}/>
 
                 <section className="page-info">
                     <PageContent title={'building-page.title'}

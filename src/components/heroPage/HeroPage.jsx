@@ -4,7 +4,7 @@ import Button from '../button/Button'
 
 import './HeroPage.scss'
 
-const HeroPage = ({onToggleModal}) => {
+const HeroPage = ({isOpen}) => {
 
     const { t } = useTranslation();
 
@@ -25,7 +25,7 @@ const HeroPage = ({onToggleModal}) => {
                 </p>
             </h1>
             <div className='hero_btn_group'>
-                <Button text={t('buttons.discuss')} onClick={onToggleModal} />
+                <Button text={t('buttons.discuss')} onClick={isOpen} />
                 <Button text={t('buttons.more info')} 
                         bg={'transperent'}
                         onClick={() => scrollToSection('services')} />

@@ -8,7 +8,7 @@ import { caseList } from "../../components/lists/Lists";
 
 import './casesPage.scss';
 
-const CasesPage  = ({onToggleModal}) => {
+const CasesPage  = ({isOpen}) => {
 
     const { t } = useTranslation();
 
@@ -19,7 +19,7 @@ const CasesPage  = ({onToggleModal}) => {
                         bgClass={'cases'} />
 
             <div className="page-container">
-                <InfoCard  onToggleModal={onToggleModal}/>
+                <InfoCard  isOpen={isOpen}/>
 
                 <section className="page-info">
                     <section className="main-section">

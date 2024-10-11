@@ -11,7 +11,7 @@ import ImgContainer from '../../components/imgContainer/ImgContainer';
 import zahist from '../../resources/securityPage/zahist-prav-ta-interesiv.webp';
 import './creditPage.scss';
 
-const CreditPage = ({onToggleModal}) => {
+const CreditPage = ({isOpen}) => {
 
     const { t } = useTranslation();
 
@@ -44,7 +44,7 @@ const CreditPage = ({onToggleModal}) => {
                         bgClass={'credit'}/>
 
             <div className='page-container'>
-                <InfoCard onToggleModal={onToggleModal} />
+                <InfoCard isOpen={isOpen} />
 
                 <section className='page-info'>
                     <PageContent title={'credit-page.title'}

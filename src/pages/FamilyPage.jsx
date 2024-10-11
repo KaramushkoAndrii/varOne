@@ -6,7 +6,7 @@ import PageContent from "../components/pageContent/PageContent";
 import Services from "../components/services/Services";
 import { familyList } from "../components/lists/Lists";
 
-const FamilyPage = ({onToggleModal}) => {
+const FamilyPage = ({isOpen}) => {
     
     return (
         <>
@@ -14,20 +14,20 @@ const FamilyPage = ({onToggleModal}) => {
                         bgClass={'family'} />
 
             <div className="page-container">
-                <InfoCard  onToggleModal={onToggleModal}/>
+                <InfoCard  isOpen={isOpen}/>
 
                 <section className="page-info">
                     <PageContent title={'family-page.title'}
                                 titleDescription={'family-page.titleDescription'}
                                 sectionHeader={'family-page.sectionHeader'}
                                 descriptionTop={'family-page.descriptionTop'}
-                                onToggleModal={onToggleModal}
+                                isOpen={isOpen}
                                 buttonText={null}/>
 
                     <PageContent sectionHeader={'family-page.sectionHeaderSecond'}
                                 descriptionTop={'family-page.descriptionTopSecond'}
                                 descriptionBottom={'family-page.descriptionBottomSecond'}
-                                onToggleModal={onToggleModal}/>
+                                isOpen={isOpen}/>
 
 
                     <Services list={familyList}/>

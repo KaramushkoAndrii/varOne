@@ -19,7 +19,7 @@ import podilZUrahuvannyam from '../../resources/familyPage/podil-z-urahuvannyam.
 import './podilMainaPage.scss';
 
 
-const PodilMainaPage = ({onToggleModal}) => {
+const PodilMainaPage = ({isOpen}) => {
 
     const { t } = useTranslation();
 
@@ -92,7 +92,7 @@ const PodilMainaPage = ({onToggleModal}) => {
                         bgClass={'podil'} />
 
             <div className='page-container'>
-                <InfoCard onToggleModal={onToggleModal} />
+                <InfoCard isOpen={isOpen} />
 
                 <section className='page-info'>
                     <PageContent title={'podil-page.title'}

@@ -12,7 +12,7 @@ import ImgContainer from "../components/imgContainer/ImgContainer";
 
 import povernenyaBorgu from '../resources/borgPage/povernennya-borgu.webp';
 
-const DutyPage = ({onToggleModal}) => {
+const DutyPage = ({isOpen}) => {
 
     const { t } = useTranslation();
 
@@ -22,7 +22,7 @@ const DutyPage = ({onToggleModal}) => {
                         bgClass={'duty'} />
 
             <div className="page-container">
-                <InfoCard  onToggleModal={onToggleModal}/>
+                <InfoCard  isOpen={isOpen}/>
 
                 <section className="page-info">
                     <PageContent title={'duty-page.title'}
@@ -30,11 +30,11 @@ const DutyPage = ({onToggleModal}) => {
                                 titleDescription={'duty-page.titleDescription'}
                                 sectionHeader={'duty-page.sectionHeader'}
                                 descriptionTop={'duty-page.descriptionTop'}
-                                onToggleModal={onToggleModal}/>
+                                isOpen={isOpen}/>
                     <ImgContainer src={povernenyaBorgu} alt={'povernenya-borgu'} />
                     <PageContent sectionHeader={'duty-page.sectionHeaderSecond'}
                                 descriptionTop={'duty-page.descriptionTopSecond'}
-                                onToggleModal={onToggleModal}>
+                                isOpen={isOpen}>
                                 
 
                         <span>{t('duty-page.descriptionBottomSecond')}<Link to={'borg'}>{t('duty-page.dolg')}</Link></span>

@@ -9,7 +9,7 @@ import Button from "../../components/button/Button";
 
 import './protectionPage.scss'
 
-const ProtectionPage = ({onToggleModal}) => {
+const ProtectionPage = ({isOpen}) => {
 
     const { t } = useTranslation();
 
@@ -58,7 +58,7 @@ const ProtectionPage = ({onToggleModal}) => {
             <PageHeader text={'protection'} bgClass={'protection'} />
 
             <div className="page-container">
-                <InfoCard onToggleModal={onToggleModal} />
+                <InfoCard isOpen={isOpen} />
 
                 <section className="page-info">
                     <PageContent title={'protection-page.title'}

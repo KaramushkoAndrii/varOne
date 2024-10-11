@@ -17,7 +17,7 @@ import lisheniePrav from '../../resources/familyPage/pozbavlennya-batkivskih-pra
 
 import './distribution.scss'
 
-const DistributionPage = ({onToggleModal}) => {
+const DistributionPage = ({isOpen}) => {
 
     const { t } = useTranslation();
 
@@ -115,7 +115,7 @@ const DistributionPage = ({onToggleModal}) => {
                         bgClass={'distribution'} />
 
             <div className='page-container'>
-                <InfoCard onToggleModal={onToggleModal}/>
+                <InfoCard isOpen={isOpen}/>
 
 
                 <section className='page-info'>

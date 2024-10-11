@@ -13,7 +13,7 @@ import podil from '../../resources/podil-maina.webp';
 import sudovyPoryadok from '../../resources/borgPage/styagnenya-sudovyi-poryadok.webp';
 import './povernenyaBorguPage.scss'
 
-const PovernenyaBorguPage = ({onToggleModal}) => {
+const PovernenyaBorguPage = ({isOpen}) => {
 
     const { t } = useTranslation();
 
@@ -71,7 +71,7 @@ const PovernenyaBorguPage = ({onToggleModal}) => {
             
 
             <div className="page-container">
-                <InfoCard onToggleModal={onToggleModal} />
+                <InfoCard isOpen={isOpen} />
 
 
                 <section className="page-info">
