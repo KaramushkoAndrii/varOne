@@ -1,5 +1,6 @@
 
 import { useTranslation } from "react-i18next";
+import { Helmet } from "react-helmet";
 
 import MySwiper from "../../components/mySwiper/MySwiper";
 import ImgContainer from "../../components/imgContainer/ImgContainer";
@@ -20,6 +21,8 @@ import './brakPage.scss';
 const BrakPage = ({isOpen}) => {
 
     const { t } = useTranslation();
+
+    const pageTitle = t('services.brak')
 
     const list = [
         'brak-list.divorce',
@@ -91,7 +94,10 @@ const BrakPage = ({isOpen}) => {
 
     return (
         <>
-            <PageHeader text={'brak'}
+            <Helmet>
+                <title>{pageTitle}</title>
+            </Helmet>
+            <PageHeader text={pageTitle}
                         bgClass={'brak'}/>
             <div className="page-container">
                 <InfoCard isOpen={isOpen}/>

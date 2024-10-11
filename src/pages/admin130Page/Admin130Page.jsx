@@ -2,6 +2,7 @@
 
 
 import { useTranslation } from 'react-i18next';
+import { Helmet } from 'react-helmet';
 import PageHeader from '../../components/pageHeader/PageHeader';
 import PageContent from '../../components/pageContent/PageContent';
 import InfoCard from '../../components/infoCard/InfoCard';
@@ -18,6 +19,8 @@ import './admin130Page.scss'
 const Admin130Page = ({isOpen}) => {
 
     const { t } = useTranslation();
+    
+    const pageTitle = t('services.admin130')
 
     const list = [
         "admin130-page.list-nevinnost",
@@ -125,7 +128,10 @@ const Admin130Page = ({isOpen}) => {
 
     return (
         <>
-            <PageHeader text={'admin130'}
+            <Helmet>
+                <title>{pageTitle}</title>
+            </Helmet>
+            <PageHeader text={pageTitle}
                         bgClass={'admin130'} />
 
             <div className="page-container">

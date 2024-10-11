@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next';
+import { Helmet } from 'react-helmet';
 
 import PageHeader from '../../components/pageHeader/PageHeader';
 import PageContent from '../../components/pageContent/PageContent';
@@ -22,6 +23,8 @@ import './podilMainaPage.scss';
 const PodilMainaPage = ({isOpen}) => {
 
     const { t } = useTranslation();
+
+    const pageTitle = t('services.podil')
 
     const sudebniyPoryadok = [
         "top",
@@ -88,7 +91,10 @@ const PodilMainaPage = ({isOpen}) => {
 
     return (
         <>
-            <PageHeader text={'podil'}
+            <Helmet>
+                <title>{pageTitle}</title>
+            </Helmet>
+            <PageHeader text={pageTitle}
                         bgClass={'podil'} />
 
             <div className='page-container'>

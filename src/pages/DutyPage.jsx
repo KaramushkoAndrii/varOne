@@ -2,6 +2,7 @@
 
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import { Helmet } from "react-helmet";
 
 import PageHeader from "../components/pageHeader/PageHeader";
 import InfoCard from "../components/infoCard/InfoCard";
@@ -16,9 +17,14 @@ const DutyPage = ({isOpen}) => {
 
     const { t } = useTranslation();
 
+    const pageTitle = t('services.duty')
+
     return (
         <>
-            <PageHeader text={'duty'} 
+            <Helmet>
+                <title>{pageTitle}</title>
+            </Helmet>
+            <PageHeader text={pageTitle} 
                         bgClass={'duty'} />
 
             <div className="page-container">

@@ -1,6 +1,7 @@
 
 
 import { useTranslation } from 'react-i18next';
+import { Helmet } from 'react-helmet';
 
 import PageHeader from '../../components/pageHeader/PageHeader';
 import InfoCard from '../../components/infoCard/InfoCard';
@@ -17,6 +18,8 @@ import './cancelArestPage.scss';
 const CancelArestPage = ({isOpen}) => {
 
     const { t } = useTranslation();
+
+    const pageTitle = t('services.cancel')
 
     const arestReasons =[
         'arest-imushestva',
@@ -55,7 +58,10 @@ const CancelArestPage = ({isOpen}) => {
 
     return (
         <>
-            <PageHeader text={'cancel'}
+            <Helmet>
+                <title>{pageTitle}</title>
+            </Helmet>
+            <PageHeader text={pageTitle}
                         bgClass={'cancel'}/>
 
             <div className='page-container'>

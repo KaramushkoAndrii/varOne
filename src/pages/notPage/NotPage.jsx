@@ -1,5 +1,7 @@
 
+
 import { useTranslation } from 'react-i18next';
+import { Helmet } from 'react-helmet';
 import PageHeader from '../../components/pageHeader/PageHeader';
 import InfoCard from '../../components/infoCard/InfoCard';
 
@@ -10,9 +12,15 @@ const NotPage = ({isOpen}) => {
 
     const { t } =useTranslation();
 
+    const pageTitle = t('services.not-page')
+
     return (
         <>
-            <PageHeader text={'not-page'}
+
+            <Helmet>
+                <title>{pageTitle}</title>
+            </Helmet>
+            <PageHeader text={pageTitle}
                         bgClass={'dev'}/>
 
             <div className="page-container">

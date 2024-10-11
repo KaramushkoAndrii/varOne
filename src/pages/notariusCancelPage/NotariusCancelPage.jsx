@@ -1,6 +1,7 @@
 
 
 import { useTranslation } from 'react-i18next';
+import { Helmet } from 'react-helmet';
 
 import PageHeader from '../../components/pageHeader/PageHeader';
 import PageContent from '../../components/pageContent/PageContent';
@@ -15,6 +16,8 @@ import './notariusCancelPage.scss';
 const NotariusCancelPage = ({isOpen}) => {
 
     const { t } = useTranslation();
+    
+    const pageTitle = t('services.notarius')
 
     const notariusDescriptionTop = [
         "ispolnitelnaya-nadpis",
@@ -37,7 +40,10 @@ const NotariusCancelPage = ({isOpen}) => {
 
     return (
         <>
-            <PageHeader text={'notarius'}
+            <Helmet>
+                <title>{pageTitle}</title>
+            </Helmet>
+            <PageHeader text={pageTitle}
                         bgClass={'notarius'}/>
 
             <div className="page-container">

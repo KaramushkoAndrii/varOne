@@ -1,5 +1,6 @@
 
 import { useTranslation } from 'react-i18next';
+import { Helmet } from 'react-helmet';
 
 
 import PageHeader from '../../components/pageHeader/PageHeader';
@@ -16,6 +17,8 @@ import './povernenyaBorguPage.scss'
 const PovernenyaBorguPage = ({isOpen}) => {
 
     const { t } = useTranslation();
+
+    const pageTitle = t('services.dolg')
 
     const dosudebnoeList = [
         "econom",
@@ -66,7 +69,10 @@ const PovernenyaBorguPage = ({isOpen}) => {
 
     return (
         <>
-            <PageHeader text={'dolg'}
+            <Helmet>
+                <title>{pageTitle}</title>
+            </Helmet>
+            <PageHeader text={pageTitle}
                         bgClass={'dolg'} />
             
 

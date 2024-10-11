@@ -1,5 +1,6 @@
 
 import { useTranslation } from "react-i18next";
+import { Helmet } from "react-helmet";
 import PageHeader from "../components/pageHeader/PageHeader";
 import InfoCard from "../components/infoCard/InfoCard";
 import PageContent from "../components/pageContent/PageContent";
@@ -22,10 +23,14 @@ const AdministrativeLawPage = ({isOpen}) => {
         'predstavitelstvo',
     ]
 
+    const pageTitle = t('services.administrative-law')
 
     return (
         <>
-            <PageHeader text={'administrative-law'} 
+            <Helmet>
+                <title>{pageTitle}</title>
+            </Helmet>
+            <PageHeader text={pageTitle} 
                         bgClass={'administrative-law'}/>
 
             <div className="page-container">

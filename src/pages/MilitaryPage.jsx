@@ -1,6 +1,7 @@
 
 
 import { useTranslation } from "react-i18next";
+import { Helmet } from "react-helmet";
 
 
 import PageHeader from "../components/pageHeader/PageHeader";
@@ -28,11 +29,16 @@ const MilitaryPage = ({isOpen}) => {
         'military-page.compensation'
     ]
 
+    const pageTitle = t('services.military');
+
 
 
     return (
         <>
-            <PageHeader text={'military'} 
+            <Helmet>
+                <title>{pageTitle}</title>
+            </Helmet>
+            <PageHeader text={pageTitle} 
                         bgClass={'military'} />
 
             <div className="page-container">

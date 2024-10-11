@@ -11,7 +11,6 @@ i18n
         debug: true,
         fallbackLng: 'ua'
     })
-    //i18n.changeLanguage('ru')
 
 
 export default i18n

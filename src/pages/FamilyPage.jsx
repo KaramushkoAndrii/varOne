@@ -1,4 +1,7 @@
 
+import { useTranslation } from "react-i18next";
+import { Helmet } from "react-helmet";
+
 
 import PageHeader from "../components/pageHeader/PageHeader";
 import InfoCard from "../components/infoCard/InfoCard";
@@ -8,9 +11,19 @@ import { familyList } from "../components/lists/Lists";
 
 const FamilyPage = ({isOpen}) => {
     
+
+    const { t } = useTranslation();
+
+    const pageTitle = t('services.family');
+
     return (
         <>
-            <PageHeader text={'family'} 
+
+            <Helmet>
+                <title>{pageTitle}</title>
+            </Helmet>
+            
+            <PageHeader text={pageTitle} 
                         bgClass={'family'} />
 
             <div className="page-container">

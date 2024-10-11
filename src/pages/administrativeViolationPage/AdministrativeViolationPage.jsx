@@ -1,6 +1,6 @@
 
 import { useTranslation } from "react-i18next";
-
+import { Helmet } from "react-helmet";
 
 import PageHeader from "../../components/pageHeader/PageHeader";
 import InfoCard from "../../components/infoCard/InfoCard";
@@ -33,9 +33,14 @@ const AdministrativeViolationPage = ({isOpen}) => {
         'pomosh'
     ]
 
+    const pageTitle = t('services.administrative-violation')
+
     return (
         <>
-            <PageHeader text={'administrative-violation'} bgClass={'administrative-violation'} />
+            <Helmet>
+                <title>{pageTitle}</title>
+            </Helmet>
+            <PageHeader text={pageTitle} bgClass={'administrative-violation'} />
 
             <div className='page-container'>
                 <InfoCard isOpen={isOpen} />

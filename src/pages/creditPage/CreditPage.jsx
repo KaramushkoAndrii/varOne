@@ -1,6 +1,7 @@
 
 
 import { useTranslation } from 'react-i18next';
+import { Helmet } from 'react-helmet';
 import PageHeader from '../../components/pageHeader/PageHeader';
 import InfoCard from '../../components/infoCard/InfoCard';
 import PageContent from '../../components/pageContent/PageContent';
@@ -14,6 +15,7 @@ import './creditPage.scss';
 const CreditPage = ({isOpen}) => {
 
     const { t } = useTranslation();
+    const pageTitle = t('services.credit')
 
     const creditContent = [
         'credits',
@@ -40,7 +42,10 @@ const CreditPage = ({isOpen}) => {
 
     return (
         <>
-            <PageHeader text={'credit'}
+            <Helmet>
+                <title>{pageTitle}</title>
+            </Helmet>
+            <PageHeader text={pageTitle}
                         bgClass={'credit'}/>
 
             <div className='page-container'>

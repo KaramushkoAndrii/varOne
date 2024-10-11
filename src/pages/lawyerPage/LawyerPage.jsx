@@ -1,5 +1,6 @@
 
 import { useTranslation } from "react-i18next";
+import { Helmet } from "react-helmet";
 
 
 import PageHeader from "../../components/pageHeader/PageHeader";
@@ -23,6 +24,8 @@ const LawyerPage = ({isOpen}) => {
 
     const { t } = useTranslation();
 
+    const pageTitle = t('services.lawyer')
+
 
     const distancionnoDescription = [
         "technology",
@@ -34,7 +37,10 @@ const LawyerPage = ({isOpen}) => {
 
     return (
         <>
-            <PageHeader text={'lawyer'} bgClass={'lawyer'} />
+            <Helmet>
+                <title>{pageTitle}</title>
+            </Helmet>
+            <PageHeader text={pageTitle} bgClass={'lawyer'} />
 
             <div className="page-container">
                 <InfoCard isOpen={isOpen} />

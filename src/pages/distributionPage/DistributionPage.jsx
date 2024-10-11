@@ -1,6 +1,6 @@
 
 import { useTranslation } from 'react-i18next';
-
+import { Helmet } from 'react-helmet';
 
 
 import PageHeader from '../../components/pageHeader/PageHeader';
@@ -20,6 +20,8 @@ import './distribution.scss'
 const DistributionPage = ({isOpen}) => {
 
     const { t } = useTranslation();
+
+    const pageTitle = t('services.distribution')
 
     const distributionContentList = [
         'roditeli-zhivyt-otdelno',
@@ -110,8 +112,11 @@ const DistributionPage = ({isOpen}) => {
     };
 
     return (
-        <>
-            <PageHeader text={'distribution'}
+        <>  
+            <Helmet>
+                <title>{pageTitle}</title>
+            </Helmet>
+            <PageHeader text={pageTitle}
                         bgClass={'distribution'} />
 
             <div className='page-container'>

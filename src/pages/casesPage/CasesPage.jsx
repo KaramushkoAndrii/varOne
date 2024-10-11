@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 import PageHeader from "../../components/pageHeader/PageHeader";
 import InfoCard from "../../components/infoCard/InfoCard";
@@ -12,10 +13,14 @@ const CasesPage  = ({isOpen}) => {
 
     const { t } = useTranslation();
 
+    const pageTitle = t('services.cases')
 
     return (
         <>
-            <PageHeader  text={'cases'} 
+            <Helmet>
+                <title>{pageTitle}</title>
+            </Helmet>
+            <PageHeader  text={pageTitle} 
                         bgClass={'cases'} />
 
             <div className="page-container">

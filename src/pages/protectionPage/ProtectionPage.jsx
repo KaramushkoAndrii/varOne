@@ -1,5 +1,6 @@
 
 import { useTranslation } from "react-i18next";
+import { Helmet } from "react-helmet";
 
 import PageHeader from "../../components/pageHeader/PageHeader";
 import InfoCard from "../../components/infoCard/InfoCard";
@@ -14,9 +15,14 @@ const ProtectionPage = ({isOpen}) => {
 
     const { t } = useTranslation();
 
+    const pageTitle = t('services.protection')
+
     return (
         <>
-            <PageHeader text={'protection'} bgClass={'protection'} />
+            <Helmet>
+                <title>{pageTitle}</title>
+            </Helmet>
+            <PageHeader text={pageTitle} bgClass={'protection'} />
 
             <div className="page-container">
                 <InfoCard isOpen={isOpen} />

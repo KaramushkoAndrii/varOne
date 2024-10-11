@@ -7,7 +7,7 @@ const PageHeader = ({text, bgClass}) => {
     const { t } = useTranslation();
     return (
         <div className={`page-header ${bgClass}`}>
-            <h2>{t(`services.${text}`)}</h2>
+            <h2>{t(`${text}`)}</h2>
         </div>
     )
 }

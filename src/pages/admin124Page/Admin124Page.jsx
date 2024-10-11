@@ -1,5 +1,6 @@
 
 import { useTranslation } from 'react-i18next';
+import { Helmet } from 'react-helmet';
 
 
 import PageHeader from '../../components/pageHeader/PageHeader';
@@ -17,6 +18,8 @@ import './admin124Page.scss'
 const Admin124Page =({isOpen}) => {
 
     const { t } = useTranslation();
+
+    const pageTitle = t('services.admin124')
 
     const lawyerServices = [
         "admin124-page.dtp-124",
@@ -81,7 +84,10 @@ const Admin124Page =({isOpen}) => {
 
     return (
         <>
-            <PageHeader text={'admin124'}
+            <Helmet>
+                <title>{pageTitle}</title>
+            </Helmet>
+            <PageHeader text={pageTitle}
                         bgClass={'admin124'} />
 
             <div className="page-container">

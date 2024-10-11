@@ -8,6 +8,7 @@ import PageContent from "../../components/pageContent/PageContent";
 import Services from "../../components/services/Services";
 import ImgContainer from "../../components/imgContainer/ImgContainer";
 import { buildingList } from "../../components/lists/Lists";
+import { Helmet } from "react-helmet";
 
 import neruhomist from '../../resources/neruhomistPage/neruhomist.webp';
 
@@ -16,6 +17,8 @@ import './buildingPage.scss';
 const BuildingPage = ({isOpen}) => {
 
     const { t } = useTranslation();
+
+    const pageTitle = t('services.building');
 
     const tipyNarusheniy = [
         "prava-sobstvenosti",
@@ -38,7 +41,11 @@ const BuildingPage = ({isOpen}) => {
 
     return (
         <>
-            <PageHeader text={'building'} 
+
+            <Helmet>
+                <title>{pageTitle}</title>
+            </Helmet>
+            <PageHeader text={pageTitle} 
                         bgClass={'build'}/>
 
             <div className="page-container">
