@@ -13,7 +13,15 @@ const Form = () => {
 
     const [formData, setFortData] = useState({
         number: ''
-    })
+    });
+
+    const formMessages = {
+        done: t('form.done'),
+        faild: t('form.faild')
+    }
+
+    const [statusMessage, setStatusMessage] = useState(null); // Сообщение статуса отправки
+    const [isSubmitting, setIsSubmitting] = useState(false);  // Статус отправки формы
 
     const changeHandler = (e) => {
         setFortData({
@@ -24,6 +32,7 @@ const Form = () => {
 
     const submitHandler = e => {
         e.preventDefault();
+        setIsSubmitting(true); // Начало отправки
 
         const formDataWithDate = {
             ...formData,
@@ -33,8 +42,29 @@ const Form = () => {
 
         axios.post(SHEET_URL, formDataWithDate)
             .then(response => {
-                console.log(response)
+                if (response.status === 200) {
+                    // Успешная отправка
+                    setStatusMessage(formMessages.done); // Сообщение благодарности
+                } else {
+                    setStatusMessage(formMessages.faild); // Сообщение об ошибке
+                }
             })
+            .catch(() => {
+                setStatusMessage(formMessages.faild); // Сообщение об ошибке при отказе
+            })
+            .finally(() => {
+                setIsSubmitting(false); // Завершение отправки
+
+                // Таймер для автоматического закрытия сообщения через 3 секунды
+                setTimeout(() => {
+                    setStatusMessage(null); // Закрыть сообщение
+                }, 2000);
+
+                // Таймер для очистки формы через 4 секунды
+                setTimeout(() => {
+                    setFortData({ number: '' }); // Очистить данные формы
+                }, 3000);
+            });
     }
 
     const advantages = [
@@ -66,9 +96,14 @@ const Form = () => {
                 </p>
             </div>
             <form onSubmit={submitHandler}>
-                <input value={formData.number} type="tel" name='number' onChange={changeHandler}  placeholder={t('form.placeholder')}></input>
-                <button><i><FiPhoneCall /></i>{t('form.call')}</button>
+                <input value={formData.number} type="tel" name='number' onChange={changeHandler}  placeholder={t('form.placeholder')} disabled={isSubmitting} />
+                <button disabled={isSubmitting}><i><FiPhoneCall /></i>{t('form.call')}</button>
             </form>
+            {statusMessage && (
+                <div className="form__status">
+                    <span>{statusMessage}</span>
+                </div>
+            )}
             <ul>
                 {advantages.map((item, key) => {
                     return (
