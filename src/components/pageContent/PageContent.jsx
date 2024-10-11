@@ -12,7 +12,7 @@ const PageContent = ({title,
                      buttonText='buttons.pageButton', 
                      descriptionBottom,
                      children = null,
-                     onToggleModal}) => {
+                     isOpen}) => {
                         
     const { t } = useTranslation();
 
@@ -44,7 +44,7 @@ const PageContent = ({title,
                         <li className='description__item' key={key}>{t(item)}</li>
                     ))}
                 </ul>
-                {buttonText ? <Button text={t(buttonText)} onClick={onToggleModal}/> : null}
+                {buttonText ? <Button text={t(buttonText)} onClick={isOpen}/> : null}
                 <p>{t(descriptionBottom)}</p> 
                     {children}
             </section>
