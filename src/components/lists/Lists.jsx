@@ -117,3 +117,42 @@ export const workerList = [
     {link:'yuredichniy-analiz', name:'worker-page.juredicheskiy-analiz'},
     {link:'skasyvanya-shtrafiv-derjpaci', name:'worker-page.otmena-shtrafov'}
 ]
+
+export const protectionList = [
+    {   
+        link: 'security',
+        name: 'protection-page-list.security'
+    },
+    {
+        link:'cancel',
+        name: 'protection-page-list.cancel'
+    },
+    {
+        link: 'security',
+        name: 'protection-page-list.escort'
+    },
+    {
+        link: 'less-damage',
+        name: 'protection-page-list.less-damage'
+    },
+    {
+        link: 'notarius',
+        name: 'protection-page-list.notarius'
+    },
+    {
+        link: 'inaction',
+        name: 'protection-page-list.inaction'
+    },
+    {
+        link: 'assessment',
+        name: 'protection-page-list.assessment'
+    },
+    {
+        link: 'credit',
+        name: 'protection-page-list.credit'
+    },
+    {
+        link: 'debt',
+        name: 'protection-page-list.debt'
+    },
+]

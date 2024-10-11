@@ -6,52 +6,13 @@ import InfoCard from "../../components/infoCard/InfoCard";
 import PageContent from "../../components/pageContent/PageContent";
 import Services from "../../components/services/Services";
 import Button from "../../components/button/Button";
+import { protectionList } from "../../components/lists/Lists";
 
 import './protectionPage.scss'
 
 const ProtectionPage = ({isOpen}) => {
 
     const { t } = useTranslation();
-
-    const servicesList = [
-
-        {   
-            link: 'security',
-            name: 'protection-page-list.security'
-        },
-        {
-            link:'cancel',
-            name: 'protection-page-list.cancel'
-        },
-        {
-            link: 'security',
-            name: 'protection-page-list.escort'
-        },
-        {
-            link: 'less-damage',
-            name: 'protection-page-list.less-damage'
-        },
-        {
-            link: 'notarius',
-            name: 'protection-page-list.notarius'
-        },
-        {
-            link: 'inaction',
-            name: 'protection-page-list.inaction'
-        },
-        {
-            link: 'assessment',
-            name: 'protection-page-list.assessment'
-        },
-        {
-            link: 'credit',
-            name: 'protection-page-list.credit'
-        },
-        {
-            link: 'debt',
-            name: 'protection-page-list.debt'
-        },
-    ]
 
     return (
         <>
@@ -66,7 +27,7 @@ const ProtectionPage = ({isOpen}) => {
                                  descriptionTop={'protection-page.creditors'}
                                  buttonText={null}>
 
-                        <Services title={'protection-page-list.title'} list={servicesList} />
+                        <Services title={'protection-page-list.title'} list={protectionList} />
 
                         <Button text={t('buttons.pageButton')} />
 
