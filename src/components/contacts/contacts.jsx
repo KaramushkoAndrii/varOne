@@ -14,7 +14,7 @@ const Contacts = () => {
     return (
         <ul className='contacts_list'>
             <li>
-                <a href={`viber://chat?number=${MyContacts[0]}`}>
+                <a href={`viber://chat?number=${MyContacts[1]}`}>
                     <CiMail />
                     <span className='contact-text'>{t('buttons.pageButton')}</span>
                 </a>
