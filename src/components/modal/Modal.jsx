@@ -14,7 +14,8 @@ const Modal = ({isClose , isModalOpen}) => {
 
     const formMessages = {
         done: t('form.done'),
-        faild: t('form.faild')
+        faild: t('form.faild'),
+        invalidNumber: t('form.invalidNumber')
     }
 
     const initialFormData = {
@@ -28,6 +29,13 @@ const Modal = ({isClose , isModalOpen}) => {
     const [hideContent, setHideContent] = useState(false); // Контроль скрытия тела и футера
     const [closeTimeout, setCloseTimeout] = useState(null); // Состояние для таймера закрытия
     const [resetTimeout, setResetTimeout] = useState(null); // Состояние для таймера сброса
+    const [error, setError] = useState(null);
+
+
+    const validateNumber = (number) => {
+        const phoneRegex = /^\+?[0-9\s]{10,15}$/;
+        return phoneRegex.test(number);
+    }
 
 
     const changeHandler = (e) => {
@@ -45,6 +53,17 @@ const Modal = ({isClose , isModalOpen}) => {
 
     const submitHandler = e => {
         e.preventDefault();
+
+        if(!formData.number || !validateNumber(formData.number)) {
+            setError(formMessages.invalidNumber);
+
+            setFormData({number: ''})
+            setTimeout(() => {
+                setError(null)
+            }, 3000)
+
+            return;
+        }
 
         // Перед отправкой, отображаем сообщение ожидания и спиннер
         setModalMessage(<Spiner />);
@@ -121,6 +140,8 @@ const Modal = ({isClose , isModalOpen}) => {
                             placeholder="050 123 456 78 89" />
                         <Button text={t('modal.send')} />
                     </span>
+
+                    {error && <span className="error-message">{error}</span>}
                 </form>
             </div>
             <footer className="modal__footer" style={{ display: hideContent ? 'none' : 'block' }}>

@@ -148,6 +148,16 @@
             }
         }
 
+        .error-message {
+            width: 100%;
+            justify-content: center;
+            background-color: $error;
+            border: 1px solid $error;
+            border-radius: 5px;
+            padding: 1rem;
+            margin-top: 0.5rem;
+        }
+
         #number {
             width: 50%;
         }

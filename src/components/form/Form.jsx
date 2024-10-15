@@ -3,6 +3,7 @@ import axios from 'axios';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { FiPhoneCall, FiDollarSign, FiClock, FiMapPin } from "react-icons/fi";
+import Spiner from '../spiner/Spiner';
 
 import './form.scss';
 
@@ -11,20 +12,30 @@ const Form = () => {
     const SHEET_URL = 'https://api.sheetbest.com/sheets/9a4149fb-e8af-4e21-bf83-08f7db89106b'
     const { t } = useTranslation();
 
-    const [formData, setFortData] = useState({
+    const [formData, setFormData] = useState({
         number: ''
     });
 
     const formMessages = {
         done: t('form.done'),
-        faild: t('form.faild')
+        faild: t('form.faild'),
+        invalidNumber: t('form.invalidNumber')
     }
 
     const [statusMessage, setStatusMessage] = useState(null); // Сообщение статуса отправки
     const [isSubmitting, setIsSubmitting] = useState(false);  // Статус отправки формы
+    const [error, setError] = useState(null);
+
+
+    const validateNumber = (number) => {
+        const phoneRegex = /^\+?[0-9\s]{10,15}$/;
+        return phoneRegex.test(number);
+    }
+
+
 
     const changeHandler = (e) => {
-        setFortData({
+        setFormData({
             ...formData,
             [e.target.name]: e.target.value
         });
@@ -32,7 +43,21 @@ const Form = () => {
 
     const submitHandler = e => {
         e.preventDefault();
+
+        if(!formData.number || !validateNumber(formData.number)) {
+            setError(formMessages.invalidNumber);
+
+            setFormData({number: ''})
+            setTimeout(() => {
+                setError(null)
+            }, 3000)
+
+            return;
+        }
+
+        setStatusMessage(<Spiner />)
         setIsSubmitting(true); // Начало отправки
+        setError(null);
 
         const formDataWithDate = {
             ...formData,
@@ -62,7 +87,7 @@ const Form = () => {
 
                 // Таймер для очистки формы через 4 секунды
                 setTimeout(() => {
-                    setFortData({ number: '' }); // Очистить данные формы
+                    setFormData({ number: '' }); // Очистить данные формы
                 }, 4000);
             });
     }
@@ -96,9 +121,16 @@ const Form = () => {
                 </p>
             </div>
             <form onSubmit={submitHandler}>
-                <input value={formData.number} type="tel" name='number' onChange={changeHandler}  placeholder={t('form.placeholder')} disabled={isSubmitting} />
+                <input value={formData.number} type="tel" name='number' 
+                       onChange={changeHandler}  
+                       placeholder={t('form.placeholder')} 
+                       disabled={isSubmitting} />
+
                 <button disabled={isSubmitting}><i><FiPhoneCall /></i>{t('form.call')}</button>
+
+                {error && <span className="error-message">{error}</span>}
             </form>
+
             {statusMessage && (
                 <div className="form__status">
                     <span>{statusMessage}</span>

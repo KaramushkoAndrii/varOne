@@ -158,3 +158,12 @@
         z-index: 11;
     }
 }
+
+.error-message {
+    width: 60%;
+    text-align: center;
+    background-color: $error;
+    border: 1px solid $error;
+    border-radius: 5px;
+    padding: 1rem;
+}
