@@ -26,6 +26,7 @@ import NotariusCancelPage from './pages/notariusCancelPage/NotariusCancelPage';
 import Admin130Page from './pages/admin130Page/Admin130Page';
 import Admin124Page from './pages/admin124Page/Admin124Page';
 import NotPage from './pages/notPage/NotPage';
+import NotFoundPage from './pages/notFoundPage/NotFoundPage';
 
 
 
@@ -50,7 +51,7 @@ function App() {
               <Route index element={<HomePage isOpen={isOpen}/>}/>
               <Route path='cases' element={<CasesPage isOpen={isOpen}/>}/>
 
-              <Route path='building/*' element={<BuildingPage isOpen={isOpen}/>}/>
+              <Route path='building/' element={<BuildingPage isOpen={isOpen}/>}/>
                   <Route path='building/suprovid-spravy-pro-vitrebuvanna-neruhomogo-maina' element={<NotPage isOpen={isOpen}/> } />
                   <Route path='building/rozarvannya-dogovory-orendy-zemli' element={<NotPage isOpen={isOpen}/> } />
                   <Route path='building/spory-pro-vyznanya-prava-vlasnosti-na-neruhome-maino' element={<NotPage isOpen={isOpen} /> } />
@@ -59,9 +60,10 @@ function App() {
                   <Route path='building/oformlennya-samovilno-zbudovanyh-objectiv' element={<NotPage isOpen={isOpen} /> } />
                   <Route path='building/vydil-na-podil-maina-v-narure' element={<NotPage isOpen={isOpen} /> } />
                   <Route path='building/suprovid-pryvatyzacii-kvartyry' element={<NotPage isOpen={isOpen} /> } />
+                  <Route path='building/*' element={<NotFoundPage isOpen={isOpen}/>} />
 
 
-              <Route path='family/*' element={<FamilyPage isOpen={isOpen}/>} />
+              <Route path='family/' element={<FamilyPage isOpen={isOpen}/>} />
                   <Route path='family/brak' element={<BrakPage isOpen={isOpen}/>}/>
                   <Route path='family/distribution' element={<DistributionPage isOpen={isOpen}/>} />
                   <Route path='family/podil-maina' element={<PodilMainaPage isOpen={isOpen} />} />
@@ -70,9 +72,10 @@ function App() {
                   <Route path='family/priznanie-nedeesposobnym' element={<NotPage isOpen={isOpen} />} />
                   <Route path='family/projivanie-odnoy-semiey' element={<NotPage isOpen={isOpen} />} />
                   <Route path='family/drygie-factory' element={<NotPage isOpen={isOpen} />} />
+                  <Route path='family/*' element={<NotFoundPage isOpen={isOpen}/>} />
 
 
-              <Route path='military/*' element={<MilitaryPage  isOpen={isOpen}/>} />
+              <Route path='military/' element={<MilitaryPage  isOpen={isOpen}/>} />
                   <Route path='military/zvilnenya-z-viyskovoi-sluzhby' element={<NotPage isOpen={isOpen} />} />
                   <Route path='military/otrymanya-vidsrochki' element={<NotPage isOpen={isOpen} />} />
                   <Route path='military/oskarzhenya-vlk' element={<NotPage isOpen={isOpen} />} />
@@ -83,13 +86,15 @@ function App() {
                   <Route path='military/dopomoga-v-otrymanii-15-millions' element={<NotPage isOpen={isOpen} />} />
                   <Route path='military/styagnenya-ne-splachenogo-zabezpechenya' element={<NotPage isOpen={isOpen} />} />
                   <Route path='military/oskarzhenya-ne-provomirnyh-rishen' element={<NotPage isOpen={isOpen} />} />
+                  <Route path='military/*' element={<NotFoundPage isOpen={isOpen}/>} />
 
 
-              <Route path='duty/*' element={<DutyPage isOpen={isOpen}/>} />
+              <Route path='duty/' element={<DutyPage isOpen={isOpen}/>} />
                   <Route path='duty/borg' element={<PovernenyaBorguPage isOpen={isOpen} />} />
+                  <Route path='duty/*' element={<NotFoundPage isOpen={isOpen}/>} />
 
 
-              <Route path='protection/*' element={<ProtectionPage isOpen={isOpen}/>} />
+              <Route path='protection/' element={<ProtectionPage isOpen={isOpen}/>} />
                   <Route path='protection/security' element={<CreditPage isOpen={isOpen}/>}/>
                   <Route path='protection/cancel' element={<CancelArestPage isOpen={isOpen}/>} />
                   <Route path='protection/notarius' element={<NotariusCancelPage isOpen={isOpen}/>} />
@@ -99,9 +104,10 @@ function App() {
                   <Route path='protection/assessment' element={<NotPage isOpen={isOpen}/>}/>
                   <Route path='protection/credit' element={<NotPage isOpen={isOpen}/>}/>
                   <Route path='protection/debt' element={<NotPage isOpen={isOpen}/>}/>
+                  <Route path='protection/*' element={<NotFoundPage isOpen={isOpen}/>} />
 
 
-              <Route path='worker/*' element={<WorkerPage isOpen={isOpen}/>} />
+              <Route path='worker/' element={<WorkerPage isOpen={isOpen}/>} />
                   <Route path='worker/styagnenya-zaborgovonosti' element={<NotPage isOpen={isOpen}/>}/>
                   <Route path='worker/suprovid-trudovogo-spory' element={<NotPage isOpen={isOpen}/>}/>
                   <Route path='worker/styagnenya-dopomogy-pry-zvilnenni' element={<NotPage isOpen={isOpen}/>}/>
@@ -109,9 +115,10 @@ function App() {
                   <Route path='worker/tyagnenya-materialnoy-shkody' element={<NotPage isOpen={isOpen}/>}/>
                   <Route path='worker/yuredichniy-analiz' element={<NotPage isOpen={isOpen}/>}/>
                   <Route path='worker/skasyvanya-shtrafiv-derjpaci' element={<NotPage isOpen={isOpen}/>}/>
+                  <Route path='worker/*' element={<NotFoundPage isOpen={isOpen}/>} />
 
 
-              <Route path='administrative-law/*' element={<AdministrativeLawPage isOpen={isOpen}/>} />
+              <Route path='administrative-law/' element={<AdministrativeLawPage isOpen={isOpen}/>} />
                   <Route path='administrative-law/oscarjennya-postanovy-pdr' element={<NotPage isOpen={isOpen}/>}/>
                   <Route path='administrative-law/suprovid-spravy-z-pererahunku-pensii' element={<NotPage isOpen={isOpen}/>}/>
                   <Route path='administrative-law/oskarzhenya-rishennya-organy-miscevogo-samovryaduvannya' element={<NotPage isOpen={isOpen}/>}/>
@@ -120,9 +127,10 @@ function App() {
                   <Route path='administrative-law/oskarzhenya-rishenya-podatkovogo-organu' element={<NotPage isOpen={isOpen}/>}/>
                   <Route path='administrative-law/oskarzhenya-diy-inshih-controluuchih-organiv' element={<NotPage isOpen={isOpen}/>}/>
                   <Route path='administrative-law/oskarzhenya-diy-tck' element={<NotPage isOpen={isOpen}/>}/>
+                  <Route path='administrative-law/*' element={<NotFoundPage isOpen={isOpen}/>} />
               
 
-              <Route path='administrative-violation/*' element={<AdministrativeViolationPage isOpen={isOpen}/>} />
+              <Route path='administrative-violation/' element={<AdministrativeViolationPage isOpen={isOpen}/>} />
                   <Route path='administrative-violation/zahist-klienta-po-130-stati' element={<Admin130Page isOpen={isOpen} />} />
                   <Route path='administrative-violation/zahist-klienta-po-124-stati' element={<Admin124Page isOpen={isOpen}/>} />
                   <Route path='administrative-violation/vidshkodyvannya-moralnoi-ta-materialnoi-shkody' element={<NotPage isOpen={isOpen}/>}/>
@@ -130,8 +138,9 @@ function App() {
                   <Route path='administrative-violation/zahist-klienta-po-164-stati' element={<NotPage isOpen={isOpen}/>}/>
                   <Route path='administrative-violation/vidshokyvanya-vyplat-pisly-dtp' element={<NotPage isOpen={isOpen}/>}/>
                   <Route path='administrative-violation/vikradenya-avto' element={<NotPage isOpen={isOpen}/>}/>
+                  <Route path='administrative-violation/*' element={<NotFoundPage isOpen={isOpen}/>} />
 
-              <Route path='lawyer/*' element={<LawyerPage isOpen={isOpen}/>} />
+              <Route path='lawyer/' element={<LawyerPage isOpen={isOpen}/>} />
                   <Route path='lawyer/brak' element={<BrakPage isOpen={isOpen}/>}/>
                   <Route path='lawyer/distribution' element={<DistributionPage isOpen={isOpen}/>} />
                   <Route path='lawyer/podil-maina' element={<PodilMainaPage isOpen={isOpen} />} />
@@ -195,6 +204,9 @@ function App() {
                   <Route path='lawyer/zahist-klienta-po-164-stati' element={<NotPage isOpen={isOpen}/>}/>
                   <Route path='lawyer/vidshokyvanya-vyplat-pisly-dtp' element={<NotPage isOpen={isOpen}/>}/>
                   <Route path='lawyer/vikradenya-avto' element={<NotPage isOpen={isOpen}/>}/>
+                  <Route path='lawyer/*' element={<NotFoundPage isOpen={isOpen}/>} />
+
+              <Route path='*' element={<NotFoundPage isOpen={isOpen}/>} />
             </Route>
           </Routes>
         <Modal isOpen={isOpen} isClose={isClose} isModalOpen={isModalOpen}/>
