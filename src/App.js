@@ -1,8 +1,8 @@
 import { Suspense, useState } from 'react';
-import { Container } from 'react-bootstrap';
-import {Routes, Route} from 'react-router-dom'
+import {Routes, Route ,useLocation} from 'react-router-dom'
 import Modal from './components/modal/Modal';
 import ScrollToAim from './components/scrollToAim/ScrollToAim';
+import PageTransition from './components/pageTransition/PageTransition';
 
 import Layout from './components/layout/Layout';
 import HomePage from './pages/HomePage';
@@ -41,12 +41,14 @@ function App() {
   const isClose = () => {
     setIsModalOpen(false)
   }
+
+  const location = useLocation();
   
   return (
     <div className="App">
-      <Container>
           <ScrollToAim />
-          <Routes>
+          <PageTransition>
+          <Routes location={location} key={location.pathname}>
             <Route path='/' element={<Layout />}>
               <Route index element={<HomePage isOpen={isOpen}/>}/>
               <Route path='cases' element={<CasesPage isOpen={isOpen}/>}/>
@@ -61,6 +63,7 @@ function App() {
                   <Route path='building/vydil-na-podil-maina-v-narure' element={<NotPage isOpen={isOpen} /> } />
                   <Route path='building/suprovid-pryvatyzacii-kvartyry' element={<NotPage isOpen={isOpen} /> } />
                   <Route path='building/*' element={<NotFoundPage isOpen={isOpen}/>} />
+              <Route />
 
 
               <Route path='family/' element={<FamilyPage isOpen={isOpen}/>} />
@@ -73,6 +76,7 @@ function App() {
                   <Route path='family/projivanie-odnoy-semiey' element={<NotPage isOpen={isOpen} />} />
                   <Route path='family/drygie-factory' element={<NotPage isOpen={isOpen} />} />
                   <Route path='family/*' element={<NotFoundPage isOpen={isOpen}/>} />
+              <Route />
 
 
               <Route path='military/' element={<MilitaryPage  isOpen={isOpen}/>} />
@@ -87,11 +91,13 @@ function App() {
                   <Route path='military/styagnenya-ne-splachenogo-zabezpechenya' element={<NotPage isOpen={isOpen} />} />
                   <Route path='military/oskarzhenya-ne-provomirnyh-rishen' element={<NotPage isOpen={isOpen} />} />
                   <Route path='military/*' element={<NotFoundPage isOpen={isOpen}/>} />
+              <Route />
 
 
               <Route path='duty/' element={<DutyPage isOpen={isOpen}/>} />
                   <Route path='duty/borg' element={<PovernenyaBorguPage isOpen={isOpen} />} />
                   <Route path='duty/*' element={<NotFoundPage isOpen={isOpen}/>} />
+              <Route />
 
 
               <Route path='protection/' element={<ProtectionPage isOpen={isOpen}/>} />
@@ -105,6 +111,7 @@ function App() {
                   <Route path='protection/credit' element={<NotPage isOpen={isOpen}/>}/>
                   <Route path='protection/debt' element={<NotPage isOpen={isOpen}/>}/>
                   <Route path='protection/*' element={<NotFoundPage isOpen={isOpen}/>} />
+              <Route />
 
 
               <Route path='worker/' element={<WorkerPage isOpen={isOpen}/>} />
@@ -116,6 +123,7 @@ function App() {
                   <Route path='worker/yuredichniy-analiz' element={<NotPage isOpen={isOpen}/>}/>
                   <Route path='worker/skasyvanya-shtrafiv-derjpaci' element={<NotPage isOpen={isOpen}/>}/>
                   <Route path='worker/*' element={<NotFoundPage isOpen={isOpen}/>} />
+              <Route />
 
 
               <Route path='administrative-law/' element={<AdministrativeLawPage isOpen={isOpen}/>} />
@@ -128,6 +136,7 @@ function App() {
                   <Route path='administrative-law/oskarzhenya-diy-inshih-controluuchih-organiv' element={<NotPage isOpen={isOpen}/>}/>
                   <Route path='administrative-law/oskarzhenya-diy-tck' element={<NotPage isOpen={isOpen}/>}/>
                   <Route path='administrative-law/*' element={<NotFoundPage isOpen={isOpen}/>} />
+              <Route />
               
 
               <Route path='administrative-violation/' element={<AdministrativeViolationPage isOpen={isOpen}/>} />
@@ -139,6 +148,7 @@ function App() {
                   <Route path='administrative-violation/vidshokyvanya-vyplat-pisly-dtp' element={<NotPage isOpen={isOpen}/>}/>
                   <Route path='administrative-violation/vikradenya-avto' element={<NotPage isOpen={isOpen}/>}/>
                   <Route path='administrative-violation/*' element={<NotFoundPage isOpen={isOpen}/>} />
+              <Route />
 
               <Route path='lawyer/' element={<LawyerPage isOpen={isOpen}/>} />
                   <Route path='lawyer/brak' element={<BrakPage isOpen={isOpen}/>}/>
@@ -205,12 +215,13 @@ function App() {
                   <Route path='lawyer/vidshokyvanya-vyplat-pisly-dtp' element={<NotPage isOpen={isOpen}/>}/>
                   <Route path='lawyer/vikradenya-avto' element={<NotPage isOpen={isOpen}/>}/>
                   <Route path='lawyer/*' element={<NotFoundPage isOpen={isOpen}/>} />
+              <Route />
 
               <Route path='*' element={<NotFoundPage isOpen={isOpen}/>} />
             </Route>
           </Routes>
+          </PageTransition>
         <Modal isOpen={isOpen} isClose={isClose} isModalOpen={isModalOpen}/>
-      </Container>
     </div>
   );
 }
