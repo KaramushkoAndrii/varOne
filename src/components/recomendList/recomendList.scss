@@ -1,11 +1,58 @@
+@import '../../style/var.scss';
+@import '../../style/global.scss';
+
+.main-section .recomend__list {
+    display: grid;
+    gap: 2rem;
+    color: $white;
 
 
-.recomend-list {
-    li:not(:last-child) {
-        padding-bottom: 1rem;
+    @media (min-width: $medium) {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.main-section .recomend__item {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    width: 100%;
+    background-color: $grey;
+    border-radius: 5px;
+
+    &:hover {
+        color: unset;
     }
 
-    h2 {
-        padding: 2rem 0;
+    &--icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        background-color: $primary-color;
+        border-radius: 5px;
     }
+
+    svg {
+        width: 60%;
+        height: 60%;
+
+        fill: $white;
+    }
+
+    &--text {
+        padding: 1.5rem;
+        font-size: 0.75rem;
+
+        @media (min-width: $large) {
+            font-size: 1rem;
+        }
+    }
+}
+
+.recomend__description {
+    margin-top: 1.5rem;
 }
