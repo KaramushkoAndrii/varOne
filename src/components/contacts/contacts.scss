@@ -2,14 +2,21 @@
 @import '../../style/fonts.scss';
 
 .contacts_list {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     position: relative;
     gap: 1rem;
     font-family: 'Roboto';
 
+    li {
+        width: 100%;
+        height: 100%;
+    }
+
     a {
         display: flex;
         align-items: center;
+        justify-content: center;
         gap: 1rem;
         padding: 0.5rem 1rem;
         border: 1px solid $primary-color;
@@ -17,11 +24,13 @@
         background-color: $primary-color;
         transition: background-color 0.7s ease, border-color 0.7s ease;
         color: $white;
+        width: 100%;
+        height: 100%;
 
         svg {
             display: block;
 
-            @media (min-width: $medium) {
+            @media (min-width: $large) {
                 display: none;
             }
 
@@ -42,16 +51,17 @@
         position: fixed;
         bottom: 0;
         left: 0;
+        gap: 0;
         width: 100dvw;
         background-color: $primary-color;
-        padding: 1rem;
+        padding: 0;
         z-index: 1000;
-        gap: 9rem;
 
 
         &::before {
             position: absolute;
             top: 0;
+            left: 50%;
             content: '';
             width: 1px;
             height: 100%;
@@ -60,10 +70,11 @@
         }
 
         a {
-            padding: 0.5rem;
+            padding: 1.5rem;
             border-radius: 0;
             width: 100%;
             text-align: center;
+            justify-content: center;
         }
 
         .contact-text {
