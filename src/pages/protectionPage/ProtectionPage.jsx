@@ -35,7 +35,7 @@ const ProtectionPage = ({isOpen}) => {
 
                         <Services title={'protection-page-list.title'} list={protectionList} />
 
-                        <Button text={t('buttons.pageButton')} />
+                        <Button text={t('buttons.pageButton')} onClick={isOpen}/>
 
                         <h3 className="protection-page__lower">{t('protection-page.more')}</h3>
 

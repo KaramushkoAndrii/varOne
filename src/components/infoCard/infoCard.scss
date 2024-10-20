@@ -49,6 +49,12 @@
 
         span {
             color: $white;
+
+            &:hover {
+                a {
+                    color: $primary-color;
+                }
+            }
         }
 
         a {
