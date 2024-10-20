@@ -11,12 +11,16 @@ const HomePage = ({isOpen}) => {
 
     const { t } = useTranslation();
 
-    const pageTitle = t('pages.main')
+    const pageTitle = t('pages.main');
+    const pageDescription = t('pages.description');
 
     return (
         <>
             <Helmet>
                 <title>{pageTitle}</title>
+                <meta property="og:title" content={pageTitle} />
+                <meta property="og:description" content={pageDescription} />
+                <meta property="og:type" content="website" />
             </Helmet>
             <HeroPage isOpen={isOpen}/>
             <Welcome isOpen={isOpen}/>
