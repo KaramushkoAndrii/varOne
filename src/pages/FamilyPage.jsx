@@ -20,7 +20,6 @@ const FamilyPage = ({isOpen}) => {
         <>
 
             <Helmet>
-                <meta property="og:title" content={pageTitle} />
                 <title>{pageTitle}</title>
             </Helmet>
             
