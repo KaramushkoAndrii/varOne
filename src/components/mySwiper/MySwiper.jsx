@@ -26,7 +26,7 @@ const MySwiper = ({slides, swiperConfig, moreBtn}) => {
             {slides.map((slide,index) => (
                     <SwiperSlide key={index}>
                         <div className="slide-content">
-                            <a href={slide.link} target="_blank" rel="noreferrer">
+                            <a href={slide.link} target="__blank" rel="noreferrer">
                                 <img src={slide.image} alt={slide.alt} />
                                 <div className="slide-description">
                                     <h3>{t(`${slide.title}`)}</h3>

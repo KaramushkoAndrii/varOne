@@ -33,7 +33,7 @@ const CasesPage  = ({isOpen}) => {
                         <ul className="cases__list">
                             {caseList.map((item, key) => (
                                 <li className="cases__item" style={{backgroundImage: `url(${item.bg})`}} key={key}>
-                                    <Link to={item.link}> 
+                                    <Link to={item.link} target="__blank"> 
                                         {t(item.title)}
                                     </Link>
                                 </li>))

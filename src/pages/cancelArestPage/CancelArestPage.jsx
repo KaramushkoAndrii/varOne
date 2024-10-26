@@ -70,78 +70,78 @@ const CancelArestPage = ({isOpen}) => {
                 <section className='page-info'>
                     <PageContent title={'cancel-page.title'} 
                                  titleDescription={'cancel-page.titleDescription'}
-                                 buttonText={null}/>
+                                 buttonText={null}>
 
-                    {arestReasons.map((item, key) => (
-                        <p key={key} className='arest__content'>{t(`cancel-page.${item}`)}</p>
-                    ))}
-
-
-                    <ImgContainer src={areshtMaina} alt={'arest-maina'} />
-                    <h3 className='arest__subtitle'>{t('cancel-page.sluchai-aresta')}</h3>
-
-                    <p className='arest__content'>{t('cancel-page.arrest-reasons')}</p>
-
-                    <h3 className='arest__subtitle'>{t('cancel-page.poryadok-nalozheniya')}</h3>
-
-                    <p className='arest__content'>{t('cancel-page.regulirovanie-poryadka')}</p>
-
-                    <p className='arest__content'>{t('cancel-page.often-reasons')}</p>
-
-                    <ImgContainer src={arested} alt={'na-sho-nakladaut-arest'} />
-                    <h3 className='arest__subtitle'>{t('cancel-page.arrested-thinks')}</h3>
-
-                    <ul className='arrested-thinks__list'>
-                        {canBeArrestedList.map((item, key) => (
-                            <li key={key} className='arrested-list__item'>
-                                {t(`cancel-page.${item}`)}
-                            </li>
+                        {arestReasons.map((item, key) => (
+                            <p key={key} className='arest__content'>{t(`cancel-page.${item}`)}</p>
                         ))}
-                    </ul>
 
-                    <h4 className='arest__subtitle'>{t('cancel-page.arrested-more')}</h4>
 
-                    <h3 className='arest__subtitle'>{t('cancel-page.not-arrested')}</h3>
+                        <ImgContainer src={areshtMaina} alt={'arest-maina'} />
+                        <h3 className='arest__subtitle'>{t('cancel-page.sluchai-aresta')}</h3>
 
-                    <ul className='arrested-thinks__list'>
-                        {notArrester.map((item, key) => (
-                            <li key={key} className='arrested-list__item'>
-                                {t(`cancel-page.${item}`)}
-                            </li>
-                        ))}
-                    </ul>
+                        <p className='arest__content'>{t('cancel-page.arrest-reasons')}</p>
 
-                    <p className='arest__content'>{t('cancel-page.arrest-moszet-nakladovatsya')}</p>
+                        <h3 className='arest__subtitle'>{t('cancel-page.poryadok-nalozheniya')}</h3>
 
-                    <h3 className='arest__subtitle'>{t('cancel-page.criminal-procesing-title')}</h3>
+                        <p className='arest__content'>{t('cancel-page.regulirovanie-poryadka')}</p>
 
-                    <ul className='arrested-thinks__list'>
-                        {criminalArrestList.map((item, key) => (
-                            <li key={key} className='arrested-list__item'>
-                                {t(`cancel-page.${item}`)}
-                            </li>
-                        ))}
-                    </ul>
+                        <p className='arest__content'>{t('cancel-page.often-reasons')}</p>
 
-                    <h3 className='arest__subtitle'>{t('cancel-page.obespechenie-iska')}</h3>
+                        <ImgContainer src={arested} alt={'na-sho-nakladaut-arest'} />
+                        <h3 className='arest__subtitle'>{t('cancel-page.arrested-thinks')}</h3>
 
-                    <p className='arest__content'>{t('cancel-page.obespechenie-iska-description')}</p>
+                        <ul className='arrested-thinks__list'>
+                            {canBeArrestedList.map((item, key) => (
+                                <li key={key} className='arrested-list__item'>
+                                    {t(`cancel-page.${item}`)}
+                                </li>
+                            ))}
+                        </ul>
 
-                    <h3 className='arest__subtitle'>{t('cancel-page.kak-snyat')}</h3>
+                        <h4 className='arest__subtitle'>{t('cancel-page.arrested-more')}</h4>
 
-                    <p className='arest__content'>{t('cancel-page.kak-snyat-description')}</p>
+                        <h3 className='arest__subtitle'>{t('cancel-page.not-arrested')}</h3>
 
-                    <ul className='arrested-thinks__list how-cancel__list'>
-                        {arrestedList.map((item, key) => (
-                            <li key={key} className='arrested-list__item'>
-                                {t(`cancel-page.${item}`)}
-                            </li>
-                        ))}
-                    </ul>
+                        <ul className='arrested-thinks__list'>
+                            {notArrester.map((item, key) => (
+                                <li key={key} className='arrested-list__item'>
+                                    {t(`cancel-page.${item}`)}
+                                </li>
+                            ))}
+                        </ul>
 
-                    <h4 className='arest__conclusion'>{t('cancel-page.pravilniy-podhod')}</h4>
+                        <p className='arest__content'>{t('cancel-page.arrest-moszet-nakladovatsya')}</p>
 
-                    <RecomendList />
+                        <h3 className='arest__subtitle'>{t('cancel-page.criminal-procesing-title')}</h3>
+
+                        <ul className='arrested-thinks__list'>
+                            {criminalArrestList.map((item, key) => (
+                                <li key={key} className='arrested-list__item'>
+                                    {t(`cancel-page.${item}`)}
+                                </li>
+                            ))}
+                        </ul>
+
+                        <h3 className='arest__subtitle'>{t('cancel-page.obespechenie-iska')}</h3>
+
+                        <p className='arest__content'>{t('cancel-page.obespechenie-iska-description')}</p>
+
+                        <h3 className='arest__subtitle'>{t('cancel-page.kak-snyat')}</h3>
+
+                        <p className='arest__content'>{t('cancel-page.kak-snyat-description')}</p>
+
+                        <ul className='arrested-thinks__list how-cancel__list'>
+                            {arrestedList.map((item, key) => (
+                                <li key={key} className='arrested-list__item'>
+                                    {t(`cancel-page.${item}`)}
+                                </li>
+                            ))}
+                        </ul>
+
+                        <h4 className='arest__conclusion'>{t('cancel-page.pravilniy-podhod')}</h4>
+                        <RecomendList />
+                    </PageContent>
                 </section>
             </div>
         </>

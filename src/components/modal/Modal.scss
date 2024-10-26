@@ -22,6 +22,7 @@
     transition: transform 1s ease, opacity 1s ease;
     font-family: 'Xolonium';
     font-weight: normal;
+    border-radius: 5px;
 
     @media (max-width: $large) {
         width: 75%;
@@ -53,6 +54,7 @@
         background-size: cover;
         color: $white;
         z-index: 4;
+        border-radius: 5px;
 
         @media (max-width: $large) {
             height: 20dvh;
@@ -175,6 +177,11 @@
             display: flex;
             flex-direction: column;
             flex-grow: 1;
+
+            &:first-child {
+                margin-bottom: 1rem;
+            }
+    
 
             span {
                 margin-bottom: 0.5rem;

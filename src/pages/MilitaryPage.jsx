@@ -49,7 +49,8 @@ const MilitaryPage = ({isOpen}) => {
                     <PageContent title={'services.military'} 
                                  titleDescription={'military-page.titleDescription'}
                                  sectionHeader={'military-page.sectionHeader'} 
-                                 list={militaryHelp} >
+                                 list={militaryHelp}
+                                 isOpen={isOpen}>
                                 
 
                                 <ImgContainer src={military} alt={'viyskoviy-advokat'} />
