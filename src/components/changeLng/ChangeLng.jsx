@@ -34,36 +34,3 @@ const ChangeLng = () => {
 };
 
 export default ChangeLng;
-
-/*const ChangeLng = () => {
-
-    const { i18n } = useTranslation();
-
-    const locales = {
-        ua : {
-            title: 'UA'
-        },
-        ru : {
-            title: 'RU'
-        }
-    }
-
-
-    return (
-        <ul className='language_togle'>
-            {Object.keys(locales).map((locale) => {
-            return (
-                <li key={locale}>
-                    <button style={{fontWeight: i18n.resolvedLanguage === locale ? 'bold' : 'normal'}} 
-                            type="submit"
-                            onClick={() => i18n.changeLanguage(locale)}>
-                        {locales[locale].title}
-                    </button>
-                </li>
-            )
-        })}
-        </ul>
-    )
-}*/
-
-//export default ChangeLng;
