@@ -9,7 +9,7 @@ import './form.scss';
 
 const Form = () => {
 
-    const SHEET_URL = 'https://api.sheetbest.com/sheets/9a4149fb-e8af-4e21-bf83-08f7db89106b'
+    const SHEET_URL = 'https://api.sheetmonkey.io/form/hB96ZMdh6rX7pfH8H7mf3h'
     const { t } = useTranslation();
 
     const [formData, setFormData] = useState({
@@ -70,6 +70,16 @@ const Form = () => {
                 if (response.status === 200) {
                     // Успешная отправка
                     setStatusMessage(formMessages.done); // Сообщение благодарности
+
+                    
+                    //Добавление события лид Facebook на отправку формы 
+                    if(window.fbq) {
+                        window.fbq('track', 'Lead', {
+                            content_name: formDataWithDate.task,
+                            phone: formDataWithDate.number,
+                            date: formDataWithDate.date,
+                        });
+                    }
                 } else {
                     setStatusMessage(formMessages.faild); // Сообщение об ошибке
                 }

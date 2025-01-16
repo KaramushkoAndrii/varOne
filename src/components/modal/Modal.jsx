@@ -81,6 +81,17 @@ const Modal = ({isClose , isModalOpen}) => {
             .then(response => {
                 if (response.status === 200) {
                     setModalMessage(formMessages.done); // Сообщение об успешной отправке
+                
+
+                    //Добавление события лид Facebook на отправку формы 
+                    if(window.fbq) {
+                        window.fbq('track', 'Lead', {
+                            content_name: formDataWithDate.task,
+                            phone: formDataWithDate.number,
+                            date: formDataWithDate.date,
+                        });
+                    }
+                
                 } else {
                     setModalMessage(formMessages.faild); // Сообщение об ошибке
                 }

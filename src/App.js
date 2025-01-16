@@ -1,9 +1,12 @@
-import { Suspense, useState } from 'react';
+import { Suspense, useEffect, useState } from 'react';
+
+import ReactPixel from 'react-facebook-pixel';
 import {Routes, Route ,useLocation} from 'react-router-dom'
 import Modal from './components/modal/Modal';
 import ScrollToAim from './components/scrollToAim/ScrollToAim';
 import PageTransition from './components/pageTransition/PageTransition';
 import Header from './components/header/Header';
+import PixelRouteTracker from './components/PixelRouteTracker';
 
 import Layout from './components/layout/Layout';
 import HomePage from './pages/HomePage';
@@ -29,7 +32,10 @@ import Admin124Page from './pages/admin124Page/Admin124Page';
 import NotPage from './pages/notPage/NotPage';
 import NotFoundPage from './pages/notFoundPage/NotFoundPage';
 
-
+const options = {
+  autoConfig: true,
+  debug: true,
+}
 
 function App() {
 
@@ -44,12 +50,22 @@ function App() {
   }
 
   const location = useLocation();
+
+  useEffect(() => {
+    //Добавление идентификатора пискеля
+    ReactPixel.init('1571386390415326', {}, options); 
+    // Отправка события PageViev
+    ReactPixel.pageView();
+  }, [])
   
   return (
     <div className="App">
           <ScrollToAim />
 
           <Header />
+
+          <PixelRouteTracker />
+          
           <PageTransition>
             <div style={{ position: "relative" }}>
               <Routes location={location} key={location.pathname}>
