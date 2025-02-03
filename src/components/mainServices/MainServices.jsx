@@ -1,4 +1,7 @@
 import { useTranslation } from 'react-i18next';
+import { motion } from 'motion/react';
+
+import { slideFromLeft, slideFromBottom } from '../Animations';
 import Button from "../button/Button";
 import ServicesList from '../servicesList/ServicesList';
 
@@ -11,12 +14,12 @@ const MainServices = ({isOpen}) => {
 
     return (
         <section id='services' className='services'>
-            <h2>{t('main.services')}</h2>
+            <motion.h2 {...slideFromLeft}>{t('main.services')}</motion.h2>
             <ServicesList />
-            <div className='services__request'>
+            <motion.div {...slideFromBottom} className='services__request'>
                 <p>{t('main.request')}</p>
                 <Button text={t('buttons.task')} onClick={isOpen}/>
-            </div>
+            </motion.div>
         </section>
     )
 }

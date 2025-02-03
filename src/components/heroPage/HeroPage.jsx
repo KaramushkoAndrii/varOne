@@ -1,5 +1,8 @@
 
 import { useTranslation } from 'react-i18next';
+import { motion } from 'motion/react';
+
+import { slideFromBottom } from '../Animations';
 import Button from '../button/Button'
 
 import './HeroPage.scss'
@@ -18,18 +21,18 @@ const HeroPage = ({isOpen}) => {
 
     return (
         <section className='hero_section'>
-            <h1>
+            <motion.h1 {...slideFromBottom}>
                 {t('main.title')}
                 <p>
                     {t('main.description')}
                 </p>
-            </h1>
-            <div className='hero_btn_group'>
+            </motion.h1>
+            <motion.div {...slideFromBottom} className='hero_btn_group'>
                 <Button text={t('buttons.discuss')} onClick={isOpen} />
                 <Button text={t('buttons.more info')} 
                         bg={'transperent'}
                         onClick={() => scrollToSection('services')} />
-            </div>
+            </motion.div>
         </section>
     )
 }

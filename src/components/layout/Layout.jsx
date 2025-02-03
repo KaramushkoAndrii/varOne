@@ -20,7 +20,7 @@ const Layout = () => {
                 transition={{ duration: 0.3 }}
                 >
                     <main>
-                        <Outlet /> {/* Здесь будут рендериться ваши страницы */}
+                        <Outlet />
                     </main>
                 </motion.div>
             </AnimatePresence>

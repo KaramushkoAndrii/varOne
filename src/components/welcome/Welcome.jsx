@@ -3,6 +3,9 @@
 
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
+import { motion } from "motion/react";
+
+import { slideFromLeft } from "../Animations";
 import Button from "../button/Button";
 import MainFoto from '../../resources/MainFoto.webp'
 import './welcome.scss'
@@ -37,7 +40,7 @@ const Welcome = ({isOpen}) => {
     return (
         <section id="welcome" className="welcome">
             <div className="welcome_info">
-                <h2 className="welcome_title">{t('welcome.title')}</h2>
+                <motion.h2 {...slideFromLeft} className="welcome_title">{t('welcome.title')}</motion.h2>
 
                 {welcomeContent.map((item, key) => <p key={key} className="welcome_description">{t(`bio.${item}`)}</p>)}
 
